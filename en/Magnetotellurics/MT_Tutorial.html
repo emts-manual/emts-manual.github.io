@@ -2,10 +2,9 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Controlled source EM" href="../CSEM/CSEM_Tutorial.html" /><link rel="prev" title="Getting Started" href="../GettingStarted/GettingStarted.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Controlled source EM" href="../CSEM/CSEM_Tutorial.html" /><link rel="prev" title="Getting Started" href="../GettingStarted/GettingStarted.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.1.2, furo 2021.10.09"/>
         <title>Magnetotellurics - Home</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
@@ -200,7 +199,7 @@
           </label>
         </div>
         <article role="main">
-          <section id="magnetotellurics">
+          <div class="section" id="magnetotellurics">
 <span id="id1"></span><h1>Magnetotellurics<a class="headerlink" href="#magnetotellurics" title="Permalink to this headline">¶</a></h1>
 <style>
 .red {color:red}
@@ -232,23 +231,23 @@ Your browser does not support the video tag.
 </video><p><em>A bit of physics behind the MT method:</em> Animation to illustrate the skin-effect that describes the frequency-dependent attenuation of
 a plane wave electric field with depth. The amplitude of the field distribution decays exponentially
 as <span class="math notranslate nohighlight">\(\sim e^{kz}\)</span>.  <span class="math notranslate nohighlight">\(\delta\)</span> is the skin-depth, where the field has reached <span class="math notranslate nohighlight">\(1/e\)</span> of the surface amplitude.</p>
-<section id="black-box-examples">
+<div class="section" id="black-box-examples">
 <h2>Black-box examples<a class="headerlink" href="#black-box-examples" title="Permalink to this headline">¶</a></h2>
 <p>We first provide black box examples which make use of default settings and which to not provide any diagnostics. In case of
 high-quality data, these examples should readily give usable MT transfer functions.</p>
-<section id="adu-and-ede-processing">
+<div class="section" id="adu-and-ede-processing">
 <h3><code class="docutils literal notranslate"><span class="pre">ADU</span></code> and <code class="docutils literal notranslate"><span class="pre">EDE</span></code> processing<a class="headerlink" href="#adu-and-ede-processing" title="Permalink to this headline">¶</a></h3>
 <p>We use a test data set that has been recorded with 5-ch <code class="docutils literal notranslate"><span class="pre">ADU</span></code> systems
 and two-channel <code class="docutils literal notranslate"><span class="pre">EDE</span></code> systems in the Sauerland and the Harz mountains, Germany. <code class="docutils literal notranslate"><span class="pre">ADU</span></code> site names are <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>,
 <code class="docutils literal notranslate"><span class="pre">ARN-B04</span></code>, <code class="docutils literal notranslate"><span class="pre">BGR-B01</span></code> and <code class="docutils literal notranslate"><span class="pre">THA-B01</span></code>; <code class="docutils literal notranslate"><span class="pre">EDE</span></code> site names
-are <code class="docutils literal notranslate"><span class="pre">ARN-E09</span></code>, <code class="docutils literal notranslate"><span class="pre">BGR-E01</span></code> and <code class="docutils literal notranslate"><span class="pre">THA-E01</span></code>. At these sites, overlapping recordings are available at several runs with <span class="math notranslate nohighlight">\(4096\,\text{Hz}\)</span>
+are <code class="docutils literal notranslate"><span class="pre">ARN-E09</span></code>, <code class="docutils literal notranslate"><span class="pre">BGR-E01</span></code> and <code class="docutils literal notranslate"><span class="pre">THA-E01</span></code>. At these sites, GPS synchronized recordings are available at several runs with <span class="math notranslate nohighlight">\(4096\,\text{Hz}\)</span>
 and <span class="math notranslate nohighlight">\(256\,\text{Hz}\)</span> sampling rates, respectively. The measurement commenced on 07 June 2020.</p>
 <p><em>Note: Some of the data used in the demo project are pretty noisy and shall only serve to illustrate the processing code.</em></p>
-<p>First, we organize the data into a project folder structure, following the guidelines in the previous section (see <a class="reference internal" href="../GettingStarted/GettingStarted.html#gettingstarted"><span class="std std-ref">Getting Started</span></a>). The project is:</p>
+<p>First, we organize the data into a project folder structure, following the guidelines in the previous section (see <a class="reference internal" href="../GettingStarted/GettingStarted.html#gettingstarted"><span class="std std-ref">Getting Started</span></a>). We name the project as:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Volumes</span><span class="o">/</span><span class="n">INTENSO_4TB</span><span class="o">/</span><span class="n">MT</span><span class="o">.</span><span class="n">Demo</span><span class="mf">.2020</span>
 </pre></div>
 </div>
-<p>Within the project, we store the <code class="docutils literal notranslate"><span class="pre">ADU</span></code> recordings in:</p>
+<p>Within this project (= folder name), we store the <code class="docutils literal notranslate"><span class="pre">ADU</span></code> recordings in:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
 <span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B04</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
 <span class="o">./</span><span class="n">BGR</span><span class="o">-</span><span class="n">B01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
@@ -261,7 +260,7 @@ and <span class="math notranslate nohighlight">\(256\,\text{Hz}\)</span> samplin
 <span class="o">./</span><span class="n">THA</span><span class="o">-</span><span class="n">E01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ets</span>
 </pre></div>
 </div>
-<p>Calibration files for the employed induction coils (MFS06, MFS07) are copied into the default folder:</p>
+<p>Calibration files for the employed induction coils (MFS06, MFS07) are to be copied into the default folder for calibration files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">s</span><span class="o">/*</span>
 </pre></div>
 </div>
@@ -273,7 +272,7 @@ functions.</p>
 <ul class="simple">
 <li><p><strong>Single-site black-box processing</strong></p></li>
 </ul>
-<p>For example, a script to perform automated single-site processing on site <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code> using all default processing parameters can
+<p>A script to perform automated single-site processing on site <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code> using all default processing parameters can
 be as short as follows:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Initialize</span><span class="w"></span>
 <span class="n">mt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MT</span><span class="p">(</span><span class="s">'/Volumes/INTENSO_4TB/MT.Demo.2020'</span><span class="p">,</span><span class="w"> </span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">06</span><span class="p">,</span><span class="mi">07</span><span class="p">));</span><span class="w"></span>
@@ -285,27 +284,30 @@ be as short as follows:</p>
 <span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The processing will merge all runs at the same sampling rate for transfer function estimation, and loop over all available sampling rates.</p>
+<p>The <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> class interprets the imported site as the <span class="red">local site</span> (because only one site is imported) and thus
+performs a single-site processing using the standard MT channel combinations to estimate the impedance tensor and the vertical magnetic transfer
+function (if <span class="math notranslate nohighlight">\(B_z\)</span> is available). The processing will merge all runs at the same sampling rate for transfer function estimation, and loop over all available sampling rates.
+In this example, data recorded at <span class="math notranslate nohighlight">\(4096\,Hz\)</span> and <span class="math notranslate nohighlight">\(256\,Hz\)</span> sampling rate are processed.</p>
 <p>The code should run through (may take a while though, but continuous output is produced to inform the progress) while computing and
-storing spectra and transfer functions (subdirectory trees are created if not existing).  An error is in almost all cases due to some
-issue with the data files, the folder structure or missing files (e.g. calibration files).</p>
-<p>In our example, the call generates single-site transfer functions separately for each sampling rate. The result looks as this
+storing spectra and transfer functions (subdirectory trees are created if not existing) separately for each sampling rate.  An error is in almost all cases due to some
+issue with the data files, the folder structure or missing files (e.g. calibration files). Using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="o">.</span><span class="n">plotmtsounding</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>a figure of the last processing result will be produced (which is in this case the <span class="math notranslate nohighlight">\(256\)</span> Hz run). The result looks as this
 (as noted, the demo data are somewhat noisy):</p>
-<a class="reference internal image-reference" href="../../_images/ARN-B03.png"><img alt="alternate text" class="align-center" src="../../_images/ARN-B03.png" style="width: 900px;"/></a>
-<p><em>MT response functions obtained from black-box single site processing of site</em> <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>. Left panels show the estimates for the
-high-frequency run recorded at <span class="math notranslate nohighlight">\(4096\, Hz\)</span>, right panels show the result for the <span class="math notranslate nohighlight">\(256\, Hz\)</span> run. From top to bottom, the panels
-show apparent resistivities, phases and induction vectors.</p>
+<a class="reference internal image-reference" href="../../_images/ARN_B03_TF_256Hz.png"><img alt="alternate text" class="align-center" src="../../_images/ARN_B03_TF_256Hz.png" style="width: 900px;"/></a>
+<p><em>MT response functions obtained from black-box single site processing of site</em> <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>. Left panels show apparent resistivities and phases,
+right panels show, from top to bottom, telluric vectors (see Becken et al., 2002), the phase tensor (Caldwell et al., 200x; Booker et al., 201x)
+and the induction vectors (Wiese, 19xx).</p>
 <p>As the default, spectra are stored in</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">fc</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">fc</span><span class="o">/*</span>
 </pre></div>
 </div>
 <p>and transfer functions are stored in</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">tf</span><span class="o">/*</span>
 </pre></div>
 </div>
-<p>In the above example the <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> class interprets the imported site as the <span class="red">local site</span> (because only only one site is imported) and thus
-performs a single-site processing using the standard MT channel combinations to estimate the impedance tensor and the vertical magnetic transfer
-function (if <span class="math notranslate nohighlight">\(B_z\)</span> is available).</p>
 <ul class="simple">
 <li><p><strong>Inter-site black-box processing</strong></p></li>
 </ul>
@@ -327,6 +329,10 @@ Then (omitting the initialization call), use:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Import time series for station ARN-E09, ARN-B03, BGR-B01, inter-site</span><span class="w"></span>
 <span class="c">% remote reference processing</span><span class="w"></span>
 <span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="w"> </span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">);</span><span class="w"></span>
+<span class="c">%% Compute Spectra</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="c">%% Estimate transfer functions</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">MT</span></code> class thus interprets the order of arguments upon import in terms of the objectives of single-site, inter-site
@@ -357,44 +363,94 @@ or remote reference processing as follows:</p>
 </div>
 <p>If more sites are passed to the import routine, the first three are interpreted as shown above. Naturally,
 these definitions can be overwritten, as described below.</p>
-</section>
-<section id="lemi-processing">
+</div>
+<div class="section" id="lemi-processing">
 <h3><code class="docutils literal notranslate"><span class="pre">Lemi</span></code> processing<a class="headerlink" href="#lemi-processing" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data are recognized upon import, if provided in the correct folder tree. We currently support recordings
-of type <code class="docutils literal notranslate"><span class="pre">B423</span></code> only. (<code class="docutils literal notranslate"><span class="pre">B423</span></code> is the extension of the data files.) For <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data, we expect that the <code class="docutils literal notranslate"><span class="pre">B423</span></code> time series
-are stored in (for example for site <code class="docutils literal notranslate"><span class="pre">0000B</span></code>)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="mi">0000</span><span class="n">B</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">B423</span>
+of type <code class="docutils literal notranslate"><span class="pre">B423</span></code> only (<code class="docutils literal notranslate"><span class="pre">B423</span></code> is the extension of the data files.) For <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data, we expect that the <code class="docutils literal notranslate"><span class="pre">B423</span></code> time series
+are stored in (for example for site <code class="docutils literal notranslate"><span class="pre">0150B</span></code>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="mi">0150</span><span class="n">B</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">B423</span>
 </pre></div>
 </div>
 <p>as the default. Unfortunately, the header information in the data files is incomplete. Therefore, the import routine searches for an extra text file (<code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code>)
-in each data folder with the missing information, or generates a default <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code> template, which can be manually edited. The text file is read during import.
+in each data folder with the missing information, or generates a default <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code> template, which can be manually edited. This text file is read during import.
 Therefore, after editing <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code>, the import call must be issued again. See <a class="reference internal" href="../API_docs/API_docs.html#recorder"><span class="std std-ref">Recorder</span></a> for details.</p>
-<p>Once, the data can be read correctly, the very same processing instructions as described above (and below) apply to <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data.</p>
-</section>
-</section>
-<section id="step-by-step-guide">
+<p>Once, the data can be read correctly, the very same processing instructions as described above (and below) apply also to <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data. For the example above, where <span class="math notranslate nohighlight">\(500\)</span> Hz
+data were acquired, we use the script</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="n">MT</span><span class="p">(</span><span class="s">'/Volumes/INTENSO_4TB/MT.Mongolia.2020'</span><span class="p">,</span><span class="w"> </span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">01</span><span class="p">));</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'0150B'</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and obtain the following result (using <code class="docutils literal notranslate"><span class="pre">mt.plotmtsounding;</span></code>):</p>
+<a class="reference internal image-reference" href="../../_images/0150B_TF_500Hz.png"><img alt="alternate text" class="align-center" src="../../_images/0150B_TF_500Hz.png" style="width: 900px;"/></a>
+<p><em>MT response functions obtained from black-box single site processing of site</em> <code class="docutils literal notranslate"><span class="pre">0150B</span></code>, recorded in Mongolia at a sampling rate of <span class="math notranslate nohighlight">\(500\)</span> Hz.
+and the induction vectors (Wiese, 19xx).</p>
+</div>
+</div>
+<div class="section" id="step-by-step-guide">
 <h2>Step-by-Step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
-<section id="the-mt-class-design">
+<div class="section" id="the-mt-class-design">
 <h3>The <code class="docutils literal notranslate"><span class="pre">MT</span></code> class design<a class="headerlink" href="#the-mt-class-design" title="Permalink to this headline">¶</a></h3>
 <p>The <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> class is not much more than a batch that shall make it
-convenient to process MT data. An <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> object, given the variable
-name, say, <code class="docutils literal notranslate"><span class="pre">mt</span></code>, during initialization:</p>
+convenient to process MT data. A <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> object, given the variable
+name, say, <code class="docutils literal notranslate"><span class="pre">mt</span></code>, is instantiated during the initialization:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span> <span class="o">=</span> <span class="n">MT</span><span class="p">(</span><span class="n">projectname</span><span class="p">,</span><span class="n">datetime</span><span class="p">(</span><span class="n">yyyy</span><span class="p">,</span><span class="n">mm</span><span class="p">,</span><span class="n">hh</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>has the following important fields:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="o">.</span><span class="n">ts</span>
-<span class="n">mt</span><span class="o">.</span><span class="n">sp</span>
-<span class="n">mt</span><span class="o">.</span><span class="n">tf</span>
-<span class="n">mt</span><span class="o">.</span><span class="n">mtset</span>
+<p>and has the following important fields:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">tf</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">mtset</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">mt.ts</span></code> is an <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> object, <code class="docutils literal notranslate"><span class="pre">mt.sp</span></code> is an <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a> object and <code class="docutils literal notranslate"><span class="pre">mt.tf</span></code> is an <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a> object. <code class="docutils literal notranslate"><span class="pre">mt.mtset</span></code> is an
-<a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a> object and stores some settings relevant to MT. The processing relies large on the methods
-provided my <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> and <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>.</p>
+<a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a> object and stores some settings relevant to MT. To set these settings, use the syntax</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">value1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">value2</span><span class="p">,..)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and pass the relevant property-value pairs as arguments.</p>
+<p>The actual processing relies largely on the methods provided by the <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> and <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a> classes, and transfer functions are handled by <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a>.
+To control the processing, the parameters to the various methods can be passed either by <code class="docutils literal notranslate"><span class="pre">set*</span></code> methods
+or by passing property-value pairs directly to a method call.</p>
+<p>Particular <code class="docutils literal notranslate"><span class="pre">set*</span></code> methods (omitting the <code class="docutils literal notranslate"><span class="pre">mt.</span></code> prefix, because the <code class="docutils literal notranslate"><span class="pre">ts</span></code>, <code class="docutils literal notranslate"><span class="pre">sp</span></code> and <code class="docutils literal notranslate"><span class="pre">tf</span></code> objects can also live on their own) are:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(),</span><span class="w"> </span><span class="n">mt</span><span class="p">.</span><span class="n">setlocal</span><span class="p">(),</span><span class="w"> </span><span class="n">mt</span><span class="p">.</span><span class="n">setbase</span><span class="p">()</span><span class="w">  </span><span class="c">% set properties of mt.mtsettings, which holds specific MT settings,</span><span class="w"></span>
+<span class="w">  </span><span class="c">% and of mt.emset, a copy of which is also a property of mt.ts.emset, mt.sp.emset and mt.tf.emset</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setfilter</span><span class="p">()</span><span class="w">                            </span><span class="c">% set properties of mt.ts.emfilt</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setdecimation</span><span class="p">()</span><span class="w">                        </span><span class="c">% set properties of mt.ts.emdec</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setspectra</span><span class="p">()</span><span class="w">                           </span><span class="c">% set properties of mt.ts.emspec</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">settsplot</span><span class="p">()</span><span class="w">                            </span><span class="c">% set properties of mt.ts.emspec</span><span class="w"></span>
+<span class="p">..</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setbandsetup</span><span class="p">()</span><span class="w">                         </span><span class="c">% set properties of mt.sp.embs</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setspplot</span><span class="p">()</span><span class="w">                            </span><span class="c">% set properties of mt.sp.emplot</span><span class="w"></span>
+<span class="p">..</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">settfplot</span><span class="p">()</span><span class="w">                            </span><span class="c">% set properties of mt.tf.emplot</span><span class="w"></span>
+<span class="c">% to be completed</span><span class="w"></span>
+</pre></div>
+</div>
+<p>An overview of the particular method names, which apply these settings, is given in the following:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(),</span><span class="w"> </span><span class="n">mt</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">readdata</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">filterdata</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plottimeseries</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">writeats</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">quicklookspectra</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotdecimationscheme</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">writespectra</span><span class="p">()</span><span class="w"></span>
+<span class="k">...</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="p">.</span><span class="n">import</span><span class="p">(),</span><span class="w"> </span><span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span><span class="w"></span>
+<span class="k">...</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">tf</span><span class="p">.</span><span class="n">import</span><span class="p">(),</span><span class="w"> </span><span class="n">mt</span><span class="p">.</span><span class="n">tf</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">tf</span><span class="p">.</span><span class="n">plotmtsounding</span><span class="p">()</span><span class="w"></span>
+<span class="c">% to be completed</span><span class="w"></span>
+</pre></div>
+</div>
+<p>We go through these methods in the sections below.</p>
 <p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a></p>
-</section>
-<section id="initialize-import-time-series-data-overview">
+</div>
+<div class="section" id="initialize-import-time-series-data-overview">
 <h3>Initialize, import time series, data overview<a class="headerlink" href="#initialize-import-time-series-data-overview" title="Permalink to this headline">¶</a></h3>
 <p>An arbitrary number of sites can be imported in one call. To initialize
 the demo project and to import all available sites, use:</p>
@@ -402,33 +458,48 @@ the demo project and to import all available sites, use:</p>
 <span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'ARN-B04'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">,</span><span class="s">'THA-B01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The import routines display some summary information during import such as sitenames, run numbers, pathnames, etc.. Sites can
+<p>The import routines display some summary information during execution, such as sitenames, run numbers, pathnames, etc.. Sites can
 only be imported into an existing project (i.e. a project that has been initialized before). If the project exists and
 contains already sites (because the <code class="docutils literal notranslate"><span class="pre">import</span></code> had
 been issued before), new sites are appended or they replace any existing sites of the same name. If the data reside in non-default directory trees,
 the import methods will not find them. The default folder structure is defined in <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a> (see there how to change default search paths)
-and described in <a class="reference internal" href="../API_docs/API_docs.html#recorder"><span class="std std-ref">Recorder</span></a>.</p>
-<p><em>Note</em>: <code class="docutils literal notranslate"><span class="pre">MT</span></code> searches for both time series and spectra file. Since no spectra are
-available at the beginning, a warning will be issued during the attempt to import spectra. To avoid automated import of
-both time series and spectra data, set the corresponding switches of <code class="docutils literal notranslate"><span class="pre">mt.mtset</span></code> ( see <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a> for details), to false, e.g.</p>
+and described in the section on <a class="reference internal" href="../Recorder/Recorder.html#recordingsystems"><span class="std std-ref">Recording systems and channels</span></a>.</p>
+<p><em>Note:</em> As described above, the first three sites are assigned as the <span class="red">local site</span>, <span class="blue">base site</span> and <span class="green">reference site</span>, respectively.</p>
+<p><em>Note</em>: <code class="docutils literal notranslate"><span class="pre">MT</span></code> searches for all time series, spectra files and transfer functions (n/a). Since no spectra and transfer functions are
+available at the beginning, a warning will be issued during the attempt to import them. To avoid automated import of
+spectra files and/or transfer functions (if existing), set the corresponding switches of <code class="docutils literal notranslate"><span class="pre">mt.mtset</span></code> ( see <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a> for details), to false, e.g.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ImportTimeSeries'</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
 <span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ImportSpectra'</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ImportTransferFunctions'</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c">% n/a</span><span class="w"></span>
 </pre></div>
 </div>
-<p><em>Note:</em> <code class="docutils literal notranslate"><span class="pre">Import</span></code> means that only the header information of each data file is extracted and stored. Actual time
-series or spectra files are usually too big to store in memory for an entire project.</p>
-<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a>,</p>
+<p>The default value for these switches is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p><em>Note:</em> <code class="docutils literal notranslate"><span class="pre">Import</span></code> generally means that only the header information of each data file is extracted and stored, at least for the large data files.
+Actual time series or spectra files are usually too big to store in memory for an entire project.</p>
+<p>It may be of interest to clear a site that had been imported. The <code class="docutils literal notranslate"><span class="pre">clear</span></code> method works in the same way as the import method, using the syntax</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">clear</span><span class="p">(</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>to clear the listed sites. To clear only time series, for instances, set the corresponding <code class="docutils literal notranslate"><span class="pre">Clear*</span></code>, e.g.,</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ClearTimeSeries'</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ClearSpectra'</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ClearTransferFunctions'</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span><span class="w"> </span><span class="c">% n/a</span><span class="w"></span>
+</pre></div>
+</div>
+<p>to either true and false, respectively. The default value for these switches is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a>,</p>
 <p><strong>Sitemap</strong></p>
 <p>A good way to get started with processing of MT data is to generate a map. We use the Matlab <code class="docutils literal notranslate"><span class="pre">geoaxes</span></code> map
 utilities, a convenient way to plot geographical data. The default map layout uses <code class="code docutils literal notranslate"><span class="pre">basemap='topographic'</span></code>.</p>
-<p>To plot site locations on a map, use the <code class="docutils literal notranslate"><span class="pre">plotsitemap</span></code> method of either <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> or <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a> and
+<p>To plot site locations on a map, use the <code class="docutils literal notranslate"><span class="pre">plotsitemap</span></code> method of either <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a> or <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a> and
 provide the latitude and longitude limits of the survey area.</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotsitemap</span><span class="p">(</span><span class="s">'LatitudeLimits'</span><span class="p">,[</span><span class="mf">50.2</span><span class="p">,</span><span class="w"> </span><span class="mf">52.7</span><span class="p">],</span><span class="s">'LongitudeLimits'</span><span class="p">,[</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">]);</span><span class="w"></span>
 <span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="p">.</span><span class="n">plotsitemap</span><span class="p">(</span><span class="s">'LatitudeLimits'</span><span class="p">,[</span><span class="mf">50.2</span><span class="p">,</span><span class="w"> </span><span class="mf">52.7</span><span class="p">],</span><span class="s">'LongitudeLimits'</span><span class="p">,[</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">]);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">tf</span><span class="p">.</span><span class="n">plotsitemap</span><span class="p">(</span><span class="s">'LatitudeLimits'</span><span class="p">,[</span><span class="mf">50.2</span><span class="p">,</span><span class="w"> </span><span class="mf">52.7</span><span class="p">],</span><span class="s">'LongitudeLimits'</span><span class="p">,[</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">]);</span><span class="w"> </span><span class="c">% n/a</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The former plots the sites for which time series have been successfully imported, the latter
-plots the sites for which spectra have been imported. Note that coordinates are extracted for
+plots the sites for which spectra or transfer functions are available and imported. Note that coordinates are extracted for
 the first available run for each available site.</p>
 <a class="reference internal image-reference" href="../../_images/DemoSiteMap.png"><img alt="alternate text" class="align-center" src="../../_images/DemoSiteMap.png" style="width: 900px;"/></a>
 <p><em>Sitemap displaying the sites contained in the demo project.</em> A zoom button can be activated on the top right of the
@@ -439,7 +510,7 @@ Matlab figure, or zooming can be performed with gestures applicable to the compu
 </div>
 <p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtplot"><span class="std std-ref">EMTPlot</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emfplot"><span class="std std-ref">EMFPlot</span></a>,</p>
 <p><strong>Runtimes plot</strong></p>
-<p>Another important plot that helps preparing processing is a runtimes plot. Runtimes plots are also available for both
+<p>Another important plot that helps preparing processing is a runtimes plot. Runtimes plots are available for both
 time series and spectra data and can be invoked with:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotruntimes</span><span class="p">;</span><span class="w"></span>
 <span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="p">.</span><span class="n">plotruntimes</span><span class="p">;</span><span class="w"></span>
@@ -452,61 +523,193 @@ summarized as follows:</p>
 <p>Use this plot to identify time windows of interest, e.g. for plotting time series.</p>
 <p><em>Note:</em> Time series and spectra must not always cover the same time span, because spectra can also be
 computed on only a subset (e.g. certain time range, sampling rates) of data.</p>
-<p><em>Note:</em> The runtimes plot replaces the sitemap plot generated above. This is because the figure handle is stored and
-re-used (with the idea to plot the figures into handles contained GUI some time in the future). To release any plot related
+<p><em>Note:</em> The runtimes plot replaces the sitemap axes in the figure generated above, if existing. This is because the figure handle is stored and
+re-used (with the idea to plot the figures into handles contained in a GUI - some time in the future). To release any plot related
 to time series, use:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">emplot</span><span class="p">.</span><span class="n">hparent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This will allow to generate a new figure for the next plotting command. An equivalent syntax applies to spectra figures.</p>
-</section>
-<section id="selecting-and-plotting-time-series-subsets">
+<p>This will generate a new figure with the next plotting command. An equivalent syntax applies to spectra and transfer function figures.</p>
+</div>
+<div class="section" id="selecting-and-plotting-time-series-subsets">
 <h3>Selecting and plotting time series (subsets)<a class="headerlink" href="#selecting-and-plotting-time-series-subsets" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="filter-decimation-and-resampling-options">
+<p>We provide a number of selection criteria to read portions of time series data, e.g. for plotting or spectra estimation. The entry keys include selection of
+(a) site(s) (b) tag(s) (c) sampling rate(s) (d) channel(s) and (e) time window. Specifically, we discriminate between a <span class="red">local site</span>
+and a number <span class="blue">base site(s)</span>. For example, to define and read a <span class="math notranslate nohighlight">\(10\, s\)</span> time window of site <code class="docutils literal notranslate"><span class="pre">ARN-E09</span></code> (a telluric recording
+that has only electric channels), we can use the following command:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">readdata</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Channels'</span><span class="p">,{</span><span class="s">'Ex'</span><span class="w"> </span><span class="s">'Ey'</span><span class="p">},</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Time'</span><span class="p">,[</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)]);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">readdata()</span></code> method passes all property-value argument pairs to <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a> and than reads the data as specified by these criteria.
+The read data are stored in a <a class="reference internal" href="../API_docs/API_docs.html#emtdata"><span class="std std-ref">EMTData</span></a> object (<code class="docutils literal notranslate"><span class="pre">ts.lsite</span></code>, lsite is short for local site). Accordingly, sites can be defined to become
+a <span class="blue">base site</span>, and data can be read correspondingly. Base site data are stored in <code class="docutils literal notranslate"><span class="pre">ts.bsite</span></code>.</p>
+<p>To clear memory from local or base site time series, set <code class="docutils literal notranslate"><span class="pre">'LocalSite','none'</span></code> or <code class="docutils literal notranslate"><span class="pre">'BaseSite','none'</span></code>, respectively.</p>
+<p>One will hardly ever need access to the data itself; it is rather of interest to plot the time series to identify signal
+as well as issues in the time series, such as broken channels or synchronization errors. Ideally, synchronized time series
+from different sites are plotted one on top of another for selected data subsets for this purpose. The method</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plottimeseries</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>accomplished this task. <code class="docutils literal notranslate"><span class="pre">plottimeseries()</span></code> plots the data that have been read before into memory; if the <code class="docutils literal notranslate"><span class="pre">readdata()</span></code> method had not
+been called before, or some relevant selection have changed, <code class="docutils literal notranslate"><span class="pre">plottimeseries()</span></code> will trigger a re-reading of the data before plotting.</p>
+<p>As a shortcut, <code class="docutils literal notranslate"><span class="pre">plottimeseries()</span></code> accepts property value-pairs to overwrite current settings, i.e. without explicitly calling <code class="docutils literal notranslate"><span class="pre">mt.setset()</span></code>.
+As an example, we plot the <span class="math notranslate nohighlight">\(10\, s\)</span> time window for the local site and number of base sites as follows:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plottimeseries</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'BaseSite'</span><span class="p">,{</span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'ARN-B04'</span><span class="p">,</span><span class="s">'THA-B01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="w"> </span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">},</span><span class="s">'BaseSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'BaseTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Channels'</span><span class="p">,{</span><span class="s">'Ex'</span><span class="w"> </span><span class="s">'Ey'</span><span class="w"> </span><span class="s">'Bx'</span><span class="w"> </span><span class="s">'By'</span><span class="w"> </span><span class="s">'Bz'</span><span class="p">},</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Time'</span><span class="p">,[</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)]);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">plottimeseries()</span></code> passes all property-value pairs to <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a> (to select the data) and <a class="reference internal" href="../API_docs/API_docs.html#emtplot"><span class="std std-ref">EMTPlot</span></a> (to control plot
+appearance), then invokes the <code class="docutils literal notranslate"><span class="pre">readdata()</span></code> method and plots the result. This could look like this:</p>
+<a class="reference internal image-reference" href="../../_images/ts_256Hz_10s.png"><img alt="alternate text" class="align-center" src="../../_images/ts_256Hz_10s.png" style="width: 900px;"/></a>
+<p><em>Time series plot.</em> A <span class="math notranslate nohighlight">\(10\, s\)</span> time series example for the local site  <code class="docutils literal notranslate"><span class="pre">ARN-E09</span></code> (listed first in the legend) and a number of base sites.
+The time series in all channels are dominated by the <span class="math notranslate nohighlight">\(50\)</span> Hz power network.</p>
+<p><em>Note:</em> Be careful not to load too many data at once into memory (i.e. too long time series);</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtplot"><span class="std std-ref">EMTPlot</span></a>,</p>
+</div>
+<div class="section" id="filter-decimation-and-resampling-options">
 <h3>Filter, decimation and resampling options<a class="headerlink" href="#filter-decimation-and-resampling-options" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="quick-look-spectra">
+<p>Some filter options are available, including decimation, resampling, delay filtering (n/a) and notch filtering (n/a). The primary use of filtering is
+for displaying filtered time series; later on, the decimation filter will be used prior to spectral estimation in a cascaded fashion, and resampling may be
+useful when combining data that were recorded at different sampling schemes (e.g. at <span class="math notranslate nohighlight">\(500\)</span> Hz and <span class="math notranslate nohighlight">\(512\)</span> Hz).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">filterdata()</span></code> method operates on the local and base site time series that are stored in memory (i.e. in the <code class="docutils literal notranslate"><span class="pre">lsite</span></code> and <code class="docutils literal notranslate"><span class="pre">bsite</span></code> properties). To
+filter data, use - as an example - a syntax as follows.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">filterdata</span><span class="p">(</span><span class="s">'ResamplingFrequency'</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="s">'DecimationFactor'</span><span class="p">,[</span><span class="mi">8</span><span class="w"> </span><span class="mi">8</span><span class="p">])</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This will first resample the data to <span class="math notranslate nohighlight">\(512\)</span> Hz (regardless of the original sampling rate) and then decimate by a factor
+of <span class="math notranslate nohighlight">\(8\times8=64\)</span>.
+Property-values pairs are used to set the filter properties (see <a class="reference internal" href="../API_docs/API_docs.html#emtfilter"><span class="std std-ref">EMTFilter</span></a> and the <code class="docutils literal notranslate"><span class="pre">setfilter</span></code>
+method of <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> for details). The filtered data are stored in the fields <code class="docutils literal notranslate"><span class="pre">ts.ltsfiltered</span></code> and <code class="docutils literal notranslate"><span class="pre">ts.btsfiltered</span></code>.</p>
+<p><em>Note:</em> The decimation scheme uses the matlab function <code class="docutils literal notranslate"><span class="pre">decimate</span></code>, which can take any integer value as the decimation factor, but it is recommended to
+decimate by less than about a factor of 10. Higher decimation rates are accomplished by successive decimation, using e.g. the value [8 8] to
+call the <code class="docutils literal notranslate"><span class="pre">decimate</span></code> functions two times, with a decimation factor of <span class="math notranslate nohighlight">\(8\)</span> each.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">filterdata()</span></code> method also accepts property-value pairs to set global settings (see <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a>), e.g.,</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">filterdata</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'BaseSite'</span><span class="p">,{</span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'ARN-B04'</span><span class="p">,</span><span class="s">'THA-B01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="w"> </span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">},</span><span class="s">'BaseSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'BaseTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Channels'</span><span class="p">,{</span><span class="s">'Ex'</span><span class="w"> </span><span class="s">'Ey'</span><span class="w"> </span><span class="s">'Bx'</span><span class="w"> </span><span class="s">'By'</span><span class="w"> </span><span class="s">'Bz'</span><span class="p">},</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Time'</span><span class="p">,[</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)],</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'DecimationFactor'</span><span class="p">,[</span><span class="mi">8</span><span class="w"> </span><span class="mi">8</span><span class="p">]);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>which will cause re-reading of the time series, because the data selections have changed.</p>
+<p>As said, we use the filter function in the first place to plot filtered (e.g. decimated) time series. The
+<code class="docutils literal notranslate"><span class="pre">plottimeseries()</span></code> method (see above) also accepts
+filter property-value pairs, and then applies them to the data.
+For plotting, set the pair <code class="docutils literal notranslate"><span class="pre">'Stage','Filtered'</span></code> to plot the filtered data
+instead of the original time series, or set the pair <code class="docutils literal notranslate"><span class="pre">'Stage',{'File','Filtered'}</span></code> to plot the filtered data on top of raw time series.</p>
+<p>As an example, the command</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plottimeseries</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'BaseSite'</span><span class="p">,{</span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'ARN-B04'</span><span class="p">,</span><span class="s">'THA-B01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="w"> </span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">},</span><span class="s">'BaseSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'BaseTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Channels'</span><span class="p">,{</span><span class="s">'Ex'</span><span class="w"> </span><span class="s">'Ey'</span><span class="p">},</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Time'</span><span class="p">,[</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">00</span><span class="p">)],</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'DecimationFactor'</span><span class="p">,[</span><span class="mi">8</span><span class="w"> </span><span class="mi">8</span><span class="p">],</span><span class="s">'Stage'</span><span class="p">,</span><span class="s">'Filtered'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>generates a <span class="math notranslate nohighlight">\(30\)</span> min plot of time series data downsampled from <span class="math notranslate nohighlight">\(256\)</span> Hz to <span class="math notranslate nohighlight">\(4\)</span> Hz:</p>
+<a class="reference internal image-reference" href="../../_images/ts_4Hz_30min.png"><img alt="alternate text" class="align-center" src="../../_images/ts_4Hz_30min.png" style="width: 900px;"/></a>
+<p><em>Filtered time series</em>, applied to a <span class="math notranslate nohighlight">\(30\)</span> min. time window and using a decimation factor of <span class="math notranslate nohighlight">\(64\)</span>. At the reduced sampling rate,
+continuous pulsations are visible, which are otherwise hidden below the <span class="math notranslate nohighlight">\(50\)</span> Hz signal.</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtfilter"><span class="std std-ref">EMTFilter</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtplot"><span class="std std-ref">EMTPlot</span></a></p>
+</div>
+<div class="section" id="quick-look-spectra">
 <h3>Quick-look spectra<a class="headerlink" href="#quick-look-spectra" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="cascade-decimation">
-<h3>Cascade Decimation<a class="headerlink" href="#cascade-decimation" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="import-spectra">
+<p>As an example, the command</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotquicklookspectra</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'BaseSite'</span><span class="p">,{</span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'ARN-B04'</span><span class="p">,</span><span class="s">'THA-B01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="w"> </span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">},</span><span class="s">'BaseSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'BaseTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Channels'</span><span class="p">,{</span><span class="s">'Bx'</span><span class="w"> </span><span class="s">'Ey'</span><span class="p">},</span><span class="s">'Time'</span><span class="p">,[</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)],</span><span class="w"> </span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'Windowlength'</span><span class="p">,</span><span class="mi">2</span>^<span class="mi">12</span><span class="p">,</span><span class="s">'Overlap'</span><span class="p">,</span><span class="mi">2</span>^<span class="mi">10</span><span class="p">,</span><span class="s">'Taper'</span><span class="p">,</span><span class="s">'Hanning'</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">  </span><span class="s">'DecimationFactor'</span><span class="p">,[</span><span class="mi">8</span><span class="w"> </span><span class="mi">8</span><span class="p">],</span><span class="s">'Stage'</span><span class="p">,{</span><span class="s">'Filtered'</span><span class="p">,</span><span class="s">'File'</span><span class="p">});</span><span class="w"></span>
+</pre></div>
+</div>
+<p>generates a PSD plot using <span class="math notranslate nohighlight">\(12\)</span> h of data, both for the original sampling rate of
+<span class="math notranslate nohighlight">\(256\)</span> Hz and the decimated data at <span class="math notranslate nohighlight">\(4\)</span> Hz:</p>
+<a class="reference internal image-reference" href="../../_images/sp_12hours.png"><img alt="alternate text" class="align-center" src="../../_images/sp_12hours.png" style="width: 900px;"/></a>
+<p><em>Power spectral density (PSD)</em>, applied to a <span class="math notranslate nohighlight">\(12\)</span> hours time window and using both the original data (<span class="math notranslate nohighlight">\(256\)</span> Hz) and the
+decimated data (<span class="math notranslate nohighlight">\(256\)</span> Hz). The PSD is the square root of the averaged autospectra of each channel. Channels <span class="math notranslate nohighlight">\(B_x\)</span> and  <span class="math notranslate nohighlight">\(B_y\)</span>
+are displayed. The PSDs show the characteristic similarity
+of the <span class="math notranslate nohighlight">\(B_x\)</span> component across all components, a rise in signal energy towards low frequencies, and wonderful Schumann resonances
+at <span class="math notranslate nohighlight">\(7.8\)</span> Hz and harmonics. However, noise is also apparent, such as the <span class="math notranslate nohighlight">\(50\)</span> Hz peak (power network), <span class="math notranslate nohighlight">\(16.67\)</span> Hz peak
+(railway network), <span class="math notranslate nohighlight">\(15\)</span> s and harmonics (corrosion protection current on gas pipelines), and some issues in the magnetics of site <code class="docutils literal notranslate"><span class="pre">THA-B01</span></code>
+and the electrics of <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>. These sites would need closer inspection.</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <cite>emtfilter</cite>, <a class="reference internal" href="../API_docs/API_docs.html#emtspectra"><span class="std std-ref">EMTSpectra</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtplot"><span class="std std-ref">EMTPlot</span></a></p>
+</div>
+<div class="section" id="cascade-decimation-and-writing-spectra">
+<h3>Cascade Decimation and writing spectra<a class="headerlink" href="#cascade-decimation-and-writing-spectra" title="Permalink to this headline">¶</a></h3>
+<p><strong>Setting up cascade decimation</strong></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">setdecimation</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="k">...</span><span class="c">)</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Property-value pairs for to set the decimation scheme are:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="s">'DecimationCascade'</span><span class="p">,[</span><span class="mi">1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="c">% Decimation factor relative to the sampling rate of the previous decimation level</span><span class="w"></span>
+<span class="s">'WindowLength'</span><span class="p">,[</span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="mi">128</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="c">% Length of time windows in number of samples</span><span class="w"></span>
+<span class="s">'OverLap'</span><span class="p">,[</span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="w"> </span><span class="mi">32</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="c">% Overlap of adjacent time windows in number of samples</span><span class="w"></span>
+<span class="s">'Taper'</span><span class="p">,</span><span class="s">'Hanning'</span><span class="w"></span>
+<span class="w">  </span><span class="c">% Taper applied to the time windows prior to spectra computation. Options are 'Hanning' and</span><span class="w"></span>
+<span class="w">  </span><span class="c">% 'dpss' (discrete prolate spheroidal sequences)</span><span class="w"></span>
+<span class="s">'PreWhitening'</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="c">% Prewhitening uses first oder differencing (-1) or nothing (0). Needs more sophisticated</span><span class="w"></span>
+<span class="w">  </span><span class="c">% schemes (in the future)</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotdecimationscheme</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">4096</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/emdec_4096Hz.png"><img alt="alternate text" class="align-center" src="../../_images/emdec_4096Hz.png" style="width: 900px;"/></a>
+<p><em>Decimation scheme</em>,</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotdecimationscheme</span><span class="p">(</span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/emdec_256Hz.png"><img alt="alternate text" class="align-center" src="../../_images/emdec_256Hz.png" style="width: 900px;"/></a>
+<p><em>Decimation scheme</em>,</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emdecimate"><span class="std std-ref">EMDecimate</span></a></p>
+<p><strong>Computing and writing spectra</strong></p>
+<p>text</p>
+</div>
+<div class="section" id="import-spectra">
 <h3>Import Spectra<a class="headerlink" href="#import-spectra" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="selecting-and-plotting-spectra-subsets">
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a></p>
+</div>
+<div class="section" id="selecting-and-plotting-spectra-subsets">
 <h3>Selecting and plotting spectra (subsets)<a class="headerlink" href="#selecting-and-plotting-spectra-subsets" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="band-setup">
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emfplot"><span class="std std-ref">EMFPlot</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a></p>
+</div>
+<div class="section" id="band-setup">
 <h3>Band Setup<a class="headerlink" href="#band-setup" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="transfer-function-estimation">
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#embandsetup"><span class="std std-ref">EMBandSetup</span></a>,</p>
+</div>
+<div class="section" id="transfer-function-estimation">
 <h3>Transfer function estimation<a class="headerlink" href="#transfer-function-estimation" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="plotting-transfer-functions">
+</div>
+<div class="section" id="plotting-transfer-functions">
 <h3>Plotting transfer functions<a class="headerlink" href="#plotting-transfer-functions" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="update-transfer-function-estimation">
+</div>
+<div class="section" id="update-transfer-function-estimation">
 <h3>Update Transfer function estimation<a class="headerlink" href="#update-transfer-function-estimation" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="coherency-masking">
+</div>
+<div class="section" id="coherency-masking">
 <h3>Coherency masking<a class="headerlink" href="#coherency-masking" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="polarization-masking">
+</div>
+<div class="section" id="polarization-masking">
 <h3>Polarization masking<a class="headerlink" href="#polarization-masking" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="other-masking">
+</div>
+<div class="section" id="other-masking">
 <h3>Other masking<a class="headerlink" href="#other-masking" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h3>Update Transfer function estimation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="sequential-processing">
+</div>
+<div class="section" id="sequential-processing">
 <h3>Sequential processing<a class="headerlink" href="#sequential-processing" title="Permalink to this headline">¶</a></h3>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
         </article>
       </div>
@@ -537,10 +740,11 @@ to time series, use:</p>
 
         <div class="related-information">
               Copyright &#169; 2021, AGP Muenster |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+            <a>@Hossam Marzouk </a> 
+            <!-- Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
               and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+              <a class="muted-link" href="https://pradyunsg.me">@Hss</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. --> |
             <a class="muted-link" href="../../_sources/en/Magnetotellurics/MT_Tutorial.rst.txt"
                rel="nofollow">
               Show Source
@@ -573,7 +777,7 @@ to time series, use:</p>
 <li><a class="reference internal" href="#selecting-and-plotting-time-series-subsets">Selecting and plotting time series (subsets)</a></li>
 <li><a class="reference internal" href="#filter-decimation-and-resampling-options">Filter, decimation and resampling options</a></li>
 <li><a class="reference internal" href="#quick-look-spectra">Quick-look spectra</a></li>
-<li><a class="reference internal" href="#cascade-decimation">Cascade Decimation</a></li>
+<li><a class="reference internal" href="#cascade-decimation-and-writing-spectra">Cascade Decimation and writing spectra</a></li>
 <li><a class="reference internal" href="#import-spectra">Import Spectra</a></li>
 <li><a class="reference internal" href="#selecting-and-plotting-spectra-subsets">Selecting and plotting spectra (subsets)</a></li>
 <li><a class="reference internal" href="#band-setup">Band Setup</a></li>

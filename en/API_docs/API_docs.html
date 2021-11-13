@@ -2,10 +2,9 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="Calibration files" href="../Calibration/Calibration.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="prev" title="Calibration files" href="../Calibration/Calibration.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.1.2, furo 2021.10.09"/>
         <title>API documentation - Home</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
@@ -200,9 +199,9 @@
           </label>
         </div>
         <article role="main">
-          <section id="api-documentation">
+          <div class="section" id="api-documentation">
 <h1>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
-<section id="mt">
+<div class="section" id="mt">
 <span id="id1"></span><h2>MT<a class="headerlink" href="#mt" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@MT"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@MT.MT">
@@ -225,7 +224,7 @@
 </div>
 <p>Some but not all methods (e.g. not the ‘Import’ and ‘Delete’ methods) can also be invoked with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">;</span>
-<span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">(,</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>Initialization:</strong></p>
@@ -257,36 +256,17 @@ command window. To see the default folder structure of spectra in the project, t
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MT</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s1">'Import'</span><span class="p">,</span><span class="s1">'0000B'</span><span class="p">);</span>
 </pre></div>
 </div>
-<p><strong>Plot RunTimes</strong></p>
-<p>To plot runtimes of recordings, :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MT</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s1">'PlotRunTimes'</span><span class="p">);</span>
-</pre></div>
-</div>
-<p><strong>Plot Sitemap</strong></p>
-<p>To plot site locations on a map, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MT</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s1">'PlotSiteMap'</span><span class="p">);</span>
-</pre></div>
-</div>
 <p><strong>Methods and Properties:</strong></p>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.behave">
-<span class="sig-name descname"><span class="pre">behave</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.behave" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">EMBehave</span></code> object to manage command line output</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.bsratessp">
-<span class="sig-name descname"><span class="pre">bsratessp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.bsratessp" title="Permalink to this definition">¶</a></dt>
-<dd><p>vector that contains all available sampling rates of base site spectra</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.bsratests">
-<span class="sig-name descname"><span class="pre">bsratests</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.bsratests" title="Permalink to this definition">¶</a></dt>
-<dd><p>vector that collects all available sampling rates of base site time series</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.emset">
-<span class="sig-name descname"><span class="pre">emset</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.emset" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">EMSettings</span></code> object to store various processing controls</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear sites listed from <code class="docutils literal notranslate"><span class="pre">obj.site</span></code> that have previously been imported; these sites will no longer be accessible..</p>
+<p><em>Input argument(s):</em> comma-separated list of site
+names</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="s1">'site01'</span><span class="p">,</span><span class="s1">'site02'</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+</pre></div>
+</div>
 </dd></dl>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@MT.MT.estimate">
@@ -306,59 +286,196 @@ names</p>
 </pre></div>
 </div>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.lsratessp">
-<span class="sig-name descname"><span class="pre">lsratessp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.lsratessp" title="Permalink to this definition">¶</a></dt>
-<dd><p>vector that contains all available sampling rates of local site spectra</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setbandsetup">
+<span class="sig-name descname"><span class="pre">setbandsetup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setbandsetup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set band setup scheme for frequency binning. Values are
+stored in <code class="docutils literal notranslate"><span class="pre">obj.embs(.)</span></code></p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs</p>
+<p><em>Example(s):</em></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="p">.</span><span class="n">setbandsetup</span><span class="p">(</span><span class="s">'Scheme'</span><span class="p">,</span><span class="s">'MT'</span><span class="p">,</span><span class="s">'Spacing'</span><span class="p">,</span><span class="s">'0.5'</span><span class="p">,</span><span class="s">'Bandwidth'</span><span class="p">,</span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+<span class="n">obj</span><span class="p">.</span><span class="n">setbandsetup</span><span class="p">(</span><span class="s">'Scheme'</span><span class="p">,</span><span class="s">'CSEM'</span><span class="p">,</span><span class="s">'T0'</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mi">98</span><span class="p">,</span><span class="s">'Spacing'</span><span class="p">,</span><span class="s">'0.5'</span><span class="p">,</span><span class="s">'Bandwidth'</span><span class="p">,</span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>To apply the current scheme to the current runs of local, base and reference site
+recordings, use the methods</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="p">.</span><span class="n">bslsp</span><span class="p">;</span><span class="w"></span>
+<span class="n">obj</span><span class="p">.</span><span class="n">bsbsp</span><span class="p">;</span><span class="w"></span>
+<span class="n">obj</span><span class="p">.</span><span class="n">bsrsp</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This will store the band setups along with the
+respective runs in the properties <code class="docutils literal notranslate"><span class="pre">obj.lsite.embs</span></code>,
+<code class="docutils literal notranslate"><span class="pre">obj.bsite.embs</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.rsite.embs</span></code>. Runs at other
+sampling rates are not affected.</p>
+<p>See also: <a class="reference internal" href="#embandsetup"><span class="std std-ref">EMBandSetup</span></a></p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.lsratests">
-<span class="sig-name descname"><span class="pre">lsratests</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.lsratests" title="Permalink to this definition">¶</a></dt>
-<dd><p>vector that collects all available sampling rates of local site time series</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setbase">
+<span class="sig-name descname"><span class="pre">setbase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setbase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify base site. This is a shortcut to settings of <code class="docutils literal notranslate"><span class="pre">obj.setset(.)</span></code>,
+which refer to the base site(s) settings only.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setbase</span><span class="p">(</span><span class="s1">'Site'</span><span class="p">,</span><span class="s1">'0000B'</span><span class="p">,</span><span class="s1">'Tag'</span><span class="p">,</span><span class="s1">'adc'</span><span class="p">,</span><span class="s1">'Samplingrate'</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setbase</span><span class="p">(</span><span class="s1">'Site'</span><span class="p">,</span><span class="s1">'none'</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To specify multiple base sites, pass a cell array of
+sitenames to the <code class="docutils literal notranslate"><span class="pre">'Site'</span></code> property, e.g. <code class="docutils literal notranslate"><span class="pre">{'0000B','0050B',..}</span></code></p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.mtset">
-<span class="sig-name descname"><span class="pre">mtset</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.mtset" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">MTSettings</span></code> object to store specific MT processing controls</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setdecimation">
+<span class="sig-name descname"><span class="pre">setdecimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setdecimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set values for the decimation scheme used for cascade
+decimation and spectral analysis. All Parameters are passed
+to <a class="reference internal" href="#emdecimate"><span class="std std-ref">EMDecimate</span></a> and stored in <code class="docutils literal notranslate"><span class="pre">obj.ts.emdec</span></code>.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs that are valid <a class="reference internal" href="#emdecimate"><span class="std std-ref">EMDecimate</span></a>
+properties and values.</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setdecimation</span><span class="p">(</span><span class="s1">'DecimationCascade'</span><span class="p">,[</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">4</span><span class="p">],</span><span class="s1">'WindowLength'</span><span class="p">,[</span><span class="mi">1024</span> <span class="mi">1024</span> <span class="mi">1024</span><span class="p">],</span><span class="o">...</span>
+    <span class="s1">'Overlap'</span><span class="p">,[</span><span class="mi">256</span> <span class="mi">256</span> <span class="mi">256</span><span class="p">],</span><span class="s1">'Prewhitening'</span><span class="p">,[</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="s1">'Taper'</span><span class="p">,</span><span class="s1">'Hanning'</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>For a full list of parameters, see <a class="reference internal" href="#emdecimate"><span class="std std-ref">EMDecimate</span></a></p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.rsratessp">
-<span class="sig-name descname"><span class="pre">rsratessp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.rsratessp" title="Permalink to this definition">¶</a></dt>
-<dd><p>vector that contains all available sampling rates of ref site spectra</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setfilter">
+<span class="sig-name descname"><span class="pre">setfilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setfilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set parameters for the filtering time series. All Parameters are passed
+to <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a> and stored in <code class="docutils literal notranslate"><span class="pre">obj.ts.emfilt</span></code>.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs that are valid <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a>
+properties and values. <code class="docutils literal notranslate"><span class="pre">'none'</span></code> removes all filter settings
+and clears filtered data from memory (a EMTFilter method?).</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setfilter</span><span class="p">(</span><span class="s1">'DecimationFactor'</span><span class="p">,[</span><span class="mi">4</span> <span class="mi">4</span><span class="p">],</span><span class="s1">'ResamplingFrequency'</span><span class="p">,</span><span class="mi">512</span><span class="p">,</span><span class="o">....</span>
+    <span class="s1">'FilterOrder'</span><span class="p">,{</span><span class="s1">'DecimationFactor'</span><span class="p">,</span><span class="s1">'ResamplingFrequency'</span><span class="p">});</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setfilter</span><span class="p">(</span><span class="s1">'none'</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The order of passed property-value pairs matters, because
+filtering is executed in this order. The order can be
+overwritten by explicitly specfifying the order of filter
+applications</p>
+<p>For a full list of parameters, see <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a></p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.rsratests">
-<span class="sig-name descname"><span class="pre">rsratests</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.rsratests" title="Permalink to this definition">¶</a></dt>
-<dd><p>vector that collects all available sampling rates of ref. site time series</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setlocal">
+<span class="sig-name descname"><span class="pre">setlocal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setlocal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify local site. This is a shortcut to settings of <code class="docutils literal notranslate"><span class="pre">obj.setset(.)</span></code>,
+which refer to the local site settings only.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setlocal</span><span class="p">(</span><span class="s1">'Site'</span><span class="p">,</span><span class="s1">'0000B'</span><span class="p">,</span><span class="s1">'Tag'</span><span class="p">,</span><span class="s1">'adc'</span><span class="p">,</span><span class="s1">'Samplingrate'</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setlocal</span><span class="p">(</span><span class="s1">'Site'</span><span class="p">,</span><span class="s1">'none'</span><span class="p">);</span>
+</pre></div>
+</div>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.sitenames">
-<span class="sig-name descname"><span class="pre">sitenames</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.sitenames" title="Permalink to this definition">¶</a></dt>
-<dd><p>cell array of sites in the order as passed for import.</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setreference">
+<span class="sig-name descname"><span class="pre">setreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setreference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify reference site. This is a shortcut to settings of <code class="docutils literal notranslate"><span class="pre">obj.sp.setset(.)</span></code>,
+which refer to the reference site(s) settings only.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">sp</span><span class="o">.</span><span class="n">setreference</span><span class="p">(</span><span class="s1">'Site'</span><span class="p">,</span><span class="s1">'0000B'</span><span class="p">,</span><span class="s1">'Tag'</span><span class="p">,</span><span class="s1">'adc'</span><span class="p">,</span><span class="s1">'Samplingrate'</span><span class="p">,</span><span class="mi">500</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">sp</span><span class="o">.</span><span class="n">setreference</span><span class="p">(</span><span class="s1">'Site'</span><span class="p">,</span><span class="s1">'none'</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>To specify multiple reference sites, pass a cell array of
+sitenames to the <code class="docutils literal notranslate"><span class="pre">'Site'</span></code> property, e.g. <code class="docutils literal notranslate"><span class="pre">{'0000B','0050B',..}</span></code></p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.sp">
-<span class="sig-name descname"><span class="pre">sp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.sp" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">EMSP</span></code> spectra object, providing access to spectra for imported sites</p>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setset">
+<span class="sig-name descname"><span class="pre">setset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set global settings and store in <code class="docutils literal notranslate"><span class="pre">obj.ts.emset</span></code> (which is the
+same as <code class="docutils literal notranslate"><span class="pre">obj.sp.emset</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.tf.emset</span></code>), an
+<a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a> object.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs that are valid <a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>
+properties and values. If any of values is <code class="docutils literal notranslate"><span class="pre">none</span></code>, all time series held
+in memory are cleared by calling the methods
+<code class="docutils literal notranslate"><span class="pre">obj.clearlts</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.clearbts</span></code>.</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'LocalSite'</span><span class="p">,</span><span class="s1">'0000B'</span><span class="p">,</span><span class="s1">'LocalTag'</span><span class="p">,</span><span class="s1">'adc'</span><span class="p">,</span><span class="s1">'LocalSamplingrate'</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="o">...</span>
+    <span class="s1">'BaseSite'</span><span class="p">,</span><span class="s1">'0050B'</span><span class="p">,</span><span class="s1">'BaseTag'</span><span class="p">,</span><span class="s1">'adc'</span><span class="p">,</span><span class="s1">'BaseSamplingrate'</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="o">...</span>
+    <span class="s1">'Channel'</span><span class="p">,{</span><span class="s1">'Ex'</span><span class="p">,</span><span class="s1">'By'</span><span class="p">},</span><span class="s1">'Time'</span><span class="p">,[]);</span>
+</pre></div>
+</div>
+<p>For a full list of parameters, see <a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a></p>
+</dd></dl>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setspectra">
+<span class="sig-name descname"><span class="pre">setspectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setspectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set values for the quick-look spectral estimation scheme.
+All Parameters are passed to <code class="docutils literal notranslate"><span class="pre">EMTSpectra</span></code> and stored in
+obj.emspec.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs that are valid <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a>
+properties and values.</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">ts</span><span class="o">.</span><span class="n">setspectra</span><span class="p">(</span><span class="s1">'WindowLength'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">14</span><span class="p">,</span><span class="s1">'Overlap'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">12</span><span class="p">,</span><span class="s1">'Taper'</span><span class="p">,</span><span class="s1">'Hanning'</span><span class="p">,</span><span class="s1">'Prewhitening'</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span>
+    <span class="s1">'Stage'</span><span class="p">,{</span><span class="s1">'file'</span><span class="p">,</span><span class="s1">'filtered'</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>For a full list of parameters, see <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a></p>
+</dd></dl>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.setspplot">
+<span class="sig-name descname"><span class="pre">setspplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.setspplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set parameters for plotting spectra.
+All Parameters are passed to <code class="docutils literal notranslate"><span class="pre">EMFPlot</span></code> and stored in
+obj.sp.emplot</p>
+<p><em>Input argument(s):</em> <code class="docutils literal notranslate"><span class="pre">varargin</span></code>, comma-separated list of
+property-value pairs</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">sp</span><span class="o">.</span><span class="n">setplot</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Valid property-value pairs are settings to <code class="docutils literal notranslate"><span class="pre">EMFPlot</span></code></p>
+</dd></dl>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.settfplot">
+<span class="sig-name descname"><span class="pre">settfplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.settfplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set parameters for plotting transfer functions.
+All Parameters are passed to <code class="docutils literal notranslate"><span class="pre">EMTFPlot</span></code> and stored in
+obj.tf.emplot</p>
+<p><em>Input argument(s):</em> <code class="docutils literal notranslate"><span class="pre">varargin</span></code>, comma-separated list of
+property-value pairs</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">tf</span><span class="o">.</span><span class="n">setplot</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Valid property-value pairs are settings to <code class="docutils literal notranslate"><span class="pre">EMTFPlot</span></code></p>
+</dd></dl>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@MT.MT.settsplot">
+<span class="sig-name descname"><span class="pre">settsplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.settsplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set parameters for plotting time series.
+All Parameters are passed to <code class="docutils literal notranslate"><span class="pre">EMTPlot</span></code> and stored in
+obj.ts.emplot</p>
+<p><em>Input argument(s):</em> <code class="docutils literal notranslate"><span class="pre">varargin</span></code>, comma-separated list of
+property-value pairs</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">ts</span><span class="o">.</span><span class="n">setplot</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Valid property-value pairs are settings to <code class="docutils literal notranslate"><span class="pre">EMTPlot</span></code></p>
 </dd></dl>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@MT.MT.spectra">
 <span class="sig-name descname"><span class="pre">spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@MT.MT.spectra" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute spectra</p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.tf">
-<span class="sig-name descname"><span class="pre">tf</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.tf" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">EMTF</span></code> transfer functions object</p>
 </dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@MT.MT.ts">
-<span class="sig-name descname"><span class="pre">ts</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@MT.MT.ts" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">EMTS</span></code> time series object, providing access to time series for imported sites</p>
-</dd></dl>
-</dd></dl>
-</section>
-<section id="mtsettings">
+</div>
+<div class="section" id="mtsettings">
 <span id="id2"></span><h2>MTSettings<a class="headerlink" href="#mtsettings" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@MTsettings"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@MTsettings.MTSettings">
@@ -372,6 +489,8 @@ names</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="s">'ImportTimeSeries'</span><span class="p">,</span><span class="nb">true</span><span class="w"></span>
 <span class="w">    </span><span class="n">Set</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="nb">import</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">series</span><span class="w"></span>
 <span class="s">'ImportSpectra'</span><span class="p">,</span><span class="nb">true</span><span class="w"></span>
+<span class="w">    </span><span class="n">Set</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="nb">import</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">spectra</span><span class="w"></span>
+<span class="s">'ImportTransferFunctions'</span><span class="p">,</span><span class="nb">true</span><span class="w"></span>
 <span class="w">    </span><span class="n">Set</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="nb">false</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="nb">import</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">spectra</span><span class="w"></span>
 <span class="s">'UseSamplingRate'</span><span class="p">,</span><span class="s">'all'</span><span class="w"></span>
 <span class="w">    </span><span class="s">'all'</span><span class="p">,</span><span class="w"> </span><span class="n">apply</span><span class="w"> </span><span class="n">processing</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="nb">all</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="n">sampling</span><span class="w"> </span><span class="n">rates</span><span class="p">;</span><span class="w"></span>
@@ -408,8 +527,8 @@ as follows:</p>
 </div>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emts">
+</div>
+<div class="section" id="emts">
 <span id="id3"></span><h2>EMTS<a class="headerlink" href="#emts" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMTS"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMTS.EMTS">
@@ -459,7 +578,7 @@ more tags can be specfied.</p>
 </pre></div>
 </div>
 <p>We stick to the former syntax in this summary; the latter syntax is
-described below.</p>
+used in the tutorial below.</p>
 <p><strong>Initialization:</strong></p>
 <p>To initialize an <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> object, set the project name and a reference time.
 The project folder stores project data in an <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> archive structure. The reference time
@@ -642,6 +761,47 @@ also which of the stages is splotted first. Valid values are <code class="docuti
 raw data, and <code class="docutils literal notranslate"><span class="pre">Filtered</span></code> to plot filtered data.</p>
 <p><em>See also:</em> <a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a>, <a class="reference internal" href="#emtplot"><span class="std std-ref">EMTPlot</span></a>,</p>
 <p><strong>Plotting Quick-look spectra:</strong></p>
+<p>Another way to look at the data or portions of it is to
+compute and display spectra. The <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> class provides a “quick”
+option to compute the averaged power spectral density (PSD) by using
+the <code class="docutils literal notranslate"><span class="pre">quicklookspectra</span></code> method. It works very much like the
+<code class="docutils literal notranslate"><span class="pre">plottimeseries()</span></code> method, but accepts in addition parameters to
+determine the computation of spectra, such as windowlength, overlap and taper. Details
+are described in <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a>. To compute spectra, use</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">EMTS</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s">'QuickLookSpectra'</span><span class="p">,</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,..);</span><span class="w"></span>
+<span class="n">EMTS</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s">'QuickLookSpectra'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>and to plot the PSD, use</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">EMTS</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s">'PlotQuickLookSpectra'</span><span class="p">,</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,..);</span><span class="w"></span>
+<span class="n">EMTS</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s">'PlotQuickLookSpectra'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Accepted property-value pairs set the properties of
+<a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>,
+<a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a> and <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a>. The <code class="docutils literal notranslate"><span class="pre">'Plot*'</span></code> option also accepts property-value pairs of <a class="reference internal" href="#emtplot"><span class="std std-ref">EMTPlot</span></a>.
+Instead of passing property-value pairs directly, properties can also be set using the <code class="docutils literal notranslate"><span class="pre">obj.setset(.)</span></code>,
+<code class="docutils literal notranslate"><span class="pre">obj.setfilter(.)</span></code>, <code class="docutils literal notranslate"><span class="pre">obj.setspectra(.)</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.setplot(.)</span></code>
+methods, and then invoking the method without parameters.</p>
+<p><em>Example:</em></p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">EMTS</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="s">'PlotQuickLookSpectra'</span><span class="p">,</span><span class="k">...</span><span class="w"></span>
+<span class="w">    </span><span class="s">'LocalSite'</span><span class="p">,</span><span class="s">'ESL-B02'</span><span class="p">,</span><span class="s">'LocalSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'LocalTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="w"> </span><span class="k">...</span><span class="c"> % Local site</span><span class="w"></span>
+<span class="w">    </span><span class="s">'BaseSite'</span><span class="p">,</span><span class="s">'ESL-B01'</span><span class="p">,</span><span class="s">'BaseSamplingRate'</span><span class="p">,</span><span class="mi">256</span><span class="p">,</span><span class="s">'BaseTag'</span><span class="p">,</span><span class="s">'adc'</span><span class="p">,</span><span class="k">...</span><span class="c">     % Base site</span><span class="w"></span>
+<span class="w">    </span><span class="s">'Channels'</span><span class="p">,{</span><span class="s">'Ex'</span><span class="w"> </span><span class="s">'Ey'</span><span class="w"> </span><span class="s">'Bx'</span><span class="w"> </span><span class="s">'By'</span><span class="w"> </span><span class="s">'Bz'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span><span class="c">                          % Channels</span><span class="w"></span>
+<span class="w">    </span><span class="s">'Time'</span><span class="p">,[</span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">08</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">06</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">)],</span><span class="w"> </span><span class="k">...</span><span class="c"> % Time window</span><span class="w"></span>
+<span class="w">    </span><span class="s">'DecimationFactor'</span><span class="p">,[</span><span class="mi">8</span><span class="w"> </span><span class="mi">8</span><span class="p">],</span><span class="k">...</span><span class="c">                                        % Filter options</span><span class="w"></span>
+<span class="w">    </span><span class="s">'Stage'</span><span class="p">,{</span><span class="s">'Filtered'</span><span class="p">,</span><span class="s">'File'</span><span class="p">},</span><span class="w"> </span><span class="k">...</span><span class="c">                        % Compute and plot both stages</span><span class="w"></span>
+<span class="w">    </span><span class="s">'Windowlength'</span><span class="p">,</span><span class="mi">2</span>^<span class="mi">12</span><span class="p">,</span><span class="s">'Overlap'</span><span class="p">,</span><span class="mi">2</span>^<span class="mi">10</span><span class="p">,</span><span class="s">'Taper'</span><span class="p">,</span><span class="s">'Hanning'</span><span class="p">,</span><span class="k">...</span><span class="c">            % FFT options</span><span class="w"></span>
+<span class="w">    </span><span class="s">'Scaling'</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span><span class="w">                                            </span><span class="c">% Plot options</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This produces the following figure:</p>
+<a class="reference internal image-reference" href="../../_images/sp_ESL.png"><img alt="alternate text" class="align-center" src="../../_images/sp_ESL.png" style="width: 800px;"/></a>
+<p><em>PSD example from sites ``ESL-B01 and`` ``ESL-B01``,
+recorded at 256 Hz and decimated by a factor of 64 in total. The data show some noise spikes related to
+the power network some nice and the railway network, as well as some low-frequency harmonic signals (presumably
+pipeline)</em></p>
+<p><em>See also:</em> <a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a>, <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a>, <a class="reference internal" href="#emtplot"><span class="std std-ref">EMTPlot</span></a></p>
 <p><strong>Properties and Methods:</strong></p>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.clear">
@@ -653,28 +813,6 @@ names</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">clear</span><span class="p">(</span><span class="s1">'site01'</span><span class="p">,</span><span class="s1">'site02'</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
 </pre></div>
 </div>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.clearbts">
-<span class="sig-name descname"><span class="pre">clearbts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.clearbts" title="Permalink to this definition">¶</a></dt>
-<dd><p>clear data from base sites</p>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.clearlts">
-<span class="sig-name descname"><span class="pre">clearlts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.clearlts" title="Permalink to this definition">¶</a></dt>
-<dd><p>clear data from local site</p>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.computespectra">
-<span class="sig-name descname"><span class="pre">computespectra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.computespectra" title="Permalink to this definition">¶</a></dt>
-<dd><p>compute Fourier spectra local site &lt;lsname&gt;, sampling rate &lt;lsrate&gt;,
-local tag &lt;ltag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;;
-applies EMTFilter if spectra are requested for filtered data</p>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.emts_delete">
-<span class="sig-name descname"><span class="pre">emts_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sites</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.emts_delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>clear sites from project</p>
 </dd></dl>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.filterdata">
@@ -697,12 +835,6 @@ property-value pairs.</p>
 </div>
 </dd></dl>
 <dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.filterts">
-<span class="sig-name descname"><span class="pre">filterts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.filterts" title="Permalink to this definition">¶</a></dt>
-<dd><p>filter data for given local site &lt;lsname&gt;, sampling rate &lt;lsrate&gt;,
-local tag &lt;ltag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;</p>
-</dd></dl>
-<dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.import">
 <span class="sig-name descname"><span class="pre">import</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.import" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read header information of all sites listed and store them in <code class="docutils literal notranslate"><span class="pre">obj.site</span></code>, an array of <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> objects.</p>
@@ -712,6 +844,34 @@ names</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">import</span><span class="p">(</span><span class="s1">'site01'</span><span class="p">,</span><span class="s1">'site02'</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
 </pre></div>
 </div>
+</dd></dl>
+<dl class="mat method">
+<dt class="sig sig-object mat" id="@EMTS.EMTS.plotquicklookspectra">
+<span class="sig-name descname"><span class="pre">plotquicklookspectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.plotquicklookspectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot averaged power spectral density for current local and basesite(s). Both the raw data as they come
+from file as well the filtered data can be plotted.
+All Parameters, if any, are passed to <code class="docutils literal notranslate"><span class="pre">obj.setset</span></code>, <code class="docutils literal notranslate"><span class="pre">obj.setfilter</span></code>, <code class="docutils literal notranslate"><span class="pre">obj.setspectra</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.setplot</span></code>
+before plotting the data. if the time series have been not been read before, read is triggered.
+If the time series have not been filtered before, a filter is
+applied if set.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs that are valid properties of
+<a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a>, <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a> and <a class="reference internal" href="#emtplot"><span class="std std-ref">EMTPlot</span></a>,</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ob</span><span class="o">.</span><span class="n">plotquicklookspectra</span><span class="p">(</span><span class="s1">'Windowlength'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">12</span><span class="p">,</span><span class="s1">'Overlap'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">10</span><span class="p">,</span><span class="s1">'Taper'</span><span class="p">,</span><span class="s1">'Hanning'</span><span class="p">,</span><span class="o">...</span>
+    <span class="s1">'Stage'</span><span class="p">,{</span><span class="s1">'Filtered'</span><span class="p">,</span><span class="s1">'File'</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>For a list of Valid property-value pairs (including examples/defaults), see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setset</span><span class="p">(</span><span class="n">varargin</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setfilter</span><span class="p">(</span><span class="n">varargin</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setspectra</span><span class="p">(</span><span class="n">varargin</span><span class="p">);</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setplot</span><span class="p">(</span><span class="n">varargin</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>See also:
+<a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>,:ref:<cite>emsettings</cite>,:ref:<cite>emtfilter</cite>,:ref:<cite>emtplot</cite>,
+<a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a></p>
 </dd></dl>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.plotruntimes">
@@ -784,23 +944,20 @@ property-value pairs that are valid properties of
 <a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>,:ref:<cite>emsettings</cite>,:ref:<cite>emtfilter</cite>,:ref:<cite>emtplot</cite></p>
 </dd></dl>
 <dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.plotts">
-<span class="sig-name descname"><span class="pre">plotts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.plotts" title="Permalink to this definition">¶</a></dt>
-<dd><p>—
-plot for given local site &lt;lsname&gt;, sampling rate &lt;lsrate&gt;,
-local tag &lt;ltag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;</p>
-</dd></dl>
-<dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.quicklookspectra">
 <span class="sig-name descname"><span class="pre">quicklookspectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.quicklookspectra" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write time series for current local site to <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> format.
-All Parameters, if any, are passed to <code class="docutils literal notranslate"><span class="pre">obj.setset</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.setfilter</span></code> before reading
-and writing data. If a filter is set, it is applied. To
-remove any filter settings, use ??</p>
-<p><em>Input argument(s):</em> <code class="docutils literal notranslate"><span class="pre">varargin</span></code>, comma-separated list of
-property-value pairs.</p>
+<dd><p>Compute soectra for current local and basesite(s) and store them in <code class="docutils literal notranslate"><span class="pre">obj.lsite</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.bsite</span></code>. Both the raw data as they come
+from file as well the filtered data can be plotted.
+All Parameters, if any, are passed to <code class="docutils literal notranslate"><span class="pre">obj.setset</span></code>, <code class="docutils literal notranslate"><span class="pre">obj.setfilter</span></code> and <code class="docutils literal notranslate"><span class="pre">obj.setspectra</span></code>
+before computing the spectra. if the time series have been not been read before, read is triggered.
+If the time series have not been filtered before, a filter is
+applied if set.</p>
+<p><em>Input argument(s):</em> comma-separated list of
+property-value pairs that are valid properties of
+<a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="#emtfilter"><span class="std std-ref">EMTFilter</span></a> and <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a></p>
 <p><em>Example:</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">quicklookspectra</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ob</span><span class="o">.</span><span class="n">quicklookspectra</span><span class="p">(</span><span class="s1">'Windowlength'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">12</span><span class="p">,</span><span class="s1">'Overlap'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">10</span><span class="p">,</span><span class="s1">'Taper'</span><span class="p">,</span><span class="s1">'Hanning'</span><span class="p">,</span><span class="o">...</span>
+    <span class="s1">'Stage'</span><span class="p">,{</span><span class="s1">'Filtered'</span><span class="p">,</span><span class="s1">'File'</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>For a list of Valid property-value pairs (including examples/defaults), see:</p>
@@ -809,12 +966,8 @@ property-value pairs.</p>
 <span class="n">obj</span><span class="o">.</span><span class="n">setspectra</span><span class="p">(</span><span class="n">varargin</span><span class="p">);</span>
 </pre></div>
 </div>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.readbts">
-<span class="sig-name descname"><span class="pre">readbts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.readbts" title="Permalink to this definition">¶</a></dt>
-<dd><p>read data for given base sites &lt;bsname&gt;, sampling rates &lt;bsrate&gt;,
-base tag &lt;btag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;</p>
+<p>See also:
+<a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a>,:ref:<cite>emsettings</cite>,:ref:<cite>emtfilter</cite>, <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a></p>
 </dd></dl>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.readdata">
@@ -837,12 +990,6 @@ property-value pairs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ob</span><span class="o">.</span><span class="n">setset</span><span class="p">(</span><span class="n">varargin</span><span class="p">)</span>
 </pre></div>
 </div>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.readlts">
-<span class="sig-name descname"><span class="pre">readlts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.readlts" title="Permalink to this definition">¶</a></dt>
-<dd><p>read data for given local site &lt;lsname&gt;, sampling rate &lt;lsrate&gt;,
-local tag &lt;ltag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;</p>
 </dd></dl>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.setbase">
@@ -918,7 +1065,7 @@ obj.emplot</p>
 <p><em>Input argument(s):</em> <code class="docutils literal notranslate"><span class="pre">varargin</span></code>, comma-separated list of
 property-value pairs</p>
 <p><em>Example:</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setplot</span><span class="p">(</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Valid property-value pairs are settings to <code class="docutils literal notranslate"><span class="pre">EMTPlot</span></code></p>
@@ -951,7 +1098,7 @@ obj.emspec.</p>
 property-value pairs that are valid <a class="reference internal" href="#emtspectra"><span class="std std-ref">EMTSpectra</span></a>
 properties and values.</p>
 <p><em>Example:</em></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">'WindowLength'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">14</span><span class="p">,</span><span class="s1">'Overlap'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">12</span><span class="p">,</span><span class="s1">'Taper'</span><span class="p">,</span><span class="s1">'Hanning'</span><span class="p">,</span><span class="s1">'Prewhitening'</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setspectra</span><span class="p">(</span><span class="s1">'WindowLength'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">14</span><span class="p">,</span><span class="s1">'Overlap'</span><span class="p">,</span><span class="mi">2</span><span class="o">^</span><span class="mi">12</span><span class="p">,</span><span class="s1">'Taper'</span><span class="p">,</span><span class="s1">'Hanning'</span><span class="p">,</span><span class="s1">'Prewhitening'</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">...</span>
     <span class="s1">'Stage'</span><span class="p">,{</span><span class="s1">'file'</span><span class="p">,</span><span class="s1">'filtered'</span><span class="p">});</span>
 </pre></div>
 </div>
@@ -977,20 +1124,6 @@ property-value pairs.</p>
 </div>
 </dd></dl>
 <dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.writelts">
-<span class="sig-name descname"><span class="pre">writelts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.writelts" title="Permalink to this definition">¶</a></dt>
-<dd><p>write data for given local site &lt;lsname&gt;, sampling rate &lt;lsrate&gt;,
-local tag &lt;ltag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;
-NOTE: EMTFilter is applied if set!</p>
-</dd></dl>
-<dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTS.EMTS.writeltsspec">
-<span class="sig-name descname"><span class="pre">writeltsspec</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.writeltsspec" title="Permalink to this definition">¶</a></dt>
-<dd><p>write spectra for given local site &lt;lsname&gt;, sampling rate &lt;lsrate&gt;,
-local tag &lt;ltag&gt;, channels &lt;usech&gt; und time window &lt;usetime&gt;
-NOTE: EMTFilter is applied before spectra computation if set!</p>
-</dd></dl>
-<dl class="mat method">
 <dt class="sig sig-object mat" id="@EMTS.EMTS.writespectra">
 <span class="sig-name descname"><span class="pre">writespectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTS.EMTS.writespectra" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write cascaded spectra for current local site to <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> format.
@@ -1012,8 +1145,8 @@ property-value pairs.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emsp">
+</div>
+<div class="section" id="emsp">
 <span id="id4"></span><h2>EMSP<a class="headerlink" href="#emsp" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMSP"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMSP.EMSP">
@@ -1308,7 +1441,7 @@ property-value pairs</p>
 <dl class="mat method">
 <dt class="sig sig-object mat" id="@EMSP.EMSP.setreference">
 <span class="sig-name descname"><span class="pre">setreference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMSP.EMSP.setreference" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify refrence site. This is a shortcut to settings of <code class="docutils literal notranslate"><span class="pre">obj.setset(.)</span></code>,
+<dd><p>Specify reference site. This is a shortcut to settings of <code class="docutils literal notranslate"><span class="pre">obj.setset(.)</span></code>,
 which refer to the reference site(s) settings only.</p>
 <p><em>Input argument(s):</em> comma-separated list of
 property-value pairs</p>
@@ -1343,8 +1476,8 @@ in memory are cleared by calling the methods
 <span class="sig-name descname"><span class="pre">writetf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@EMSP.EMSP.writetf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
-</section>
-<section id="emtf">
+</div>
+<div class="section" id="emtf">
 <span id="id5"></span><h2>EMTF<a class="headerlink" href="#emtf" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMTF"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMTF.EMTF">
@@ -1586,8 +1719,8 @@ properties and values.</p>
 <p>For a full list of parameters, see <a class="reference internal" href="#emsettings"><span class="std std-ref">EMSettings</span></a></p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emsettings">
+</div>
+<div class="section" id="emsettings">
 <span id="id6"></span><h2>EMSettings<a class="headerlink" href="#emsettings" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMSettings"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMSettings.EMSettings">
@@ -1640,6 +1773,10 @@ properties and values.</p>
 <span class="s">'FcPath'</span><span class="p">,</span><span class="s">'./fc'</span><span class="w"></span>
 <span class="w">    </span><span class="nb">path</span><span class="w"> </span><span class="n">fragment</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">store</span><span class="w"> </span><span class="n">spectra</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="o">./</span><span class="n">fc</span><span class="w"> </span><span class="p">(</span><span class="n">CALL</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">IMPLEMENTED</span><span class="p">)</span><span class="w"></span>
 <span class="s">'TO BE COMPLETED'</span><span class="w"></span>
+<span class="s">'TFName'</span><span class="p">,{</span><span class="s">'0000B-4000Hz'</span><span class="w"> </span><span class="s">'0000B-500Hz'</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">select</span><span class="w"> </span><span class="n">transfer</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">based</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">theri</span><span class="w"> </span><span class="n">particular</span><span class="w"></span>
+<span class="w">    </span><span class="n">filename</span><span class="p">;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nb">empty</span><span class="p">,</span><span class="w"> </span><span class="n">tfs</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">selected</span><span class="w"> </span><span class="n">based</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">their</span><span class="w"></span>
+<span class="w">    </span><span class="n">particular</span><span class="w"> </span><span class="n">lsname</span><span class="p">,</span><span class="w"> </span><span class="n">lsrate</span><span class="p">,</span><span class="w"> </span><span class="n">ltag</span><span class="p">,</span><span class="w"> </span><span class="n">bsname</span><span class="w"> </span><span class="n">match</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>Methods:</strong></p>
@@ -1669,8 +1806,8 @@ set <code class="docutils literal notranslate"><span class="pre">obj.localhascha
 of data is required.</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emtdata">
+</div>
+<div class="section" id="emtdata">
 <span id="id7"></span><h2>EMTData<a class="headerlink" href="#emtdata" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMTData"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMTData.EMTData">
@@ -1766,46 +1903,87 @@ of data is required.</p>
 <dd><p>— Timing —</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emtfilter">
+</div>
+<div class="section" id="emtfilter">
 <span id="id8"></span><h2>EMTFilter<a class="headerlink" href="#emtfilter" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMTFilter"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMTFilter.EMTFilter">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">@EMTFilter.</span></span><span class="sig-name descname"><span class="pre">EMTFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTFilter.EMTFilter" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="mat attribute">
-<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.behave">
-<span class="sig-name descname"><span class="pre">behave</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'true'</span></em><a class="headerlink" href="#@EMTFilter.EMTFilter.behave" title="Permalink to this definition">¶</a></dt>
-<dd><p>logical variable, true if any of the settings is changed</p>
-</dd></dl>
+<dd><p><code class="docutils literal notranslate"><span class="pre">EMTFilter</span></code> is a class defintion that filters time series.
+<code class="docutils literal notranslate"><span class="pre">EMTFilter</span></code> accepts either <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> or <code class="docutils literal notranslate"><span class="pre">EMTData</span></code> objects.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EMTS</span></code>
+objects <code class="docutils literal notranslate"><span class="pre">ts</span></code> hold an <code class="docutils literal notranslate"><span class="pre">EMTFilter</span></code> object, <code class="docutils literal notranslate"><span class="pre">ts.emfilt</span></code>,  and (a number of) <code class="docutils literal notranslate"><span class="pre">EMTData</span></code>
+objects, <code class="docutils literal notranslate"><span class="pre">ts.lts</span></code>, <code class="docutils literal notranslate"><span class="pre">ts.bts</span></code>, and can set and store filter  settings an <code class="docutils literal notranslate"><span class="pre">ts.emfilt</span></code>,
+and apply the filter to <code class="docutils literal notranslate"><span class="pre">ts.lts</span></code> and <code class="docutils literal notranslate"><span class="pre">ts.bts</span></code>. Filtered data are stored in <code class="docutils literal notranslate"><span class="pre">ts.ltsfiltered</span></code>
+and <code class="docutils literal notranslate"><span class="pre">ts.btsfiltered</span></code>, both <code class="docutils literal notranslate"><span class="pre">EMTData</span></code> objects.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EMTData</span></code> objects hold time series, and a filter can be
+applied to these data, oevrwriting the existing, unfiltered data, but filter settings can not be stored.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ts</span><span class="o">.</span><span class="n">emfilt</span> <span class="o">=</span> <span class="n">EMTFilter</span><span class="p">;</span>
+<span class="n">ts</span><span class="o">.</span><span class="n">emfilt</span><span class="o">.</span><span class="n">setprops</span><span class="p">({</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">});</span>
+<span class="n">ts</span><span class="o">.</span><span class="n">emfilt</span><span class="o">.</span><span class="n">setprops</span><span class="p">({</span><span class="s1">'none'</span><span class="p">});</span>
+<span class="n">EMTFilter</span><span class="p">(</span><span class="n">ts</span><span class="p">);</span>
+<span class="n">EMTFilter</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="s1">'Set'</span><span class="p">,</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+<span class="n">EMTFilter</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="s1">'Set'</span><span class="p">,</span><span class="s1">'none'</span><span class="p">);</span>
+<span class="n">EMTFilter</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="s1">'Filter'</span><span class="p">);</span>
+<span class="n">EMTFilter</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="s1">'Filter'</span><span class="p">,</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+<span class="n">EMTFilter</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">lts</span><span class="p">,</span><span class="s1">'Filter'</span><span class="p">,</span><span class="n">prop1</span><span class="p">,</span><span class="n">val1</span><span class="p">,</span><span class="n">prop2</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Property-value pairs include (with example values):</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="s">'DecimationFactor'</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">8</span><span class="w"> </span><span class="mi">8</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="n">Decimation</span><span class="w"> </span><span class="nb">factor</span><span class="p">(</span><span class="n">s</span><span class="p">).</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">recommended</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">use</span><span class="w"></span>
+<span class="w">    </span><span class="n">decimation</span><span class="w"> </span><span class="n">factors</span><span class="w"> </span><span class="n">higher</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">DECIMATE</span><span class="p">).</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">higher</span><span class="w"> </span><span class="n">decimation</span><span class="w"></span>
+<span class="w">    </span><span class="n">factors</span><span class="p">,</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">consecutive</span><span class="w"> </span><span class="n">decimation</span><span class="w"> </span><span class="n">factors</span><span class="p">.</span><span class="w"> </span><span class="n">Be</span><span class="w"> </span><span class="n">careful</span><span class="w"></span>
+<span class="w">    </span><span class="n">to</span><span class="w"> </span><span class="nb">choose</span><span class="w"> </span><span class="n">decimation</span><span class="w"> </span><span class="n">factors</span><span class="p">,</span><span class="w"> </span><span class="nb">which</span><span class="w"> </span><span class="n">match</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="n">sampling</span><span class="w"> </span><span class="n">rate</span><span class="w"></span>
+<span class="w">    </span><span class="n">in</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">fractional</span><span class="w"> </span><span class="n">sampling</span><span class="w"> </span><span class="n">rates</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">decimated</span><span class="w"> </span><span class="nb">time</span><span class="w"></span>
+<span class="w">    </span><span class="n">series</span><span class="p">.</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">original</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">series</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">sampled</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">rate</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">2</span>^<span class="n">N</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">decimation</span><span class="w"> </span><span class="n">factors</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="mi">2</span>^<span class="n">n</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">appropriate</span><span class="p">.</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="nb">warning</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">issued</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">is</span><span class="w"></span>
+<span class="w">    </span><span class="n">violated</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">NOTE</span><span class="p">:</span><span class="w"> </span><span class="n">Decimation</span><span class="w"> </span><span class="n">uses</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">before</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">after</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">window</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">existing</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">filtering</span><span class="w"> </span><span class="n">artifacts</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="w"></span>
+<span class="w">    </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">filtered</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">cuts</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">portion</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">series</span><span class="w"> </span><span class="n">as</span><span class="w"></span>
+<span class="w">    </span><span class="n">requested</span><span class="p">.</span><span class="w"> </span><span class="n">Also</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">omit</span><span class="w"> </span><span class="n">samples</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">series</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">series</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="nb">start</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nb">full</span><span class="w"> </span><span class="nb">second</span><span class="p">,</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">before</span><span class="w"></span>
+<span class="w">    </span><span class="n">the</span><span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="n">window</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">existing</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="nb">fill</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">previous</span><span class="w"> </span><span class="nb">second</span><span class="p">.</span><span class="w"></span>
+<span class="s">'ResamplingFrequency'</span><span class="p">,</span><span class="s">'512'</span><span class="w"></span>
+<span class="w">    </span><span class="n">Resampling</span><span class="w"> </span><span class="n">frequency</span><span class="w"> </span><span class="p">[</span><span class="n">Hz</span><span class="p">].</span><span class="w"></span>
+<span class="s">'Delay'</span><span class="p">,</span><span class="mi">15</span><span class="w"></span>
+<span class="w">    </span><span class="n">Period</span><span class="w"> </span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">delay</span><span class="w"> </span><span class="nb">filter</span><span class="p">.</span><span class="w">                </span><span class="n">NOT</span><span class="w"> </span><span class="n">IMPLEMENTED</span><span class="p">.</span><span class="w"></span>
+<span class="s">'Notch'</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
+<span class="w">    </span><span class="n">Frequency</span><span class="w"> </span><span class="p">[</span><span class="n">Hz</span><span class="p">]</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">notch</span><span class="w"> </span><span class="nb">filter</span><span class="p">.</span><span class="w">            </span><span class="n">NOT</span><span class="w"> </span><span class="n">IMPLEMENTED</span><span class="p">.</span><span class="w"></span>
+<span class="s">'LP'</span><span class="p">,</span><span class="mi">10</span><span class="w"></span>
+<span class="w">    </span><span class="n">Cut</span><span class="o">-</span><span class="n">off</span><span class="w"> </span><span class="n">frequency</span><span class="w"> </span><span class="p">[</span><span class="n">Hz</span><span class="p">]</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">lowpass</span><span class="w"> </span><span class="nb">filter</span><span class="p">.</span><span class="w">     </span><span class="n">NOT</span><span class="w"> </span><span class="n">IMPLEMENTED</span><span class="p">.</span><span class="w"></span>
+<span class="s">'HP'</span><span class="p">,</span><span class="mi">1</span><span class="w"></span>
+<span class="w">    </span><span class="n">Cut</span><span class="o">-</span><span class="n">off</span><span class="w"> </span><span class="n">frequency</span><span class="w"> </span><span class="p">[</span><span class="n">Hz</span><span class="p">]</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">highpass</span><span class="w"> </span><span class="nb">filter</span><span class="p">.</span><span class="w">    </span><span class="n">NOT</span><span class="w"> </span><span class="n">IMPLEMENTED</span><span class="p">.</span><span class="w"></span>
+<span class="s">'BP'</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">100</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="n">Cut</span><span class="o">-</span><span class="n">off</span><span class="w"> </span><span class="n">frequencies</span><span class="w"> </span><span class="p">[</span><span class="n">Hz</span><span class="p">]</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">bandpass</span><span class="w"> </span><span class="nb">filter</span><span class="p">.</span><span class="w">    </span><span class="n">NOT</span><span class="w"> </span><span class="n">IMPLEMENTED</span><span class="p">.</span><span class="w"></span>
+<span class="s">'FilterOrder'</span><span class="p">,{</span><span class="s">'Resampling'</span><span class="p">,</span><span class="s">'Decimation'</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="nb">string</span><span class="w"> </span><span class="n">specifying</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nb">filter</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">applied</span><span class="p">,</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nb">cell</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="nb">strings</span><span class="w"></span>
+<span class="w">    </span><span class="n">specifying</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">filters</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">application</span><span class="p">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">VALUE</span><span class="w"> </span><span class="k">for</span><span class="w"></span>
+<span class="w">    </span><span class="s">'FilterOrder'</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">provided</span><span class="p">,</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="n">filters</span><span class="w"> </span><span class="n">specifified</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">VALUE</span><span class="w"></span>
+<span class="w">    </span><span class="n">are</span><span class="w"> </span><span class="n">applied</span><span class="p">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="s">'FilterOrder'</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">filters</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">applied</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"></span>
+<span class="w">    </span><span class="n">order</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">occurence</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">property</span><span class="o">-</span><span class="n">value</span><span class="w"> </span><span class="n">list</span><span class="w"></span>
+</pre></div>
+</div>
 <dl class="mat method">
-<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.callfilter">
-<span class="sig-name descname"><span class="pre">callfilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ts</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTFilter.EMTFilter.callfilter" title="Permalink to this definition">¶</a></dt>
-<dd><p>if nothing to filter, then EMTFilter will just copy the
-data as they are into tsfiltered</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.delay">
-<span class="sig-name descname"><span class="pre">delay</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'0'</span></em><a class="headerlink" href="#@EMTFilter.EMTFilter.delay" title="Permalink to this definition">¶</a></dt>
-<dd><p>not yet supported</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.notch">
-<span class="sig-name descname"><span class="pre">notch</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'0'</span></em><a class="headerlink" href="#@EMTFilter.EMTFilter.notch" title="Permalink to this definition">¶</a></dt>
-<dd><p>not yet supported</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.order">
-<span class="sig-name descname"><span class="pre">order</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@EMTFilter.EMTFilter.order" title="Permalink to this definition">¶</a></dt>
-<dd><p>perform these operations in this order</p>
-</dd></dl>
-<dl class="mat attribute">
-<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.resampling">
-<span class="sig-name descname"><span class="pre">resampling</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'0'</span></em><a class="headerlink" href="#@EMTFilter.EMTFilter.resampling" title="Permalink to this definition">¶</a></dt>
-<dd><p>not yet supported</p>
+<dt class="sig sig-object mat" id="@EMTFilter.EMTFilter.setprops">
+<span class="sig-name descname"><span class="pre">setprops</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">options</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMTFilter.EMTFilter.setprops" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set properties of <code class="docutils literal notranslate"><span class="pre">obj</span></code>, an <code class="docutils literal notranslate"><span class="pre">EMTFiler</span></code> object.</p>
+<p><em>Input argument(s):</em> <code class="docutils literal notranslate"><span class="pre">options</span></code> cell array of properties and values</p>
+<p><em>Example:</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">setprops</span><span class="p">({</span><span class="s1">'DecimationFactor'</span><span class="p">,[</span><span class="mi">8</span> <span class="mi">8</span><span class="p">],</span><span class="s1">'ResamplingFrequency'</span><span class="p">,</span><span class="mi">512</span><span class="p">,});</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">setprops</span><span class="p">({</span><span class="s1">'none'</span><span class="p">});</span>
+</pre></div>
+</div>
+<p><em>Note:</em> the list of property-value pairs is passed as one
+cell array. This should be changed in future versions.
+Setting these propertie from outside of <code class="docutils literal notranslate"><span class="pre">EMTFilter</span></code> uses
+a list of property-value pairs in standard form.</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emtplot">
+</div>
+<div class="section" id="emtplot">
 <span id="id9"></span><h2>EMTPlot<a class="headerlink" href="#emtplot" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMTPlot"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMTPlot.EMTPlot">
@@ -1846,8 +2024,8 @@ data as they are into tsfiltered</p>
 </div>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emdecimate">
+</div>
+<div class="section" id="emdecimate">
 <span id="id10"></span><h2>EMDecimate<a class="headerlink" href="#emdecimate" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMDecimate"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMDecimate.EMDecimate">
@@ -1873,8 +2051,8 @@ data as they are into tsfiltered</p>
 <dd><p>frequency spacing for each decimation level</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="embandsetup">
+</div>
+<div class="section" id="embandsetup">
 <span id="id11"></span><h2>EMBandSetup<a class="headerlink" href="#embandsetup" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMBandSetup"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMBandSetup.EMBandSetup">
@@ -1952,8 +2130,8 @@ current spectra.</p>
 </div>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emtspectra">
+</div>
+<div class="section" id="emtspectra">
 <span id="id12"></span><h2>EMTSpectra<a class="headerlink" href="#emtspectra" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMTSpectra"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMTSpectra.EMTSpectra">
@@ -2037,8 +2215,8 @@ ts is here either an EMTS (not implemented) or an EMTData object</p>
 <dd><p>number of tapers</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emfdata">
+</div>
+<div class="section" id="emfdata">
 <span id="id13"></span><h2>EMFData<a class="headerlink" href="#emfdata" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMFData"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMFData.EMFData">
@@ -2143,15 +2321,15 @@ collected.</p>
 <span class="sig-name descname"><span class="pre">startofdata</span></span><em class="property"> <span class="pre">=</span> <span class="pre">None</span></em><a class="headerlink" href="#@EMFData.EMFData.startofdata" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 </dd></dl>
-</section>
-<section id="emestimate">
+</div>
+<div class="section" id="emestimate">
 <span id="id14"></span><h2>EMEstimate<a class="headerlink" href="#emestimate" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMEstimate"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMEstimate.EMEstimate">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">@EMEstimate.</span></span><span class="sig-name descname"><span class="pre">EMEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMEstimate.EMEstimate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-</section>
-<section id="emfplot">
+</div>
+<div class="section" id="emfplot">
 <span id="id15"></span><h2>EMFPlot<a class="headerlink" href="#emfplot" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMFPlot"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMFPlot.EMFPlot">
@@ -2187,8 +2365,8 @@ collected.</p>
 <dd><p>options for psd</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emtfplot">
+</div>
+<div class="section" id="emtfplot">
 <span id="id16"></span><h2>EMTFPlot<a class="headerlink" href="#emtfplot" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMFPlot"></span><dl class="mat class">
 <dt class="sig sig-object mat">
@@ -2224,8 +2402,8 @@ collected.</p>
 <dd><p>options for psd</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="recorder">
+</div>
+<div class="section" id="recorder">
 <span id="id17"></span><h2>Recorder<a class="headerlink" href="#recorder" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@Recorder"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@Recorder.Recorder">
@@ -2413,8 +2591,8 @@ provides access to various data formats.</p>
 <dd><p>[s1 s2],samples in this recorder run that correspond</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="timefrequency">
+</div>
+<div class="section" id="timefrequency">
 <span id="id18"></span><h2>TimeFrequency<a class="headerlink" href="#timefrequency" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@TimeFrequency"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@TimeFrequency.TimeFrequency">
@@ -2600,16 +2778,16 @@ provides access to various data formats.</p>
 <dd><p>this is a frequency or duration</p>
 </dd></dl>
 </dd></dl>
-</section>
-<section id="emsite">
+</div>
+<div class="section" id="emsite">
 <span id="id19"></span><h2>EMSite<a class="headerlink" href="#emsite" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMSite"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMSite.EMSite">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">@EMSite.</span></span><span class="sig-name descname"><span class="pre">EMSite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">varargin</span></em><span class="sig-paren">)</span><a class="headerlink" href="#@EMSite.EMSite" title="Permalink to this definition">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">EMSite</span></code> is a class definition to store transfer functions of a single purpose, e.g. MT data.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">EMSite</span></code> is a class definition to store transfer functions of a</p>
 </dd></dl>
-</section>
-<section id="emcalibrate">
+</div>
+<div class="section" id="emcalibrate">
 <span id="id20"></span><h2>EMCalibrate<a class="headerlink" href="#emcalibrate" title="Permalink to this headline">¶</a></h2>
 <span class="target" id="module-@EMCalibrate"></span><dl class="mat class">
 <dt class="sig sig-object mat" id="@EMCalibrate.EMCalibrate">
@@ -2620,8 +2798,8 @@ provides access to various data formats.</p>
 <dd><p>Read RSP &amp; RSPX potsdam cal data</p>
 </dd></dl>
 </dd></dl>
-</section>
-</section>
+</div>
+</div>
 
         </article>
       </div>
@@ -2644,10 +2822,11 @@ provides access to various data formats.</p>
 
         <div class="related-information">
               Copyright &#169; 2021, AGP Muenster |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+            <a>@Hossam Marzouk </a> 
+            <!-- Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
               and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+              <a class="muted-link" href="https://pradyunsg.me">@Hss</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. --> |
             <a class="muted-link" href="../../_sources/en/API_docs/API_docs.rst.txt"
                rel="nofollow">
               Show Source

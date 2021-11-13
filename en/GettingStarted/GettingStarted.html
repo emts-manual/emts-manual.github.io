@@ -2,10 +2,9 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Magnetotellurics" href="../Magnetotellurics/MT_Tutorial.html" /><link rel="prev" title="About" href="../Introduction/Introduction.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Magnetotellurics" href="../Magnetotellurics/MT_Tutorial.html" /><link rel="prev" title="About" href="../Introduction/Introduction.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.1.2, furo 2021.10.09"/>
         <title>Getting Started - Home</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
@@ -200,19 +199,19 @@
           </label>
         </div>
         <article role="main">
-          <section id="getting-started">
+          <div class="section" id="getting-started">
 <span id="gettingstarted"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <style>
 .red {color:red}
 .blue {color:blue}
 .special{color:#00FF00; background-color:black;font-weight:bold}
-</style><section id="download-and-installation">
+</style><div class="section" id="download-and-installation">
 <h2>Download and installation<a class="headerlink" href="#download-and-installation" title="Permalink to this headline">¶</a></h2>
 <p>to come</p>
-</section>
-<section id="preparation-of-data">
+</div>
+<div class="section" id="preparation-of-data">
 <h2>Preparation of data<a class="headerlink" href="#preparation-of-data" title="Permalink to this headline">¶</a></h2>
-<section id="folder-structure">
+<div class="section" id="folder-structure">
 <h3>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h3>
 <p>Data are to be organized in a particular folder structure of the type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/&lt;</span><span class="n">tag</span><span class="o">&gt;/&lt;</span><span class="n">recorder</span><span class="o">&gt;/&lt;</span><span class="n">run</span><span class="o">&gt;/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;</span>
@@ -248,8 +247,8 @@ we require calibration files for the magnetometers, for example. Put them (as th
 </pre></div>
 </div>
 <p>More details on the different data loggers and how to organize the data files are provided below and in the section <a class="reference internal" href="../Recorder/Recorder.html#recordingsystems"><span class="std std-ref">Recording systems and channels</span></a>.</p>
-</section>
-<section id="project-site-tag-run-and-more-what-is-what">
+</div>
+<div class="section" id="project-site-tag-run-and-more-what-is-what">
 <h3>Project, site, tag, run, and more: What is what?<a class="headerlink" href="#project-site-tag-run-and-more-what-is-what" title="Permalink to this headline">¶</a></h3>
 <p><strong>Project</strong></p>
 <p>A project contains all data related to a project. The project is simply a folder denoted as:</p>
@@ -299,9 +298,9 @@ Typical folder names holding a run are of type <code class="docutils literal not
 <p>to come</p>
 <p><strong>Digital elevation models</strong></p>
 <p>to come</p>
-</section>
-</section>
-<section id="initializing-a-project">
+</div>
+</div>
+<div class="section" id="initializing-a-project">
 <h2>Initializing a project<a class="headerlink" href="#initializing-a-project" title="Permalink to this headline">¶</a></h2>
 <p>Common to all data in one project is that they reside in the same project folder and that they refer to a common reference time.
 Although we use UTC-time as far as possible, a time for internal time referencing must also be specified. Normally, the
@@ -320,8 +319,8 @@ reference time is 2021-10-24 00-00-00
 </pre></div>
 </div>
 <p>The same type of initialization applies to other processing classes. See the respective tutorials.</p>
-</section>
-<section id="design-of-a-processing-script">
+</div>
+<div class="section" id="design-of-a-processing-script">
 <h2>Design of a processing script<a class="headerlink" href="#design-of-a-processing-script" title="Permalink to this headline">¶</a></h2>
 <p>Data access and processing is generally controlled through scripts. A script has typically the following sections:</p>
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clc</span><span class="p">;</span><span class="w"></span>
@@ -343,8 +342,8 @@ reference time is 2021-10-24 00-00-00
 to save this script in your project folder, or a subfolder for scripts, and possibly using a name
 that relates to the particular processing task. We choose <code class="docutils literal notranslate"><span class="pre">./MT.Sauerland.2021/scripts/proc_ESL.m</span></code>.</p>
 <p>The remainder of these tutorials is how to fill this script with content.</p>
-</section>
-<section id="some-nomenclature">
+</div>
+<div class="section" id="some-nomenclature">
 <h2>Some nomenclature<a class="headerlink" href="#some-nomenclature" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Local site, tag, sampling rate:</p>
@@ -373,8 +372,8 @@ that relates to the particular processing task. We choose <code class="docutils 
 </li>
 <li><p>Band setup</p></li>
 </ul>
-</section>
-<section id="software-from-external-parties">
+</div>
+<div class="section" id="software-from-external-parties">
 <h2>Software from external parties<a class="headerlink" href="#software-from-external-parties" title="Permalink to this headline">¶</a></h2>
 <p>Depending on the particular application, we make use of tools from third parties, or expect
 that the data have been prepared with  proprietary software from instrument manufacturers. The
@@ -393,8 +392,8 @@ and relies on the external class definition <code class="docutils literal notran
 <li><p>Geometrics Survey manager</p></li>
 <li><p>iMAR software iXCOM-CMD.</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
         </article>
       </div>
@@ -425,10 +424,11 @@ and relies on the external class definition <code class="docutils literal notran
 
         <div class="related-information">
               Copyright &#169; 2021, AGP Muenster |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+            <a>@Hossam Marzouk </a> 
+            <!-- Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
               and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+              <a class="muted-link" href="https://pradyunsg.me">@Hss</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. --> |
             <a class="muted-link" href="../../_sources/en/GettingStarted/GettingStarted.rst.txt"
                rel="nofollow">
               Show Source

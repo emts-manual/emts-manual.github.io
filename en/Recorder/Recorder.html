@@ -2,10 +2,9 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Calibration files" href="../Calibration/Calibration.html" /><link rel="prev" title="AFMAG" href="../AFMAG/AFMAG_Tutorial.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Calibration files" href="../Calibration/Calibration.html" /><link rel="prev" title="AFMAG" href="../AFMAG/AFMAG_Tutorial.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.1.2, furo 2021.10.09"/>
         <title>Recording systems and channels - Home</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
@@ -200,7 +199,7 @@
           </label>
         </div>
         <article role="main">
-          <section id="recording-systems-and-channels">
+          <div class="section" id="recording-systems-and-channels">
 <span id="recordingsystems"></span><h1>Recording systems and channels<a class="headerlink" href="#recording-systems-and-channels" title="Permalink to this headline">¶</a></h1>
 <style>
 .red {color:red}
@@ -216,7 +215,7 @@ the attitude of an airborne system).</p>
 <p>Here, we describe the supported <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> types and the <code class="docutils literal notranslate"><span class="pre">EMChannels</span></code>, which are recognized. Adding
 new recorders and channels programmatically should be straightforward.</p>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">Recorder</span></code>, <code class="docutils literal notranslate"><span class="pre">EMChannels</span></code>, <code class="docutils literal notranslate"><span class="pre">EMSystems</span></code></p>
-<section id="overview-of-recorders">
+<div class="section" id="overview-of-recorders">
 <h2>Overview of Recorders<a class="headerlink" href="#overview-of-recorders" title="Permalink to this headline">¶</a></h2>
 <p>Implemented <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> subclasses are <code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">EDE</span></code>, <code class="docutils literal notranslate"><span class="pre">Lemi</span></code>, <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code>, <code class="docutils literal notranslate"><span class="pre">GEM</span></code>,
 <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code>, <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> and <code class="docutils literal notranslate"><span class="pre">XSens</span></code>. It is expected that the time series data files for
@@ -344,8 +343,8 @@ converted data files:</p>
 </table></div>
 <p>If you are unhappy with these conventions (particularly the short names), or wish to add recorders,
 you can overwrite or change them in the <code class="docutils literal notranslate"><span class="pre">EMSystems</span></code> class definition.</p>
-</section>
-<section id="overview-of-channels">
+</div>
+<div class="section" id="overview-of-channels">
 <h2>Overview of Channels<a class="headerlink" href="#overview-of-channels" title="Permalink to this headline">¶</a></h2>
 <p>Channel names are defined in <code class="docutils literal notranslate"><span class="pre">EMChannels</span></code> and identify a particular channel. Short
 channel names are 2-letter abbreviations used in file names when exporting data to <code class="docutils literal notranslate"><span class="pre">*.ats</span></code>
@@ -655,11 +654,11 @@ provides an overview of these properties.</p>
 <dd><p>Compass is either a direct measurement (e.g. <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code> ) or constructed during import from the DCM estimate and a reference field (such as IGRF)</p>
 </dd>
 </dl>
-</section>
-<section id="adu">
+</div>
+<div class="section" id="adu">
 <h2>ADU<a class="headerlink" href="#adu" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">ATS</span></code></p>
-<section id="default-archive-structure">
+<div class="section" id="default-archive-structure">
 <h3>Default archive structure<a class="headerlink" href="#default-archive-structure" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">ADU</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">ats</span>
@@ -672,8 +671,8 @@ and converted into <code class="docutils literal notranslate"><span class="pre">
 </pre></div>
 </div>
 <p>To read such kind of data, the original search path must be overwritten accordingly.</p>
-</section>
-<section id="file-format">
+</div>
+<div class="section" id="file-format">
 <h3>File format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h3>
 <p>Binary data format, storing each channel in a separate <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> file, and complemented with
 an extensive <code class="docutils literal notranslate"><span class="pre">xml</span></code>-file, which stores metadata. A continuous data stream may be split up into multiple files.</p>
@@ -693,8 +692,8 @@ channel type. The data format is encoded in the <code class="docutils literal no
 </pre></div>
 </div>
 <p>See <code class="docutils literal notranslate"><span class="pre">ATS</span></code> class definition for details.</p>
-</section>
-<section id="channels-and-sensor-types">
+</div>
+<div class="section" id="channels-and-sensor-types">
 <h3>Channels and sensor types<a class="headerlink" href="#channels-and-sensor-types" title="Permalink to this headline">¶</a></h3>
 <p>Standard channel names are <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code> <code class="docutils literal notranslate"><span class="pre">Bx</span></code> <code class="docutils literal notranslate"><span class="pre">By</span></code> <code class="docutils literal notranslate"><span class="pre">Bz</span></code>. Channel
 names <code class="docutils literal notranslate"><span class="pre">H*</span></code> are converted to <code class="docutils literal notranslate"><span class="pre">B*</span></code> during data import. If the sensor is recognized
@@ -705,27 +704,27 @@ If the data are converted from other <code class="docutils literal notranslate">
 channel can be contained in the data file.</p>
 <p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">iselectrode</span></code> for electric channels and of types <code class="docutils literal notranslate"><span class="pre">iscoil</span></code> or
 <code class="docutils literal notranslate"><span class="pre">isfluxgate</span></code> for magnetic recorders, and of type <code class="docutils literal notranslate"><span class="pre">iscurrent</span></code> for current recorders, respectively.</p>
-</section>
-</section>
-<section id="ede">
+</div>
+</div>
+<div class="section" id="ede">
 <h2>EDE<a class="headerlink" href="#ede" title="Permalink to this headline">¶</a></h2>
 <p>EDE is a data logger developed by Bernd Bömer at the Institute of Geophysics, University of Münster.
 <span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">EDE</span></code>, <code class="docutils literal notranslate"><span class="pre">ETS</span></code></p>
-<section id="id5">
+<div class="section" id="id5">
 <h3>Default archive structure<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">EDE</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">ets</span>
 <span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">mts</span>
 </pre></div>
 </div>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>Channels and sensor types<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>Channels names of a telluric recorder are <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code>, and of a magnetic
 recorder, <code class="docutils literal notranslate"><span class="pre">Fx</span></code> <code class="docutils literal notranslate"><span class="pre">Fy</span></code> <code class="docutils literal notranslate"><span class="pre">Fz</span></code>. Sensors are of type <code class="docutils literal notranslate"><span class="pre">iselectrode</span></code> for
 electric channels and of type <code class="docutils literal notranslate"><span class="pre">isfluxgate</span></code> for magnetic recorders</p>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>File format<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Binary data format, storing either two telluric channel in a <code class="docutils literal notranslate"><span class="pre">*.ets</span></code> file, or three
 magnetic channels in a <code class="docutils literal notranslate"><span class="pre">*.mts</span></code> file, and complemented with a short header text file.
@@ -743,26 +742,26 @@ overwriting the original data file. Should this happen, then the site must be re
 <li><p>The date format of the header version looks like <code class="docutils literal notranslate"><span class="pre">26</span> <span class="pre">Jan</span> <span class="pre">2021</span></code>. Should it look different from that, e.g. <code class="docutils literal notranslate"><span class="pre">Jan</span> <span class="pre">26</span> <span class="pre">2021</span></code>, change it manually in the header file.</p></li>
 <li><p>The size of a single file may depends on the format version, but this information is not part of the header text file. Currently, we start a new file every for hours, and this is hardwired in the <code class="docutils literal notranslate"><span class="pre">ETS</span></code> class definition. Change there if required.</p></li>
 </ul>
-</section>
-</section>
-<section id="lemi-lem">
+</div>
+</div>
+<div class="section" id="lemi-lem">
 <h2>Lemi (LEM)<a class="headerlink" href="#lemi-lem" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">Lemi</span></code>, <code class="docutils literal notranslate"><span class="pre">B423</span></code></p>
-<section id="id8">
+<div class="section" id="id8">
 <h3>Default archive structure<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">B423</span>
 <span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423E</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">B423E</span>
 </pre></div>
 </div>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h3>Channels and sensor types<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>Channels names of a telluric recorder are <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code>, and of a magnetotelluric
 recorder, <code class="docutils literal notranslate"><span class="pre">Bx</span></code> <code class="docutils literal notranslate"><span class="pre">By</span></code> <code class="docutils literal notranslate"><span class="pre">Bz</span></code> <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code>. Sensors are of type <code class="docutils literal notranslate"><span class="pre">iselectrode</span></code>
 for electric channels and of type <code class="docutils literal notranslate"><span class="pre">iscoil</span></code> for magnetic recorders.</p>
-</section>
-<section id="id10">
+</div>
+<div class="section" id="id10">
 <h3>File format<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <p>Binary data format, storing either five magnetotelluric channels in one or multiple <code class="docutils literal notranslate"><span class="pre">*.B423</span></code> file(s)
 or two telluric channel in <code class="docutils literal notranslate"><span class="pre">*.B423E</span></code> file(s). The first 1024 bytes in a data file are
@@ -813,12 +812,12 @@ the raw data as</p>
 \[d_{h,e}[raw]=(d[\text{int32}]+\frac{a_{h,e}}{\text{LSB}_{h,e}})/g_{h,e}\]</div></div>
 <p><strong>B423E format</strong></p>
 <p><span class="red">not implemented</span></p>
-</section>
-</section>
-<section id="magarrow-mar">
+</div>
+</div>
+<div class="section" id="magarrow-mar">
 <h2>MagArrow (MAR)<a class="headerlink" href="#magarrow-mar" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code></p>
-<section id="id11">
+<div class="section" id="id11">
 <h3>Default archive structure<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">MagArrow</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">csv</span>
@@ -829,8 +828,8 @@ the raw data as</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id12">
+</div>
+<div class="section" id="id12">
 <h3>File format<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <p>Comma separated table format. The file looks similar to this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Counter</span><span class="p">,</span><span class="n">Date</span><span class="p">,</span><span class="n">Time</span><span class="p">,</span><span class="n">Latitude</span><span class="p">,</span><span class="n">Longitude</span><span class="p">,</span><span class="n">Mag1Data</span><span class="p">,</span> <span class="n">Mag1Valid</span><span class="p">,</span> <span class="n">Mag1Deadzone</span><span class="p">,</span> <span class="n">Mag2Data</span><span class="p">,</span> <span class="n">Mag2Valid</span><span class="p">,</span> <span class="n">Mag2Deadzone</span><span class="p">,</span> <span class="n">MagAverage</span><span class="p">,</span> <span class="n">MagAverageValid</span><span class="p">,</span> <span class="n">CompassX</span><span class="p">,</span> <span class="n">CompassY</span><span class="p">,</span> <span class="n">CompassZ</span><span class="p">,</span> <span class="n">CompassTemperature</span><span class="p">,</span> <span class="n">GyroscopeX</span><span class="p">,</span> <span class="n">GyroscopeY</span><span class="p">,</span> <span class="n">GyroscopeZ</span><span class="p">,</span> <span class="n">AccelerometerX</span><span class="p">,</span> <span class="n">AccelerometerY</span><span class="p">,</span> <span class="n">AccelerometerZ</span><span class="p">,</span><span class="n">ImuTemperature</span><span class="p">,</span><span class="n">Track</span><span class="p">,</span><span class="n">LocationSource</span><span class="p">,</span><span class="n">Hdop</span><span class="p">,</span><span class="n">FixQuality</span><span class="p">,</span> <span class="n">SatellitesUsed</span><span class="p">,</span> <span class="n">Altitude</span><span class="p">,</span><span class="n">HeightOverEllipsoid</span><span class="p">,</span><span class="n">SpeedOverGround</span><span class="p">,</span><span class="n">MagneticVariation</span><span class="p">,</span><span class="n">VariationDirection</span><span class="p">,</span><span class="n">ModeIndicator</span><span class="p">,</span><span class="n">GgaSentence</span><span class="p">,</span><span class="n">RmcSentence</span><span class="p">,</span><span class="n">EventCode</span><span class="p">,</span><span class="n">EventInfo</span><span class="p">,</span><span class="n">EventDataLength</span><span class="p">,</span><span class="n">EventData</span>
@@ -844,8 +843,8 @@ the raw data as</p>
 </pre></div>
 </div>
 <p>The header line is required. Sampling is not entirely regular and interpolated to a regular <em>1000 Hz</em> sampling scheme during the import.</p>
-</section>
-<section id="id13">
+</div>
+<div class="section" id="id13">
 <h3>Channels and sensor types<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <p>Channels extracted from MagArrow <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> files are total magnetic intensities <code class="docutils literal notranslate"><span class="pre">TM1</span></code> <code class="docutils literal notranslate"><span class="pre">TM2</span></code>
 <code class="docutils literal notranslate"><span class="pre">TMI</span></code>, coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Alt</span></code> and compass readings <code class="docutils literal notranslate"><span class="pre">CmpX</span></code>
@@ -855,12 +854,12 @@ calibration factors (<span class="red">this needs to become flexible</span>). Mo
 the MagArrow data file and could be added, such as gyro, accelerometer etc., if needed.</p>
 <p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isopm</span></code> for total magnetic field readings, of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code>
 for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">iscompass</span></code> for compass values.</p>
-</section>
-</section>
-<section id="gemsys-gem">
+</div>
+</div>
+<div class="section" id="gemsys-gem">
 <h2>GemSys (GEM)<a class="headerlink" href="#gemsys-gem" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">GemSys</span></code></p>
-<section id="id14">
+<div class="section" id="id14">
 <h3>Default archive structure<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">GEM</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">GEM</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/</span><span class="n">gem_yyyy</span><span class="o">-</span><span class="n">mm</span><span class="o">-</span><span class="n">dd</span><span class="o">.</span><span class="n">log</span>
@@ -872,8 +871,8 @@ for coordinates, and of type <code class="docutils literal notranslate"><span cl
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id15">
+</div>
+<div class="section" id="id15">
 <h3>File format<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <p>Space separated table format. The file looks similar to this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hhmmss</span><span class="o">.</span><span class="n">s</span> <span class="n">nT</span> <span class="n">L</span> <span class="n">H</span> <span class="n">FR</span> <span class="n">uA</span> <span class="n">ampl</span> <span class="n">RF</span><span class="o">-</span><span class="n">VDC</span> <span class="n">V</span><span class="o">-</span><span class="n">heater</span> <span class="n">V</span><span class="o">-</span><span class="n">supply</span> <span class="n">sensor</span><span class="o">-</span><span class="n">temp</span> <span class="n">box</span><span class="o">-</span><span class="n">temp</span> <span class="n">lat</span> <span class="n">lon</span> <span class="n">utmE</span> <span class="n">utmN</span> <span class="n">alt</span> <span class="n">sat</span> <span class="n">zone</span> <span class="n">laser</span>
@@ -889,8 +888,8 @@ for coordinates, and of type <code class="docutils literal notranslate"><span cl
 <p>Header line is required. During the import, the data set will be truncated at the first full in the
 file. Invalid readings and outliers are recognized and interpolated. Both the original and the cleaned TMI data are stored.</p>
 <p>Time gaps are recognized and interpolated. However, it would be better to split the data into separate runs in some cases.</p>
-</section>
-<section id="id16">
+</div>
+<div class="section" id="id16">
 <h3>Channels and sensor types<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <p>Channels extracted from <code class="docutils literal notranslate"><span class="pre">GEM</span></code> <code class="docutils literal notranslate"><span class="pre">*.log</span></code> files are total magnetic intensity (TM) <code class="docutils literal notranslate"><span class="pre">TM1</span></code>,
 coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Height</span></code>. Sensor lock is also extracted and stored
@@ -898,19 +897,19 @@ under channel name <code class="docutils literal notranslate"><span class="pre">
 <p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isopm</span></code> for total magnetic field readings, and of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and
 <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates. Invalid TMI data and outliers are replaced by linear interpolation.
 The cleaned data are stored in channel <code class="docutils literal notranslate"><span class="pre">TMI</span></code>.</p>
-</section>
-</section>
-<section id="ardupilot-arp">
+</div>
+</div>
+<div class="section" id="ardupilot-arp">
 <h2>ArduPilot (ARP)<a class="headerlink" href="#ardupilot-arp" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code></p>
-<section id="id17">
+<div class="section" id="id17">
 <h3>Default archive structure<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ArduPilot</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">bin</span>
 </pre></div>
 </div>
-</section>
-<section id="id18">
+</div>
+<div class="section" id="id18">
 <h3>File format<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <p>Binary data format. We use the external external class definition <code class="docutils literal notranslate"><span class="pre">ardupilog</span></code> to read the data and
 extract the relevant channels. <code class="docutils literal notranslate"><span class="pre">ardupilog</span></code> reads all available data using:</p>
@@ -919,19 +918,19 @@ extract the relevant channels. <code class="docutils literal notranslate"><span 
 </div>
 <p>We use <code class="docutils literal notranslate"><span class="pre">log.GPS</span></code> to extract coordinates and <code class="docutils literal notranslate"><span class="pre">log.NKF1</span></code> to extract attitude data. More channels
 can be added, such as gyro, accelorometer etc., if needed.</p>
-</section>
-<section id="id19">
+</div>
+<div class="section" id="id19">
 <h3>Channels and sensor types<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <p>Channels extracted from ArduPilot <code class="docutils literal notranslate"><span class="pre">*.bin</span></code> files are coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code>
 <code class="docutils literal notranslate"><span class="pre">Alt</span></code> and the special Euler angles <code class="docutils literal notranslate"><span class="pre">Roll</span></code> <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> <code class="docutils literal notranslate"><span class="pre">Yaw</span></code>.</p>
 <p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for attitude angles.</p>
 <p>Upon import, the starttime is truncated to the first full second in the file.</p>
-</section>
-</section>
-<section id="inat-ima">
+</div>
+</div>
+<div class="section" id="inat-ima">
 <h2>iNAT (IMA)<a class="headerlink" href="#inat-ima" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">iNAT</span></code></p>
-<section id="id20">
+<div class="section" id="id20">
 <h3>Default archive structure<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">iNAT</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">csv</span>
@@ -944,13 +943,13 @@ Survey manager. The matlab binary file <code class="docutils literal notranslate
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id21">
+</div>
+<div class="section" id="id21">
 <h3>File format<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <p><span class="red">2Do: Need a description wha and how to generate mat-files, and need to implement the reading of iNAT csv files</span>
 Data have been post-processed with the <cite>iXCOM</cite> software from IMAR.</p>
-</section>
-<section id="id22">
+</div>
+<div class="section" id="id22">
 <h3>Channels and sensor types<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
 <p>Channels extracted from <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> or <code class="docutils literal notranslate"><span class="pre">*.mat</span></code> files are coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Alt</span></code>
 and the special Euler angles <code class="docutils literal notranslate"><span class="pre">Roll</span></code> <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> <code class="docutils literal notranslate"><span class="pre">Yaw</span></code>.</p>
@@ -973,13 +972,13 @@ compass and is accordingly stored with channel names <code class="docutils liter
 <p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for the rotation matrix, and of type <code class="docutils literal notranslate"><span class="pre">iscompass</span></code> for the compass predictions.</p>
 <p>The reason to do these computations upon import is that they must be done BEFORE interpolation
 to a regular time base; otherwise, issues with jumps of quadrant of the yaw angle may detoriate the data.</p>
-</section>
-</section>
-<section id="xsens-mti">
+</div>
+</div>
+<div class="section" id="xsens-mti">
 <h2>XSens (MTI)<a class="headerlink" href="#xsens-mti" title="Permalink to this headline">¶</a></h2>
 <p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">XSens</span></code></p>
 <p><span class="red">needs update</span></p>
-<section id="id23">
+<div class="section" id="id23">
 <h3>Default archive structure<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <p>The default search path for <code class="docutils literal notranslate"><span class="pre">XSens</span></code> data files and the expected data file naming convention is:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">Xsens</span><span class="o">/</span><span class="n">meas</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">txt</span>
@@ -989,12 +988,12 @@ to a regular time base; otherwise, issues with jumps of quadrant of the yaw angl
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;.</span><span class="n">mtb</span>
 </pre></div>
 </div>
-</section>
-<section id="id24">
+</div>
+<div class="section" id="id24">
 <h3>File format<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
 <p>Text file in table format.</p>
-</section>
-<section id="id25">
+</div>
+<div class="section" id="id25">
 <h3>Channels and sensor types<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
 <p>Channels extracted from <code class="docutils literal notranslate"><span class="pre">XSens</span></code> <code class="docutils literal notranslate"><span class="pre">*.bin</span></code> files are coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Alt</span></code>
 and the special Euler angles <code class="docutils literal notranslate"><span class="pre">Roll</span></code> <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> <code class="docutils literal notranslate"><span class="pre">Yaw</span></code>. During import, we construct
@@ -1003,9 +1002,9 @@ and store the elements of <span class="math notranslate nohighlight">\(\mathbf{R
 the <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> IMU. We also predict the magnetic field that a vector magnetometer would measure in body coordinates
 and store these predictions as compass channels <code class="docutils literal notranslate"><span class="pre">CmpX</span></code> <code class="docutils literal notranslate"><span class="pre">CmpY</span></code> <code class="docutils literal notranslate"><span class="pre">CmpZ</span></code>.</p>
 <p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for attitude angles.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
         </article>
       </div>
@@ -1036,10 +1035,11 @@ and store these predictions as compass channels <code class="docutils literal no
 
         <div class="related-information">
               Copyright &#169; 2021, AGP Muenster |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+            <a>@Hossam Marzouk </a> 
+            <!-- Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
               and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+              <a class="muted-link" href="https://pradyunsg.me">@Hss</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. --> |
             <a class="muted-link" href="../../_sources/en/Recorder/Recorder.rst.txt"
                rel="nofollow">
               Show Source
