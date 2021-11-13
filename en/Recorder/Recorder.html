@@ -1,0 +1,1134 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Calibration files" href="../Calibration/Calibration.html" /><link rel="prev" title="AFMAG" href="../AFMAG/AFMAG_Tutorial.html" />
+
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Recording systems and channels - Home</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Home</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/logo2.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Home</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Magnetotellurics/MT_Tutorial.html">Magnetotellurics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CSEM/CSEM_Tutorial.html">Controlled source EM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sAEM/sAEM_Tutorial.html">Semi-airborne EM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Geomagnetics/Geomagnetics_Tutorial.html">Geomagnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AFMAG/AFMAG_Tutorial.html">AFMAG</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Recording systems and channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Calibration/Calibration.html">Calibration files</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../API_docs/API_docs.html">API documentation</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="recording-systems-and-channels">
+<span id="recordingsystems"></span><h1>Recording systems and channels<a class="headerlink" href="#recording-systems-and-channels" title="Permalink to this headline">¶</a></h1>
+<style>
+.red {color:red}
+.blue {color:blue}
+.special{color:#00FF00; background-color:black;font-weight:bold}
+</style><p>The <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> superclass provides access to data files recorded by various recording systems and
+stored in various formats. To handle the data properly, it is important to agree on some naming conventions
+for recorder types and data types.</p>
+<p>Typically, a single recorder has stored time series of multiple channels. We identify channels by channel
+names. For example, a channel named <code class="docutils literal notranslate"><span class="pre">Ex</span></code> is understood as an electric field recording (e.g. from a
+magnetotelluric measurement), and a channel named <code class="docutils literal notranslate"><span class="pre">Yaw</span></code> is an attitude estimate of a body (e.g. to describe
+the attitude of an airborne system).</p>
+<p>Here, we describe the supported <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> types and the <code class="docutils literal notranslate"><span class="pre">EMChannels</span></code>, which are recognized. Adding
+new recorders and channels programmatically should be straightforward.</p>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">Recorder</span></code>, <code class="docutils literal notranslate"><span class="pre">EMChannels</span></code>, <code class="docutils literal notranslate"><span class="pre">EMSystems</span></code></p>
+<section id="overview-of-recorders">
+<h2>Overview of Recorders<a class="headerlink" href="#overview-of-recorders" title="Permalink to this headline">¶</a></h2>
+<p>Implemented <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> subclasses are <code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">EDE</span></code>, <code class="docutils literal notranslate"><span class="pre">Lemi</span></code>, <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code>, <code class="docutils literal notranslate"><span class="pre">GEM</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code>, <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> and <code class="docutils literal notranslate"><span class="pre">XSens</span></code>. It is expected that the time series data files for
+a particular project and site are stored in a (semi-flexible) archive structure, which has the structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/&lt;</span><span class="n">searchpath</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>where the default search paths are as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">datapath</span>    <span class="o">=</span>   <span class="p">{</span><span class="o">...</span>
+        <span class="p">[</span><span class="s1">'./adc/ADU/meas*'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'./adc/EDE/meas*'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'./adc/Lemi/meas*'</span><span class="p">],</span> <span class="o">...</span>
+        <span class="p">[</span><span class="s1">'./adc/iNAT/meas*'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'./adc/XSens/meas*'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'./adc/ArduPilot/meas*'</span><span class="p">],</span> <span class="o">...</span>
+        <span class="p">[</span><span class="s1">'./adc/GEM/meas*'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'./adc/MagArrow/meas*'</span><span class="p">],</span> <span class="o">...</span>
+        <span class="p">[</span><span class="s1">'./adc/Observatory/meas*'</span><span class="p">]};</span>
+</pre></div>
+</div>
+<p>These default paths are defined in <code class="docutils literal notranslate"><span class="pre">EMSettings</span></code> and can be changed there, or by passing
+respective property-value pairs to methods which access <code class="docutils literal notranslate"><span class="pre">EMSettings</span></code> objects; details
+are provided elsewhere.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">EDE</span></code> and <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data file formats are recognized by their data file extensions
+(<code class="docutils literal notranslate"><span class="pre">*.ats</span></code> for <code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">*.ets</span></code> and <code class="docutils literal notranslate"><span class="pre">*.mts</span></code> for electric and magnetic <code class="docutils literal notranslate"><span class="pre">EDE</span></code>, <code class="docutils literal notranslate"><span class="pre">*.B423</span></code>
+and <code class="docutils literal notranslate"><span class="pre">*.B423E</span></code> for five- and two-channel <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> recorders, resp.); the remainder of
+recorder types and their data formats are recognized by the combination of their data
+file extensions and the <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> name contained in the search path.</p>
+<p>To import data, e.g. the <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> class is invoked as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ts</span> <span class="o">=</span> <span class="n">EMTS</span><span class="p">(</span><span class="o">&lt;</span><span class="n">projectpath</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">referencetime</span><span class="o">&gt;</span><span class="p">);</span>
+<span class="n">EMTS</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="s1">'Import'</span><span class="p">,</span><span class="o">&lt;</span><span class="n">site01</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">site02</span><span class="o">&gt;</span><span class="p">,</span><span class="o">..</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Details are provided in the documentation for the <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> class.</p>
+<p><code class="docutils literal notranslate"><span class="pre">EMTS</span></code> recognizes the data type and uses the respective data class to read the corresponding
+data files. <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> is designed to store header information only and to read the data from
+disc only when required. This works for binary data files (<code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">EDE</span></code>, <code class="docutils literal notranslate"><span class="pre">Lemi</span></code>) but is
+impractical for other data types (<code class="docutils literal notranslate"><span class="pre">MagArrow</span></code>, <code class="docutils literal notranslate"><span class="pre">GEM</span></code>, <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code>, <code class="docutils literal notranslate"><span class="pre">iNAT</span></code>, <code class="docutils literal notranslate"><span class="pre">XSens</span></code>)
+for different reasons. For the latter data types, all data are held in memory after import
+rather than on disc.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> class has options to filter and convert any sort of time series data into <code class="docutils literal notranslate"><span class="pre">*.ats</span></code>
+format. Therefore, the <code class="docutils literal notranslate"><span class="pre">ADU</span></code> recorder subclass can hold data from any of the system types
+described in this tutorial. This may be useful in case of large data files. The <code class="docutils literal notranslate"><span class="pre">EMTS</span></code> class
+has also options to estimate and store spectra (as <code class="docutils literal notranslate"><span class="pre">*.asp</span></code>) for any sort of time series using
+a flexible cascade decimation scheme along with a short-time Fourier transformation. In output
+files, we identify the original recording system using 3-letter abbreviations, which is also
+used to encode the system in file names when exporting to <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> or <code class="docutils literal notranslate"><span class="pre">*.asp</span></code> files, for instance.
+Short names are defined in the class <code class="docutils literal notranslate"><span class="pre">EMSystems</span></code>.</p>
+<p>Overview of Recorders, class names, short names and file naming conventions of original and
+converted data files:</p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 14%"/>
+<col style="width: 18%"/>
+<col style="width: 14%"/>
+<col style="width: 30%"/>
+<col style="width: 14%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Class</p></th>
+<th class="head"><p>Short</p></th>
+<th class="head"><p>Naming convention</p></th>
+<th class="head"><p>conv. ts</p></th>
+<th class="head"><p>spectra</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ADU07e/08e</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ADU</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ADU</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>EDE</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">EDE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">EDE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ets</span></code>
+<code class="docutils literal notranslate"><span class="pre">*.mts</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Lemi</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Lemi</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LEM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.B423</span></code>
+<code class="docutils literal notranslate"><span class="pre">*.B423E</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>MagArrow</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MagArrow</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MAR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.csv</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>GemSys</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">GEM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">GEM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gem_yyyy-mm-dd.log</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>ArduPilot</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ARP</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.bin</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>iNAT-iMAR</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iNAT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">IMA</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.csv</span></code>
+<code class="docutils literal notranslate"><span class="pre">*.mat</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>XSens</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">XSens</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MTI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.txt</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.ats</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*.asp</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<p>If you are unhappy with these conventions (particularly the short names), or wish to add recorders,
+you can overwrite or change them in the <code class="docutils literal notranslate"><span class="pre">EMSystems</span></code> class definition.</p>
+</section>
+<section id="overview-of-channels">
+<h2>Overview of Channels<a class="headerlink" href="#overview-of-channels" title="Permalink to this headline">¶</a></h2>
+<p>Channel names are defined in <code class="docutils literal notranslate"><span class="pre">EMChannels</span></code> and identify a particular channel. Short
+channel names are 2-letter abbreviations used in file names when exporting data to <code class="docutils literal notranslate"><span class="pre">*.ats</span></code>
+or <code class="docutils literal notranslate"><span class="pre">*.asp</span></code> files, for instance. A sensor name is assigned a sensor sensitivity as the
+default, and identified with a sensor type (induction coil, OPM, etc.). The sensitivity is
+used to convert time series to physical units. The tables below
+provides an overview of these properties.</p>
+<p><strong>Electric channels</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 2%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 19%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>Channel name(s)</p></th>
+<th class="head"><p>Short name(s)</p></th>
+<th class="head"><p>Sensor names(s)</p></th>
+<th class="head"><p>Sensitivity</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">is*</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">PbCl</span></code>
+<code class="docutils literal notranslate"><span class="pre">AgAgCl</span></code>
+<code class="docutils literal notranslate"><span class="pre">CuS04</span></code>
+<code class="docutils literal notranslate"><span class="pre">EFP06</span></code>
+<code class="docutils literal notranslate"><span class="pre">UNKN_E</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.001</span> <span class="pre">km</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iselectrode</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Magnetic channels</strong> <a class="footnote-reference brackets" href="#f1" id="id1">1</a></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 2%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 19%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>Channel name(s)</p></th>
+<th class="head"><p>Short name(s)</p></th>
+<th class="head"><p>Sensor names(s)</p></th>
+<th class="head"><p>Sensitivity</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">is*</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Bx</span></code> <code class="docutils literal notranslate"><span class="pre">Hx</span></code>
+<code class="docutils literal notranslate"><span class="pre">By</span></code> <code class="docutils literal notranslate"><span class="pre">Hy</span></code>
+<code class="docutils literal notranslate"><span class="pre">Bz</span></code> <code class="docutils literal notranslate"><span class="pre">Hz</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Bx</span></code>
+<code class="docutils literal notranslate"><span class="pre">By</span></code>
+<code class="docutils literal notranslate"><span class="pre">Bz</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MFS05</span></code>
+<code class="docutils literal notranslate"><span class="pre">MFS06</span></code>
+<code class="docutils literal notranslate"><span class="pre">MFS06e</span></code>
+<code class="docutils literal notranslate"><span class="pre">MFS10e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">800</span> <span class="pre">mV/nT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iscoil</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><em>see (1)</em></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MFS07e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">640</span> <span class="pre">mV/nT</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><em>see (1)</em></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MFS11e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">134.4</span> <span class="pre">mV/nT</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><em>see (1)</em></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SHF02</span></code>
+<code class="docutils literal notranslate"><span class="pre">SHF02e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">50</span> <span class="pre">mV/nT</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><em>see (1)</em></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LEM120</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">640</span> <span class="pre">mV/nT</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Fx</span></code>
+<code class="docutils literal notranslate"><span class="pre">Fy</span></code>
+<code class="docutils literal notranslate"><span class="pre">Fz</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Fx</span></code>
+<code class="docutils literal notranslate"><span class="pre">Fy</span></code>
+<code class="docutils literal notranslate"><span class="pre">Fz</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">FGS03</span></code>
+<code class="docutils literal notranslate"><span class="pre">FGS03e</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">mV/nT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isflux</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><em>see (6)</em></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Geomag</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0.75</span> <span class="pre">mV/nT</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TM1</span></code>
+<code class="docutils literal notranslate"><span class="pre">TM2</span></code>
+<code class="docutils literal notranslate"><span class="pre">TMI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TM1</span></code>
+<code class="docutils literal notranslate"><span class="pre">TM2</span></code>
+<code class="docutils literal notranslate"><span class="pre">TMI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Caesium</span></code>
+<code class="docutils literal notranslate"><span class="pre">Potassium</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">/nT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isopm</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Current channels</strong> <a class="footnote-reference brackets" href="#f2" id="id2">2</a></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 2%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 19%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>Channel name(s)</p></th>
+<th class="head"><p>Short name(s)</p></th>
+<th class="head"><p>Sensor names(s)</p></th>
+<th class="head"><p>Sensitivity</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">is*</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Ix</span></code> <code class="docutils literal notranslate"><span class="pre">I1</span></code>
+<code class="docutils literal notranslate"><span class="pre">Iy</span></code> <code class="docutils literal notranslate"><span class="pre">I2</span></code>
+<code class="docutils literal notranslate"><span class="pre">Iz</span></code> <code class="docutils literal notranslate"><span class="pre">I3</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">I1</span></code>
+<code class="docutils literal notranslate"><span class="pre">I2</span></code>
+<code class="docutils literal notranslate"><span class="pre">I3</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TXB08</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">25</span> <span class="pre">mV/A</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iscurrent</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><em>see (1)</em></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CurClmp</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">mV/nT</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Coordinates</strong></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 2%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 19%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>Channel name(s)</p></th>
+<th class="head"><p>Short name(s)</p></th>
+<th class="head"><p>Sensor names(s)</p></th>
+<th class="head"><p>Sensitivity</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">is*</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Lat</span></code>
+<code class="docutils literal notranslate"><span class="pre">Lon</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">La</span></code>
+<code class="docutils literal notranslate"><span class="pre">Lo</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">GPS</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">/°</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isgps</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Alt</span></code>
+<code class="docutils literal notranslate"><span class="pre">Height</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Al</span></code>
+<code class="docutils literal notranslate"><span class="pre">He</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">GPSAlt</span></code>
+<code class="docutils literal notranslate"><span class="pre">Laser</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">/m</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Attitude</strong> <a class="footnote-reference brackets" href="#f3" id="id3">3</a></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 2%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 19%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>Channel name(s)</p></th>
+<th class="head"><p>Short name(s)</p></th>
+<th class="head"><p>Sensor names(s)</p></th>
+<th class="head"><p>Sensitivity</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">is*</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Roll</span></code>
+<code class="docutils literal notranslate"><span class="pre">Pitch</span></code>
+<code class="docutils literal notranslate"><span class="pre">Yaw</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Ro</span></code>
+<code class="docutils literal notranslate"><span class="pre">Pi</span></code>
+<code class="docutils literal notranslate"><span class="pre">Ya</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Kalman</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">/°</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">isimu</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Rxx</span></code>
+<code class="docutils literal notranslate"><span class="pre">..</span></code>
+<code class="docutils literal notranslate"><span class="pre">Rzz</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">R1</span></code>
+<code class="docutils literal notranslate"><span class="pre">..</span></code>
+<code class="docutils literal notranslate"><span class="pre">R9</span></code></p></td>
+<td></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Compass</strong> <a class="footnote-reference brackets" href="#f4" id="id4">4</a></p>
+<div class="table-wrapper"><table class="docutils align-default">
+<colgroup>
+<col style="width: 2%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 19%"/>
+<col style="width: 18%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>Channel name(s)</p></th>
+<th class="head"><p>Short name(s)</p></th>
+<th class="head"><p>Sensor names(s)</p></th>
+<th class="head"><p>Sensitivity</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">is*</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CmpX</span></code>
+<code class="docutils literal notranslate"><span class="pre">CmpY</span></code>
+<code class="docutils literal notranslate"><span class="pre">CmpZ</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">CX</span></code>
+<code class="docutils literal notranslate"><span class="pre">CY</span></code>
+<code class="docutils literal notranslate"><span class="pre">CZ</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Compass</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">iscompass</span></code></p></td>
+</tr>
+</tbody>
+</table></div>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>fluxgate channels are not encoded as <code class="docutils literal notranslate"><span class="pre">Fx</span></code> <code class="docutils literal notranslate"><span class="pre">Fy</span></code> <code class="docutils literal notranslate"><span class="pre">Fz</span></code> in original <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> files, but are set during import, when the sensor is recognized as fluxgate.</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>current channels are not encoded as <code class="docutils literal notranslate"><span class="pre">I1</span></code> <code class="docutils literal notranslate"><span class="pre">I2</span></code> <code class="docutils literal notranslate"><span class="pre">I3</span></code> in original <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> files, but are set during import, if the system is recognized as a <code class="docutils literal notranslate"><span class="pre">Txb08</span></code>. For current clamp recordings, the <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> properties <code class="docutils literal notranslate"><span class="pre">chname</span></code>, <code class="docutils literal notranslate"><span class="pre">sensorname</span></code>, <code class="docutils literal notranslate"><span class="pre">fieldunit</span></code> and <code class="docutils literal notranslate"><span class="pre">sensitivity</span></code> must be set manually.</p>
+</dd>
+<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>channels <code class="docutils literal notranslate"><span class="pre">Rxx</span></code> <code class="docutils literal notranslate"><span class="pre">..</span></code> <code class="docutils literal notranslate"><span class="pre">Rzz</span></code> are the elements of the directional cosine matrix (DCM) and are constructed during import from <code class="docutils literal notranslate"><span class="pre">Roll</span></code>, <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> and <code class="docutils literal notranslate"><span class="pre">Yaw</span></code> estimates.</p>
+</dd>
+<dt class="label" id="f4"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Compass is either a direct measurement (e.g. <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code> ) or constructed during import from the DCM estimate and a reference field (such as IGRF)</p>
+</dd>
+</dl>
+</section>
+<section id="adu">
+<h2>ADU<a class="headerlink" href="#adu" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">ADU</span></code>, <code class="docutils literal notranslate"><span class="pre">ATS</span></code></p>
+<section id="default-archive-structure">
+<h3>Default archive structure<a class="headerlink" href="#default-archive-structure" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">ADU</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">ats</span>
+</pre></div>
+</div>
+<p>Data that have been converted from other <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> types into <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> format are usually stored under
+a different tag. For example, data that have originally been recorded with an <code class="docutils literal notranslate"><span class="pre">EDE</span></code> system
+and converted into <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> format, are as the default stored as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">ats</span>
+</pre></div>
+</div>
+<p>To read such kind of data, the original search path must be overwritten accordingly.</p>
+</section>
+<section id="file-format">
+<h3>File format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h3>
+<p>Binary data format, storing each channel in a separate <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> file, and complemented with
+an extensive <code class="docutils literal notranslate"><span class="pre">xml</span></code>-file, which stores metadata. A continuous data stream may be split up into multiple files.</p>
+<p>The file format of <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> files is i) a header of 1024 bytes length ii) followed by int32 data. See Metronix manuals.
+The <code class="docutils literal notranslate"><span class="pre">ADU</span></code> class (more precisely: the <code class="docutils literal notranslate"><span class="pre">ATS</span></code> class invoked by the <code class="docutils literal notranslate"><span class="pre">ADU</span></code> class) extracts
+header information from <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> files and ignores the <code class="docutils literal notranslate"><span class="pre">xml</span></code>-file.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> files exported with the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EMTS</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="s1">'WriteData'</span><span class="p">,</span><span class="o">..</span><span class="p">)};</span>
+</pre></div>
+</div>
+<p>the data type can also by of type <code class="docutils literal notranslate"><span class="pre">float32</span></code> and <code class="docutils literal notranslate"><span class="pre">float64</span></code>, depending on the particular
+channel type. The data format is encoded in the <code class="docutils literal notranslate"><span class="pre">headerversion</span></code> and <code class="docutils literal notranslate"><span class="pre">bitindicator</span></code> fields of the <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> header.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">int32</span><span class="p">:</span> <span class="n">headerversion</span> <span class="o">&lt;=</span> <span class="mi">81</span><span class="p">;</span> <span class="n">bitindicator</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">int64</span><span class="p">:</span> <span class="n">headerversion</span> <span class="o">=</span> <span class="mi">81</span><span class="p">;</span> <span class="n">bitindicator</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">float32</span><span class="p">:</span> <span class="n">headerversion</span> <span class="o">==</span> <span class="mi">99</span><span class="p">;</span> <span class="n">bitindicator</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">float64</span><span class="p">:</span> <span class="n">headerversion</span> <span class="o">==</span> <span class="mi">99</span><span class="p">;</span> <span class="n">bitindicator</span> <span class="o">==</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>See <code class="docutils literal notranslate"><span class="pre">ATS</span></code> class definition for details.</p>
+</section>
+<section id="channels-and-sensor-types">
+<h3>Channels and sensor types<a class="headerlink" href="#channels-and-sensor-types" title="Permalink to this headline">¶</a></h3>
+<p>Standard channel names are <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code> <code class="docutils literal notranslate"><span class="pre">Bx</span></code> <code class="docutils literal notranslate"><span class="pre">By</span></code> <code class="docutils literal notranslate"><span class="pre">Bz</span></code>. Channel
+names <code class="docutils literal notranslate"><span class="pre">H*</span></code> are converted to <code class="docutils literal notranslate"><span class="pre">B*</span></code> during data import. If the sensor is recognized
+as fluxgate sensor, channel names are converted to <code class="docutils literal notranslate"><span class="pre">F*</span></code>. If the recording system
+is recognized as <code class="docutils literal notranslate"><span class="pre">TXB08</span></code>, channel names and related properties are converted to current
+channels <code class="docutils literal notranslate"><span class="pre">I1</span></code> <code class="docutils literal notranslate"><span class="pre">I2</span></code> <code class="docutils literal notranslate"><span class="pre">I3</span></code>, which provide fields with physical unit A (<span class="red">not implemented</span>).
+If the data are converted from other <code class="docutils literal notranslate"><span class="pre">Recorder</span></code> types, any other valid
+channel can be contained in the data file.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">iselectrode</span></code> for electric channels and of types <code class="docutils literal notranslate"><span class="pre">iscoil</span></code> or
+<code class="docutils literal notranslate"><span class="pre">isfluxgate</span></code> for magnetic recorders, and of type <code class="docutils literal notranslate"><span class="pre">iscurrent</span></code> for current recorders, respectively.</p>
+</section>
+</section>
+<section id="ede">
+<h2>EDE<a class="headerlink" href="#ede" title="Permalink to this headline">¶</a></h2>
+<p>EDE is a data logger developed by Bernd Bömer at the Institute of Geophysics, University of Münster.
+<span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">EDE</span></code>, <code class="docutils literal notranslate"><span class="pre">ETS</span></code></p>
+<section id="id5">
+<h3>Default archive structure<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">EDE</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">ets</span>
+<span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">mts</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>Channels and sensor types<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Channels names of a telluric recorder are <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code>, and of a magnetic
+recorder, <code class="docutils literal notranslate"><span class="pre">Fx</span></code> <code class="docutils literal notranslate"><span class="pre">Fy</span></code> <code class="docutils literal notranslate"><span class="pre">Fz</span></code>. Sensors are of type <code class="docutils literal notranslate"><span class="pre">iselectrode</span></code> for
+electric channels and of type <code class="docutils literal notranslate"><span class="pre">isfluxgate</span></code> for magnetic recorders</p>
+</section>
+<section id="id7">
+<h3>File format<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>Binary data format, storing either two telluric channel in a <code class="docutils literal notranslate"><span class="pre">*.ets</span></code> file, or three
+magnetic channels in a <code class="docutils literal notranslate"><span class="pre">*.mts</span></code> file, and complemented with a short header text file.
+The text file is self-explanatory. A new file is written every four hours (see issues below).</p>
+<p>Binary data files store, for each sample, a sample counter followed by the two
+(telluric recorder) or three (magnetic recorder) data samples in <code class="docutils literal notranslate"><span class="pre">int32</span></code> format.
+A consistency check is performed during import, and if any inconsistencies are
+detected, the samples are re-ordered using the sample counter information and
+time gaps are filled with linear interpolation. In this case, the original data
+file is copied to a backup file, and the re-ordered data file is re-written to disk,
+overwriting the original data file. Should this happen, then the site must be re-imported.</p>
+<p>There are few issues which can cause errors and which can manually be resolved:</p>
+<ul class="simple">
+<li><p>The software version changes from time. Should the current header version be unknown, add this to the <code class="docutils literal notranslate"><span class="pre">ETS</span></code> class.</p></li>
+<li><p>The date format of the header version looks like <code class="docutils literal notranslate"><span class="pre">26</span> <span class="pre">Jan</span> <span class="pre">2021</span></code>. Should it look different from that, e.g. <code class="docutils literal notranslate"><span class="pre">Jan</span> <span class="pre">26</span> <span class="pre">2021</span></code>, change it manually in the header file.</p></li>
+<li><p>The size of a single file may depends on the format version, but this information is not part of the header text file. Currently, we start a new file every for hours, and this is hardwired in the <code class="docutils literal notranslate"><span class="pre">ETS</span></code> class definition. Change there if required.</p></li>
+</ul>
+</section>
+</section>
+<section id="lemi-lem">
+<h2>Lemi (LEM)<a class="headerlink" href="#lemi-lem" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">Lemi</span></code>, <code class="docutils literal notranslate"><span class="pre">B423</span></code></p>
+<section id="id8">
+<h3>Default archive structure<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">B423</span>
+<span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423E</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">B423E</span>
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h3>Channels and sensor types<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>Channels names of a telluric recorder are <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code>, and of a magnetotelluric
+recorder, <code class="docutils literal notranslate"><span class="pre">Bx</span></code> <code class="docutils literal notranslate"><span class="pre">By</span></code> <code class="docutils literal notranslate"><span class="pre">Bz</span></code> <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey</span></code>. Sensors are of type <code class="docutils literal notranslate"><span class="pre">iselectrode</span></code>
+for electric channels and of type <code class="docutils literal notranslate"><span class="pre">iscoil</span></code> for magnetic recorders.</p>
+</section>
+<section id="id10">
+<h3>File format<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Binary data format, storing either five magnetotelluric channels in one or multiple <code class="docutils literal notranslate"><span class="pre">*.B423</span></code> file(s)
+or two telluric channel in <code class="docutils literal notranslate"><span class="pre">*.B423E</span></code> file(s). The first 1024 bytes in a data file are
+used for an ASCII header, followed by a binary stream of data. The format differs for
+five- and two-channels recorders. Continuous recordings are assumed (and tested during import) across
+separate files.</p>
+<p>Because the header information in Lemi data files is incomplete, a separate text file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/</span><span class="n">siteinfo</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>should be provided in each <code class="docutils literal notranslate"><span class="pre">meas_*</span></code> folder. The filename <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code> is compulsory; the
+file contains the following information (as an example):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SiteInfo</span> <span class="k">for</span> <span class="n">site</span> <span class="mi">0350</span><span class="n">B</span>
+<span class="n">SamplingRate</span><span class="p">:</span> <span class="mi">500</span> <span class="n">Hz</span>
+<span class="n">Channels</span><span class="p">:</span> <span class="mi">5</span>
+<span class="n">Bx</span><span class="p">:</span> <span class="n">LEM120</span> <span class="c1">#699</span>
+<span class="n">By</span><span class="p">:</span> <span class="n">LEM120</span> <span class="c1">#707</span>
+<span class="n">Bz</span><span class="p">:</span> <span class="n">LEM120</span> <span class="c1">#705</span>
+<span class="n">Ex</span><span class="p">:</span> <span class="n">CuSO4</span> <span class="mf">60.0</span>
+<span class="n">Ey</span><span class="p">:</span> <span class="n">CuSO4</span> <span class="mf">60.0</span>
+</pre></div>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code> is not found, a template is written into each <code class="docutils literal notranslate"><span class="pre">meas_*</span></code> folder and should
+be edited to provide the correct channel infos. To read any updated site information, re-import
+the corresponding site. Note that the <code class="docutils literal notranslate"><span class="pre">Lemi-120</span></code> coils are identified with the 6 char
+long name <code class="docutils literal notranslate"><span class="pre">LEM120</span></code>. Other types Lemi coils are presently not known by the processing.</p>
+<p>Lemi instruments come with a hardwired gain, which must be known. The default gains for magnetic and electric channels are</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[g_{h}=16\,\,, g_{e}=1\]</div></div>
+<p>To change the gain to be applied to the raw data, change the gain property in the <code class="docutils literal notranslate"><span class="pre">B423</span></code> class defintion.</p>
+<p><strong>B423 format</strong></p>
+<p>1024 byte long ascii header, followed by 30 bytes long portions of data for each sample, composed of</p>
+<ul class="simple">
+<li><p>a date identifier in seconds since 01.01.1970 of type <code class="docutils literal notranslate"><span class="pre">uint32</span></code></p></li>
+<li><p>a sampling counter for each second ranging from 0 to the sampling rate minus one (e.g. 0-499 for a 500 Hz sampling rate) of type <code class="docutils literal notranslate"><span class="pre">uint16</span></code></p></li>
+<li><p>the five-channel data in the order <code class="docutils literal notranslate"><span class="pre">Bx</span></code> <code class="docutils literal notranslate"><span class="pre">By</span></code> <code class="docutils literal notranslate"><span class="pre">Bz</span></code> <code class="docutils literal notranslate"><span class="pre">Ex</span></code> <code class="docutils literal notranslate"><span class="pre">Ey``each</span> <span class="pre">of</span> <span class="pre">type</span> <span class="pre">``int32</span></code></p></li>
+<li><p>the last four bytes contain some status information, which is not used in this code.</p></li>
+</ul>
+<p>The ascii header contains scaling factors and offsets, <span class="math notranslate nohighlight">\(k_{h,e}\)</span> and <span class="math notranslate nohighlight">\(a_{h,e}\)</span>, respectively, for each
+channel to convert the stored <code class="docutils literal notranslate"><span class="pre">int32</span></code> readings into mV for magnetic channels and <span class="math notranslate nohighlight">\(mu\)</span> and <span class="math notranslate nohighlight">\(a_{e}:= a_{e}/1000\)</span>, respectively,
+for the electric field, the data in mV are obtained from</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[d_{h,e}[mV]=(d[\text{int32}]k_{h,e}+a_{h,e})/g_{h,e}\]</div></div>
+<p>(where the electric gain is unity here). Because we internally just use <em>LSB</em> values to convert raw data in mV, i.e.
+<span class="math notranslate nohighlight">\(d[mV]=d[raw]\times\text{LSB}\)</span>, we set <span class="math notranslate nohighlight">\(\text{LSB}_{h,e}=k_{h,e}\)</span> for the respective channels and read
+the raw data as</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[d_{h,e}[raw]=(d[\text{int32}]+\frac{a_{h,e}}{\text{LSB}_{h,e}})/g_{h,e}\]</div></div>
+<p><strong>B423E format</strong></p>
+<p><span class="red">not implemented</span></p>
+</section>
+</section>
+<section id="magarrow-mar">
+<h2>MagArrow (MAR)<a class="headerlink" href="#magarrow-mar" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code></p>
+<section id="id11">
+<h3>Default archive structure<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">MagArrow</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">*.csv-files</span></code> are to be generated from the <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code> output using the Geometrics Survey manager.</p>
+<p>We propose to store a back-up of raw data files in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h3>File format<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>Comma separated table format. The file looks similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Counter</span><span class="p">,</span><span class="n">Date</span><span class="p">,</span><span class="n">Time</span><span class="p">,</span><span class="n">Latitude</span><span class="p">,</span><span class="n">Longitude</span><span class="p">,</span><span class="n">Mag1Data</span><span class="p">,</span> <span class="n">Mag1Valid</span><span class="p">,</span> <span class="n">Mag1Deadzone</span><span class="p">,</span> <span class="n">Mag2Data</span><span class="p">,</span> <span class="n">Mag2Valid</span><span class="p">,</span> <span class="n">Mag2Deadzone</span><span class="p">,</span> <span class="n">MagAverage</span><span class="p">,</span> <span class="n">MagAverageValid</span><span class="p">,</span> <span class="n">CompassX</span><span class="p">,</span> <span class="n">CompassY</span><span class="p">,</span> <span class="n">CompassZ</span><span class="p">,</span> <span class="n">CompassTemperature</span><span class="p">,</span> <span class="n">GyroscopeX</span><span class="p">,</span> <span class="n">GyroscopeY</span><span class="p">,</span> <span class="n">GyroscopeZ</span><span class="p">,</span> <span class="n">AccelerometerX</span><span class="p">,</span> <span class="n">AccelerometerY</span><span class="p">,</span> <span class="n">AccelerometerZ</span><span class="p">,</span><span class="n">ImuTemperature</span><span class="p">,</span><span class="n">Track</span><span class="p">,</span><span class="n">LocationSource</span><span class="p">,</span><span class="n">Hdop</span><span class="p">,</span><span class="n">FixQuality</span><span class="p">,</span> <span class="n">SatellitesUsed</span><span class="p">,</span> <span class="n">Altitude</span><span class="p">,</span><span class="n">HeightOverEllipsoid</span><span class="p">,</span><span class="n">SpeedOverGround</span><span class="p">,</span><span class="n">MagneticVariation</span><span class="p">,</span><span class="n">VariationDirection</span><span class="p">,</span><span class="n">ModeIndicator</span><span class="p">,</span><span class="n">GgaSentence</span><span class="p">,</span><span class="n">RmcSentence</span><span class="p">,</span><span class="n">EventCode</span><span class="p">,</span><span class="n">EventInfo</span><span class="p">,</span><span class="n">EventDataLength</span><span class="p">,</span><span class="n">EventData</span>
+<span class="mi">1027053</span><span class="p">,</span><span class="mi">2020</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">27</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">09.000</span><span class="p">,</span><span class="mf">49.59633900</span><span class="p">,</span><span class="mf">7.01354000</span><span class="p">,</span><span class="mf">48590.38265</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48589.05990</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48589.72128</span><span class="p">,</span> <span class="mi">1</span><span class="p">,,,,,,,,,,,,</span><span class="mf">58.0</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="mf">0.720</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mf">465.35</span><span class="p">,</span><span class="mf">47.79</span><span class="p">,</span><span class="mf">0.010</span><span class="p">,</span><span class="mf">0.000</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="s2">"$GNGGA,103309.000,4935.780351,N,00700.812390,E,2,17,0.72,465.352,M,47.791,M,,*70"</span><span class="p">,</span><span class="s2">"$GNRMC,103309.000,A,4935.780351,N,00700.812390,E,0.01,58.03,271020,,,D*41"</span><span class="p">,,,,,,</span>
+<span class="mi">1027054</span><span class="p">,</span><span class="mi">2020</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">27</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">09.001</span><span class="p">,</span><span class="mf">49.59633900</span><span class="p">,</span><span class="mf">7.01354000</span><span class="p">,</span><span class="mf">48590.89640</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48589.37725</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48590.13683</span><span class="p">,</span> <span class="mi">1</span><span class="p">,,,,,,,,,,,,</span><span class="mf">58.2</span><span class="p">,</span><span class="n">I</span><span class="p">,,,,,,,,,,,,,,,,</span>
+<span class="mi">1027055</span><span class="p">,</span><span class="mi">2020</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">27</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">09.002</span><span class="p">,</span><span class="mf">49.59633900</span><span class="p">,</span><span class="mf">7.01354000</span><span class="p">,</span><span class="mf">48591.51010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48590.44815</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48590.97912</span><span class="p">,</span> <span class="mi">1</span><span class="p">,,,,,,,,</span><span class="mf">0.04272</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01233</span><span class="p">,</span> <span class="mf">1.04657</span><span class="p">,</span><span class="mf">25.506</span><span class="p">,</span><span class="mf">58.3</span><span class="p">,</span><span class="n">I</span><span class="p">,,,,,,,,,,,,,,,,</span>
+<span class="mi">1027056</span><span class="p">,</span><span class="mi">2020</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">27</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">09.003</span><span class="p">,</span><span class="mf">49.59633900</span><span class="p">,</span><span class="mf">7.01354000</span><span class="p">,</span><span class="mf">48591.80100</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48590.83490</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48591.31795</span><span class="p">,</span> <span class="mi">1</span><span class="p">,,,,,</span><span class="mf">0.854</span><span class="p">,</span><span class="o">-</span><span class="mf">0.061</span><span class="p">,</span><span class="o">-</span><span class="mf">0.305</span><span class="p">,,,,</span><span class="mf">25.506</span><span class="p">,</span><span class="mf">58.5</span><span class="p">,</span><span class="n">I</span><span class="p">,,,,,,,,,,,,,,,,</span>
+<span class="mi">1027057</span><span class="p">,</span><span class="mi">2020</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">27</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">09.004</span><span class="p">,</span><span class="mf">49.59633900</span><span class="p">,</span><span class="mf">7.01354000</span><span class="p">,</span><span class="mf">48591.76745</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48590.68945</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48591.22845</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30149</span><span class="p">,</span>  <span class="mi">8760</span><span class="p">,</span> <span class="mi">49202</span><span class="p">,</span><span class="mf">35.50</span><span class="p">,,,,,,,,</span><span class="mf">58.6</span><span class="p">,</span><span class="n">I</span><span class="p">,,,,,,,,,,,,,,,,</span>
+<span class="mi">1027058</span><span class="p">,</span><span class="mi">2020</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">27</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">33</span><span class="p">:</span><span class="mf">09.005</span><span class="p">,</span><span class="mf">49.59633900</span><span class="p">,</span><span class="mf">7.01354000</span><span class="p">,</span><span class="mf">48591.67005</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48590.76720</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">48591.21863</span><span class="p">,</span> <span class="mi">1</span><span class="p">,,,,,,,,,,,,</span><span class="mf">58.8</span><span class="p">,</span><span class="n">I</span><span class="p">,,,,,,,,,,,,,,,,</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>The header line is required. Sampling is not entirely regular and interpolated to a regular <em>1000 Hz</em> sampling scheme during the import.</p>
+</section>
+<section id="id13">
+<h3>Channels and sensor types<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>Channels extracted from MagArrow <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> files are total magnetic intensities <code class="docutils literal notranslate"><span class="pre">TM1</span></code> <code class="docutils literal notranslate"><span class="pre">TM2</span></code>
+<code class="docutils literal notranslate"><span class="pre">TMI</span></code>, coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Alt</span></code> and compass readings <code class="docutils literal notranslate"><span class="pre">CmpX</span></code>
+<code class="docutils literal notranslate"><span class="pre">CmpY</span></code> <code class="docutils literal notranslate"><span class="pre">CmpZ</span></code>. Sensor locks are also extracted and stored under channel names
+<code class="docutils literal notranslate"><span class="pre">S1valid</span></code> and <code class="docutils literal notranslate"><span class="pre">S2valid</span></code>. Compass values are calibrated upon import using hardwired
+calibration factors (<span class="red">this needs to become flexible</span>). More channels are available from
+the MagArrow data file and could be added, such as gyro, accelerometer etc., if needed.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isopm</span></code> for total magnetic field readings, of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code>
+for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">iscompass</span></code> for compass values.</p>
+</section>
+</section>
+<section id="gemsys-gem">
+<h2>GemSys (GEM)<a class="headerlink" href="#gemsys-gem" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">GemSys</span></code></p>
+<section id="id14">
+<h3>Default archive structure<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">GEM</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">GEM</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/</span><span class="n">gem_yyyy</span><span class="o">-</span><span class="n">mm</span><span class="o">-</span><span class="n">dd</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">*.log-files</span></code> may need manual editing.</p>
+<p><em>Note:</em> The date of recording is not listed in the data file. Therefore, we expect that the filename is of type <code class="docutils literal notranslate"><span class="pre">gem_yyyy-mm-dd.log</span></code>.</p>
+<p>We propose to store a back-up of raw data files in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h3>File format<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Space separated table format. The file looks similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hhmmss</span><span class="o">.</span><span class="n">s</span> <span class="n">nT</span> <span class="n">L</span> <span class="n">H</span> <span class="n">FR</span> <span class="n">uA</span> <span class="n">ampl</span> <span class="n">RF</span><span class="o">-</span><span class="n">VDC</span> <span class="n">V</span><span class="o">-</span><span class="n">heater</span> <span class="n">V</span><span class="o">-</span><span class="n">supply</span> <span class="n">sensor</span><span class="o">-</span><span class="n">temp</span> <span class="n">box</span><span class="o">-</span><span class="n">temp</span> <span class="n">lat</span> <span class="n">lon</span> <span class="n">utmE</span> <span class="n">utmN</span> <span class="n">alt</span> <span class="n">sat</span> <span class="n">zone</span> <span class="n">laser</span>
+<span class="mf">070349.15</span> <span class="mf">049002.1273</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">3.4</span> <span class="mi">295</span> <span class="mf">07.2</span> <span class="mf">11.3</span> <span class="mf">25.0</span> <span class="mi">49</span> <span class="mi">47</span>  <span class="mf">050.2880777</span>  <span class="mf">011.8661417</span>  <span class="mf">0704162.42</span>  <span class="mf">5574591.03</span> <span class="mi">00578</span> <span class="mi">08</span> <span class="mi">32</span><span class="n">U</span> <span class="mf">001.00</span>
+<span class="mf">070349.20</span> <span class="mf">049001.9646</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">3.4</span> <span class="mi">299</span> <span class="mf">07.3</span> <span class="mf">11.3</span> <span class="mf">25.0</span> <span class="mi">49</span> <span class="mi">47</span>  <span class="mf">050.2880777</span>  <span class="mf">011.8661417</span>  <span class="mf">0704162.42</span>  <span class="mf">5574591.03</span> <span class="mi">00578</span> <span class="mi">08</span> <span class="mi">32</span><span class="n">U</span> <span class="mf">001.05</span>
+<span class="mf">070349.25</span> <span class="mf">049002.8965</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">3.4</span> <span class="mi">303</span> <span class="mf">07.3</span> <span class="mf">11.3</span> <span class="mf">25.0</span> <span class="mi">49</span> <span class="mi">47</span>  <span class="mf">050.2880777</span>  <span class="mf">011.8661418</span>  <span class="mf">0704162.43</span>  <span class="mf">5574591.03</span> <span class="mi">00578</span> <span class="mi">08</span> <span class="mi">32</span><span class="n">U</span> <span class="mf">001.10</span>
+<span class="mf">070349.30</span> <span class="mf">049005.4929</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">3.4</span> <span class="mi">309</span> <span class="mf">07.3</span> <span class="mf">11.3</span> <span class="mf">25.0</span> <span class="mi">49</span> <span class="mi">47</span>  <span class="mf">050.2880777</span>  <span class="mf">011.8661418</span>  <span class="mf">0704162.42</span>  <span class="mf">5574591.03</span> <span class="mi">00578</span> <span class="mi">08</span> <span class="mi">32</span><span class="n">U</span> <span class="mf">001.10</span>
+<span class="mf">070349.35</span> <span class="mf">049006.3213</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">3.4</span> <span class="mi">317</span> <span class="mf">07.4</span> <span class="mf">11.3</span> <span class="mf">25.0</span> <span class="mi">49</span> <span class="mi">47</span>  <span class="mf">050.2880776</span>  <span class="mf">011.8661417</span>  <span class="mf">0704162.42</span>  <span class="mf">5574591.02</span> <span class="mi">00578</span> <span class="mi">08</span> <span class="mi">32</span><span class="n">U</span> <span class="mf">001.10</span>
+<span class="mf">070349.40</span> <span class="mf">049006.1328</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mf">3.4</span> <span class="mi">325</span> <span class="mf">07.4</span> <span class="mf">11.3</span> <span class="mf">25.0</span> <span class="mi">49</span> <span class="mi">47</span>  <span class="mf">050.2880776</span>  <span class="mf">011.8661418</span>  <span class="mf">0704162.42</span>  <span class="mf">5574591.02</span> <span class="mi">00578</span> <span class="mi">08</span> <span class="mi">32</span><span class="n">U</span> <span class="mf">001.20</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Header line is required. During the import, the data set will be truncated at the first full in the
+file. Invalid readings and outliers are recognized and interpolated. Both the original and the cleaned TMI data are stored.</p>
+<p>Time gaps are recognized and interpolated. However, it would be better to split the data into separate runs in some cases.</p>
+</section>
+<section id="id16">
+<h3>Channels and sensor types<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>Channels extracted from <code class="docutils literal notranslate"><span class="pre">GEM</span></code> <code class="docutils literal notranslate"><span class="pre">*.log</span></code> files are total magnetic intensity (TM) <code class="docutils literal notranslate"><span class="pre">TM1</span></code>,
+coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Height</span></code>. Sensor lock is also extracted and stored
+under channel name <code class="docutils literal notranslate"><span class="pre">Svalid</span></code>.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isopm</span></code> for total magnetic field readings, and of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and
+<code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates. Invalid TMI data and outliers are replaced by linear interpolation.
+The cleaned data are stored in channel <code class="docutils literal notranslate"><span class="pre">TMI</span></code>.</p>
+</section>
+</section>
+<section id="ardupilot-arp">
+<h2>ArduPilot (ARP)<a class="headerlink" href="#ardupilot-arp" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code></p>
+<section id="id17">
+<h3>Default archive structure<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ArduPilot</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">bin</span>
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h3>File format<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>Binary data format. We use the external external class definition <code class="docutils literal notranslate"><span class="pre">ardupilog</span></code> to read the data and
+extract the relevant channels. <code class="docutils literal notranslate"><span class="pre">ardupilog</span></code> reads all available data using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span> <span class="o">=</span> <span class="n">Ardupilog</span><span class="p">(</span><span class="s1">'datafile.bin'</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>We use <code class="docutils literal notranslate"><span class="pre">log.GPS</span></code> to extract coordinates and <code class="docutils literal notranslate"><span class="pre">log.NKF1</span></code> to extract attitude data. More channels
+can be added, such as gyro, accelorometer etc., if needed.</p>
+</section>
+<section id="id19">
+<h3>Channels and sensor types<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>Channels extracted from ArduPilot <code class="docutils literal notranslate"><span class="pre">*.bin</span></code> files are coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code>
+<code class="docutils literal notranslate"><span class="pre">Alt</span></code> and the special Euler angles <code class="docutils literal notranslate"><span class="pre">Roll</span></code> <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> <code class="docutils literal notranslate"><span class="pre">Yaw</span></code>.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for attitude angles.</p>
+<p>Upon import, the starttime is truncated to the first full second in the file.</p>
+</section>
+</section>
+<section id="inat-ima">
+<h2>iNAT (IMA)<a class="headerlink" href="#inat-ima" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">iNAT</span></code></p>
+<section id="id20">
+<h3>Default archive structure<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">iNAT</span><span class="o">/</span><span class="n">meas_</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">csv</span>
+<span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">iNAT</span><span class="o">/</span><span class="n">meas</span><span class="o">*/</span><span class="n">imudata</span><span class="o">.</span><span class="n">mat</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">*.csv</span></code>-files are to be generated from the <code class="docutils literal notranslate"><span class="pre">MagArrow</span></code> output using the Geometrics
+Survey manager. The matlab binary file <code class="docutils literal notranslate"><span class="pre">imudata.mat</span></code> is to be generated from the <code class="docutils literal notranslate"><span class="pre">*.csv-files</span></code>.</p>
+<p>We propose to store a back-up of raw data files in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="id21">
+<h3>File format<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p><span class="red">2Do: Need a description wha and how to generate mat-files, and need to implement the reading of iNAT csv files</span>
+Data have been post-processed with the <cite>iXCOM</cite> software from IMAR.</p>
+</section>
+<section id="id22">
+<h3>Channels and sensor types<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h3>
+<p>Channels extracted from <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> or <code class="docutils literal notranslate"><span class="pre">*.mat</span></code> files are coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Alt</span></code>
+and the special Euler angles <code class="docutils literal notranslate"><span class="pre">Roll</span></code> <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> <code class="docutils literal notranslate"><span class="pre">Yaw</span></code>.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for attitude angles.</p>
+<p>During import, we construct the rotation matrix <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> from roll (<span class="math notranslate nohighlight">\(\varphi\)</span>), pitch
+(<span class="math notranslate nohighlight">\(\theta\)</span>) and yaw angles (<span class="math notranslate nohighlight">\(\psi\)</span>) as <span class="math notranslate nohighlight">\(\mathbf{R}=\mathbf{R}_{z}(\psi)\mathbf{R}_{y}(\theta)\mathbf{R}_{x}(\varphi)\)</span>,
+which transforms coordinates from a body fixed into an earth-fixed coordinate system (see Figure).
+Here,</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}\mathbf{R}_{z}(\psi)=\left(\begin{array}{ccc}\cos\psi &amp; -\sin\psi &amp; 0\\\sin\psi &amp; \cos\psi &amp; 0\\0 &amp; 0 &amp; 1\end{array}\right)\,\,\,,\end{split}\\\begin{split}\mathbf{R}_{y}(\theta)=\left(\begin{array}{ccc}\cos\theta &amp; 0 &amp; \sin\theta\\0 &amp; 1 &amp; 0\\-\sin\theta &amp; 0 &amp; \cos\theta\end{array}\right)\,\,\,,\end{split}\\\begin{split}\mathbf{R}_{x}(\psi)=\left(\begin{array}{ccc}1 &amp; 0 &amp; 0\\0 &amp; \cos\varphi &amp; -\sin\varphi\\0 &amp; \sin\varphi &amp; \cos\varphi\end{array}\right)\,\,\,,\end{split}\end{aligned}\end{align} \]</div></div>
+<p>and store the elements of <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> as channels using the channel names <code class="docutils literal notranslate"><span class="pre">Rxx',</span> <span class="pre">..,</span> <span class="pre">'Rzz</span></code>.</p>
+<img alt="../../_images/aircraft_attitude.png" src="../../_images/aircraft_attitude.png"/>
+<p><em>Figure:</em> Roll, pitch and yaw attitude angles (<span class="math notranslate nohighlight">\(\varphi\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, and <span class="math notranslate nohighlight">\(\psi\)</span>, respectively) in aircraft navigation.</p>
+<p>We also predict the magnetic field that a vector magnetometer would measure in body coordinates by the
+reverse transformation <span class="math notranslate nohighlight">\(\mathbf{B}^{p}=\mathbf{R}^{T}\mathbf{B}_{0}\)</span> where <span class="math notranslate nohighlight">\(\mathbf{B}_{0}\)</span> is the
+geomagnetic field and either determined from the international geomagnetic reference field, IGRF, or
+provided in terms of the main field, magnitude, <span class="math notranslate nohighlight">\(B_{0}\)</span>, declination <span class="math notranslate nohighlight">\(D\)</span> and inklination <span class="math notranslate nohighlight">\(I\)</span>.</p>
+<p>The predicted field in body coordinates, <span class="math notranslate nohighlight">\(\mathbf{B}^{p}\)</span> can be conceived as the readings of a
+compass and is accordingly stored with channel names <code class="docutils literal notranslate"><span class="pre">CmpX</span></code>, <code class="docutils literal notranslate"><span class="pre">CmpY</span></code> and <code class="docutils literal notranslate"><span class="pre">CmpZ</span></code>.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for the rotation matrix, and of type <code class="docutils literal notranslate"><span class="pre">iscompass</span></code> for the compass predictions.</p>
+<p>The reason to do these computations upon import is that they must be done BEFORE interpolation
+to a regular time base; otherwise, issues with jumps of quadrant of the yaw angle may detoriate the data.</p>
+</section>
+</section>
+<section id="xsens-mti">
+<h2>XSens (MTI)<a class="headerlink" href="#xsens-mti" title="Permalink to this headline">¶</a></h2>
+<p><span class="blue">Classes:</span> <code class="docutils literal notranslate"><span class="pre">XSens</span></code></p>
+<p><span class="red">needs update</span></p>
+<section id="id23">
+<h3>Default archive structure<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
+<p>The default search path for <code class="docutils literal notranslate"><span class="pre">XSens</span></code> data files and the expected data file naming convention is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">Xsens</span><span class="o">/</span><span class="n">meas</span><span class="o">*/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>We propose to store a back-up of raw data files in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">project</span><span class="o">/&lt;</span><span class="n">flight</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/</span><span class="n">raw</span><span class="o">/&lt;</span><span class="n">raw</span> <span class="n">data</span> <span class="n">file</span><span class="o">&gt;.</span><span class="n">mtb</span>
+</pre></div>
+</div>
+</section>
+<section id="id24">
+<h3>File format<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h3>
+<p>Text file in table format.</p>
+</section>
+<section id="id25">
+<h3>Channels and sensor types<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h3>
+<p>Channels extracted from <code class="docutils literal notranslate"><span class="pre">XSens</span></code> <code class="docutils literal notranslate"><span class="pre">*.bin</span></code> files are coordinates <code class="docutils literal notranslate"><span class="pre">Lat</span></code> <code class="docutils literal notranslate"><span class="pre">Lon</span></code> <code class="docutils literal notranslate"><span class="pre">Alt</span></code>
+and the special Euler angles <code class="docutils literal notranslate"><span class="pre">Roll</span></code> <code class="docutils literal notranslate"><span class="pre">Pitch</span></code> <code class="docutils literal notranslate"><span class="pre">Yaw</span></code>. During import, we construct
+the rotation matrix <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> from roll (<span class="math notranslate nohighlight">\(\varphi\)</span>), pitch (<span class="math notranslate nohighlight">\(\theta\)</span>) and yaw angles (<span class="math notranslate nohighlight">\(\psi\)</span>)
+and store the elements of <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> as channels using the channel names <code class="docutils literal notranslate"><span class="pre">Rxx</span></code> <code class="docutils literal notranslate"><span class="pre">..</span></code> <code class="docutils literal notranslate"><span class="pre">Rzz</span></code> as described for
+the <code class="docutils literal notranslate"><span class="pre">iNAT</span></code> IMU. We also predict the magnetic field that a vector magnetometer would measure in body coordinates
+and store these predictions as compass channels <code class="docutils literal notranslate"><span class="pre">CmpX</span></code> <code class="docutils literal notranslate"><span class="pre">CmpY</span></code> <code class="docutils literal notranslate"><span class="pre">CmpZ</span></code>.</p>
+<p>Sensors are of type <code class="docutils literal notranslate"><span class="pre">isgps</span></code> and <code class="docutils literal notranslate"><span class="pre">isgpsalt</span></code> for coordinates, and of type <code class="docutils literal notranslate"><span class="pre">isimu</span></code> for attitude angles.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../Calibration/Calibration.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Calibration files</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../AFMAG/AFMAG_Tutorial.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">AFMAG</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, AGP Muenster |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../../_sources/en/Recorder/Recorder.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Recording systems and channels</a><ul>
+<li><a class="reference internal" href="#overview-of-recorders">Overview of Recorders</a></li>
+<li><a class="reference internal" href="#overview-of-channels">Overview of Channels</a></li>
+<li><a class="reference internal" href="#adu">ADU</a><ul>
+<li><a class="reference internal" href="#default-archive-structure">Default archive structure</a></li>
+<li><a class="reference internal" href="#file-format">File format</a></li>
+<li><a class="reference internal" href="#channels-and-sensor-types">Channels and sensor types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ede">EDE</a><ul>
+<li><a class="reference internal" href="#id5">Default archive structure</a></li>
+<li><a class="reference internal" href="#id6">Channels and sensor types</a></li>
+<li><a class="reference internal" href="#id7">File format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lemi-lem">Lemi (LEM)</a><ul>
+<li><a class="reference internal" href="#id8">Default archive structure</a></li>
+<li><a class="reference internal" href="#id9">Channels and sensor types</a></li>
+<li><a class="reference internal" href="#id10">File format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#magarrow-mar">MagArrow (MAR)</a><ul>
+<li><a class="reference internal" href="#id11">Default archive structure</a></li>
+<li><a class="reference internal" href="#id12">File format</a></li>
+<li><a class="reference internal" href="#id13">Channels and sensor types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gemsys-gem">GemSys (GEM)</a><ul>
+<li><a class="reference internal" href="#id14">Default archive structure</a></li>
+<li><a class="reference internal" href="#id15">File format</a></li>
+<li><a class="reference internal" href="#id16">Channels and sensor types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ardupilot-arp">ArduPilot (ARP)</a><ul>
+<li><a class="reference internal" href="#id17">Default archive structure</a></li>
+<li><a class="reference internal" href="#id18">File format</a></li>
+<li><a class="reference internal" href="#id19">Channels and sensor types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#inat-ima">iNAT (IMA)</a><ul>
+<li><a class="reference internal" href="#id20">Default archive structure</a></li>
+<li><a class="reference internal" href="#id21">File format</a></li>
+<li><a class="reference internal" href="#id22">Channels and sensor types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#xsens-mti">XSens (MTI)</a><ul>
+<li><a class="reference internal" href="#id23">Default archive structure</a></li>
+<li><a class="reference internal" href="#id24">File format</a></li>
+<li><a class="reference internal" href="#id25">Channels and sensor types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

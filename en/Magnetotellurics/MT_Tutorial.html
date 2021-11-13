@@ -1,0 +1,610 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Controlled source EM" href="../CSEM/CSEM_Tutorial.html" /><link rel="prev" title="Getting Started" href="../GettingStarted/GettingStarted.html" />
+
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Magnetotellurics - Home</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Home</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/logo2.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Home</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../GettingStarted/GettingStarted.html">Getting Started</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Magnetotellurics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CSEM/CSEM_Tutorial.html">Controlled source EM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sAEM/sAEM_Tutorial.html">Semi-airborne EM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Geomagnetics/Geomagnetics_Tutorial.html">Geomagnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AFMAG/AFMAG_Tutorial.html">AFMAG</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Recorder/Recorder.html">Recording systems and channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Calibration/Calibration.html">Calibration files</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../API_docs/API_docs.html">API documentation</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="magnetotellurics">
+<span id="id1"></span><h1>Magnetotellurics<a class="headerlink" href="#magnetotellurics" title="Permalink to this headline">¶</a></h1>
+<style>
+.red {color:red}
+.blue {color:blue}
+.green {color:green}
+.special{color:#00FF00; background-color:black;font-weight:bold}
+</style><p>MT processing determines the bivariate transfer function between the horizontal electric
+and vertical magnetic field components, <span class="math notranslate nohighlight">\(E_{x}\)</span>, <span class="math notranslate nohighlight">\(E_{y}\)</span> and <span class="math notranslate nohighlight">\(B_{z}\)</span>,
+and the two horizontal magnetic field components <span class="math notranslate nohighlight">\(B_{x}\)</span> and <span class="math notranslate nohighlight">\(B_{y}\)</span> in frequency domain. <span class="math notranslate nohighlight">\(E_{x}\)</span>,
+<span class="math notranslate nohighlight">\(E_{y}\)</span> and <span class="math notranslate nohighlight">\(B_{z}\)</span> are denoted as <span class="red">output channels</span>, or predicted channels,
+and <span class="math notranslate nohighlight">\(B_{x}\)</span> and <span class="math notranslate nohighlight">\(B_{y}\)</span> are the <span class="blue">input channels</span>, or predicting channels.</p>
+<p>In standard MT setups, both the output and the input channels are recorded at the same location. A processing
+that uses channels from one single site is commonly denoted as <strong>single-site</strong> processing. In turn,
+<strong>inter-site processing</strong> relates output and input channels from separate sites. We denote
+the site that recorded the input channels as the <span class="blue">base site</span> and the site that recorded the output
+channels as the <span class="red">local site</span>. In addition, single-site or inter-site processing estimates can sometimes
+be enhanced with a recording from a (clean) <span class="green">remote reference site</span>. The
+reference channels correspond to the input channels, and the processing that uses reference channels to improve the estimates
+is denoted as <strong>remote-reference processing</strong>.</p>
+<p>To generalize this, we solve the bi-variate regression problem</p>
+<div class="math-wrapper"><div class="math notranslate nohighlight">
+\[{\cal O}_{i}(\omega)={\cal T}_{i,1}(\omega){\cal I}_{1}(\omega)+{\cal T}_{i,2}(\omega){\cal I}_{2}(\omega)+{\cal E}_{i}(\omega)\,\,\,,\]</div></div>
+<p>where <span class="math notranslate nohighlight">\({\cal I}_{1,2}\)</span> denote the two input channels and <span class="math notranslate nohighlight">\({\cal O}_{i}\)</span> is the <span class="math notranslate nohighlight">\(i\textrm{-th}\)</span> output channel.
+This equation applies to both single-site and inter-site processing and we offer the flexibility to define arbitrary channel combinations - with
+the only constraint that the neither input channels nor output channels are mixed across different stations, respectively.</p>
+<video controls="" width='700"'>
+<source src="Skineffect.mp4" type="video/mp4"/>
+Your browser does not support the video tag.
+</video><p><em>A bit of physics behind the MT method:</em> Animation to illustrate the skin-effect that describes the frequency-dependent attenuation of
+a plane wave electric field with depth. The amplitude of the field distribution decays exponentially
+as <span class="math notranslate nohighlight">\(\sim e^{kz}\)</span>.  <span class="math notranslate nohighlight">\(\delta\)</span> is the skin-depth, where the field has reached <span class="math notranslate nohighlight">\(1/e\)</span> of the surface amplitude.</p>
+<section id="black-box-examples">
+<h2>Black-box examples<a class="headerlink" href="#black-box-examples" title="Permalink to this headline">¶</a></h2>
+<p>We first provide black box examples which make use of default settings and which to not provide any diagnostics. In case of
+high-quality data, these examples should readily give usable MT transfer functions.</p>
+<section id="adu-and-ede-processing">
+<h3><code class="docutils literal notranslate"><span class="pre">ADU</span></code> and <code class="docutils literal notranslate"><span class="pre">EDE</span></code> processing<a class="headerlink" href="#adu-and-ede-processing" title="Permalink to this headline">¶</a></h3>
+<p>We use a test data set that has been recorded with 5-ch <code class="docutils literal notranslate"><span class="pre">ADU</span></code> systems
+and two-channel <code class="docutils literal notranslate"><span class="pre">EDE</span></code> systems in the Sauerland and the Harz mountains, Germany. <code class="docutils literal notranslate"><span class="pre">ADU</span></code> site names are <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ARN-B04</span></code>, <code class="docutils literal notranslate"><span class="pre">BGR-B01</span></code> and <code class="docutils literal notranslate"><span class="pre">THA-B01</span></code>; <code class="docutils literal notranslate"><span class="pre">EDE</span></code> site names
+are <code class="docutils literal notranslate"><span class="pre">ARN-E09</span></code>, <code class="docutils literal notranslate"><span class="pre">BGR-E01</span></code> and <code class="docutils literal notranslate"><span class="pre">THA-E01</span></code>. At these sites, overlapping recordings are available at several runs with <span class="math notranslate nohighlight">\(4096\,\text{Hz}\)</span>
+and <span class="math notranslate nohighlight">\(256\,\text{Hz}\)</span> sampling rates, respectively. The measurement commenced on 07 June 2020.</p>
+<p><em>Note: Some of the data used in the demo project are pretty noisy and shall only serve to illustrate the processing code.</em></p>
+<p>First, we organize the data into a project folder structure, following the guidelines in the previous section (see <a class="reference internal" href="../GettingStarted/GettingStarted.html#gettingstarted"><span class="std std-ref">Getting Started</span></a>). The project is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Volumes</span><span class="o">/</span><span class="n">INTENSO_4TB</span><span class="o">/</span><span class="n">MT</span><span class="o">.</span><span class="n">Demo</span><span class="mf">.2020</span>
+</pre></div>
+</div>
+<p>Within the project, we store the <code class="docutils literal notranslate"><span class="pre">ADU</span></code> recordings in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
+<span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B04</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
+<span class="o">./</span><span class="n">BGR</span><span class="o">-</span><span class="n">B01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
+<span class="o">./</span><span class="n">THA</span><span class="o">-</span><span class="n">B01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ats</span>
+</pre></div>
+</div>
+<p>and the <code class="docutils literal notranslate"><span class="pre">EDE</span></code> recordings in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">E09</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ets</span>
+<span class="o">./</span><span class="n">BGR</span><span class="o">-</span><span class="n">E01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ets</span>
+<span class="o">./</span><span class="n">THA</span><span class="o">-</span><span class="n">E01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">ets</span>
+</pre></div>
+</div>
+<p>Calibration files for the employed induction coils (MFS06, MFS07) are copied into the default folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">s</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p><em>Note: Theoretical calibration functions are available for Metronix induction coils and will be used in case that the measured
+calibration files are not available.</em></p>
+<p>To process the data, a script has to produced (see <a class="reference internal" href="../GettingStarted/GettingStarted.html#gettingstarted"><span class="std std-ref">Getting Started</span></a>) that contains the desired instructions, structured
+essentially into three sections: (1) importing data, (2) computing spectra and (3) estimating transfer
+functions.</p>
+<ul class="simple">
+<li><p><strong>Single-site black-box processing</strong></p></li>
+</ul>
+<p>For example, a script to perform automated single-site processing on site <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code> using all default processing parameters can
+be as short as follows:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%% Initialize</span><span class="w"></span>
+<span class="n">mt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">MT</span><span class="p">(</span><span class="s">'/Volumes/INTENSO_4TB/MT.Demo.2020'</span><span class="p">,</span><span class="w"> </span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">06</span><span class="p">,</span><span class="mi">07</span><span class="p">));</span><span class="w"></span>
+<span class="c">% Import time series for station ARN-B03, single site processing</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'ARN-B03'</span><span class="p">);</span><span class="w"></span>
+<span class="c">%% Compute Spectra</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="c">%% Estimate transfer functions</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The processing will merge all runs at the same sampling rate for transfer function estimation, and loop over all available sampling rates.</p>
+<p>The code should run through (may take a while though, but continuous output is produced to inform the progress) while computing and
+storing spectra and transfer functions (subdirectory trees are created if not existing).  An error is in almost all cases due to some
+issue with the data files, the folder structure or missing files (e.g. calibration files).</p>
+<p>In our example, the call generates single-site transfer functions separately for each sampling rate. The result looks as this
+(as noted, the demo data are somewhat noisy):</p>
+<a class="reference internal image-reference" href="../../_images/ARN-B03.png"><img alt="alternate text" class="align-center" src="../../_images/ARN-B03.png" style="width: 900px;"/></a>
+<p><em>MT response functions obtained from black-box single site processing of site</em> <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>. Left panels show the estimates for the
+high-frequency run recorded at <span class="math notranslate nohighlight">\(4096\, Hz\)</span>, right panels show the result for the <span class="math notranslate nohighlight">\(256\, Hz\)</span> run. From top to bottom, the panels
+show apparent resistivities, phases and induction vectors.</p>
+<p>As the default, spectra are stored in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">fc</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>and transfer functions are stored in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ARN</span><span class="o">-</span><span class="n">B03</span><span class="o">/</span><span class="n">tf</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>In the above example the <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> class interprets the imported site as the <span class="red">local site</span> (because only only one site is imported) and thus
+performs a single-site processing using the standard MT channel combinations to estimate the impedance tensor and the vertical magnetic transfer
+function (if <span class="math notranslate nohighlight">\(B_z\)</span> is available).</p>
+<ul class="simple">
+<li><p><strong>Inter-site black-box processing</strong></p></li>
+</ul>
+<p>To perform inter-site processing, provide the <span class="blue">base site</span> as the second argument to the import call.
+For instance, we wish to process the telluric recording at <code class="docutils literal notranslate"><span class="pre">ARN-E09</span></code> against the horizontal magnetic channels at the site <code class="docutils literal notranslate"><span class="pre">ARN-B03</span></code>.
+Then (omitting the initialization call), use:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Import time series for station ARN-E09, ARN-B03, inter-site processing</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="w"> </span><span class="s">'ARN-B03'</span><span class="p">);</span><span class="w"></span>
+<span class="c">%% Compute Spectra</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="c">%% Estimate transfer functions</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Remote-reference</strong></p></li>
+</ul>
+<p>A remote-reference site can be passed as the third argument, e.g., using the <span class="green">remote site</span> in the Harz, <code class="docutils literal notranslate"><span class="pre">BGR-B01</span></code>:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% Import time series for station ARN-E09, ARN-B03, BGR-B01, inter-site</span><span class="w"></span>
+<span class="c">% remote reference processing</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="w"> </span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">MT</span></code> class thus interprets the order of arguments upon import in terms of the objectives of single-site, inter-site
+or remote reference processing as follows:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% single-site</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="n">localsite</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% inter-site</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="n">localsite</span><span class="p">,</span><span class="n">basesite</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% standard remote reference</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="n">localsite</span><span class="p">,[],</span><span class="n">remotesite</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">% inter-site remote reference</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="n">localsite</span><span class="p">,</span><span class="n">basesite</span><span class="p">,</span><span class="n">remotesite</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">spectra</span><span class="p">;</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">estimate</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>If more sites are passed to the import routine, the first three are interpreted as shown above. Naturally,
+these definitions can be overwritten, as described below.</p>
+</section>
+<section id="lemi-processing">
+<h3><code class="docutils literal notranslate"><span class="pre">Lemi</span></code> processing<a class="headerlink" href="#lemi-processing" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data are recognized upon import, if provided in the correct folder tree. We currently support recordings
+of type <code class="docutils literal notranslate"><span class="pre">B423</span></code> only. (<code class="docutils literal notranslate"><span class="pre">B423</span></code> is the extension of the data files.) For <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data, we expect that the <code class="docutils literal notranslate"><span class="pre">B423</span></code> time series
+are stored in (for example for site <code class="docutils literal notranslate"><span class="pre">0000B</span></code>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="mi">0000</span><span class="n">B</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">B423</span><span class="o">/</span><span class="n">meas</span><span class="o">*/*.</span><span class="n">B423</span>
+</pre></div>
+</div>
+<p>as the default. Unfortunately, the header information in the data files is incomplete. Therefore, the import routine searches for an extra text file (<code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code>)
+in each data folder with the missing information, or generates a default <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code> template, which can be manually edited. The text file is read during import.
+Therefore, after editing <code class="docutils literal notranslate"><span class="pre">siteinfo.txt</span></code>, the import call must be issued again. See <a class="reference internal" href="../API_docs/API_docs.html#recorder"><span class="std std-ref">Recorder</span></a> for details.</p>
+<p>Once, the data can be read correctly, the very same processing instructions as described above (and below) apply to <code class="docutils literal notranslate"><span class="pre">Lemi</span></code> data.</p>
+</section>
+</section>
+<section id="step-by-step-guide">
+<h2>Step-by-Step guide<a class="headerlink" href="#step-by-step-guide" title="Permalink to this headline">¶</a></h2>
+<section id="the-mt-class-design">
+<h3>The <code class="docutils literal notranslate"><span class="pre">MT</span></code> class design<a class="headerlink" href="#the-mt-class-design" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> class is not much more than a batch that shall make it
+convenient to process MT data. An <a class="reference internal" href="../API_docs/API_docs.html#mt"><span class="std std-ref">MT</span></a> object, given the variable
+name, say, <code class="docutils literal notranslate"><span class="pre">mt</span></code>, during initialization:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span> <span class="o">=</span> <span class="n">MT</span><span class="p">(</span><span class="n">projectname</span><span class="p">,</span><span class="n">datetime</span><span class="p">(</span><span class="n">yyyy</span><span class="p">,</span><span class="n">mm</span><span class="p">,</span><span class="n">hh</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>has the following important fields:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="o">.</span><span class="n">ts</span>
+<span class="n">mt</span><span class="o">.</span><span class="n">sp</span>
+<span class="n">mt</span><span class="o">.</span><span class="n">tf</span>
+<span class="n">mt</span><span class="o">.</span><span class="n">mtset</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">mt.ts</span></code> is an <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> object, <code class="docutils literal notranslate"><span class="pre">mt.sp</span></code> is an <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a> object and <code class="docutils literal notranslate"><span class="pre">mt.tf</span></code> is an <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a> object. <code class="docutils literal notranslate"><span class="pre">mt.mtset</span></code> is an
+<a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a> object and stores some settings relevant to MT. The processing relies large on the methods
+provided my <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> and <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>.</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtf"><span class="std std-ref">EMTF</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a></p>
+</section>
+<section id="initialize-import-time-series-data-overview">
+<h3>Initialize, import time series, data overview<a class="headerlink" href="#initialize-import-time-series-data-overview" title="Permalink to this headline">¶</a></h3>
+<p>An arbitrary number of sites can be imported in one call. To initialize
+the demo project and to import all available sites, use:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="n">MT</span><span class="p">(</span><span class="s">'/Volumes/INTENSO_4TB/MT.Demo.2020'</span><span class="p">,</span><span class="w"> </span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">07</span><span class="p">,</span><span class="mi">06</span><span class="p">));</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">import</span><span class="p">(</span><span class="s">'ARN-B03'</span><span class="p">,</span><span class="s">'ARN-B04'</span><span class="p">,</span><span class="s">'ARN-E09'</span><span class="p">,</span><span class="s">'BGR-B01'</span><span class="p">,</span><span class="s">'BGR-E01'</span><span class="p">,</span><span class="s">'THA-B01'</span><span class="p">,</span><span class="s">'THA-E01'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The import routines display some summary information during import such as sitenames, run numbers, pathnames, etc.. Sites can
+only be imported into an existing project (i.e. a project that has been initialized before). If the project exists and
+contains already sites (because the <code class="docutils literal notranslate"><span class="pre">import</span></code> had
+been issued before), new sites are appended or they replace any existing sites of the same name. If the data reside in non-default directory trees,
+the import methods will not find them. The default folder structure is defined in <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a> (see there how to change default search paths)
+and described in <a class="reference internal" href="../API_docs/API_docs.html#recorder"><span class="std std-ref">Recorder</span></a>.</p>
+<p><em>Note</em>: <code class="docutils literal notranslate"><span class="pre">MT</span></code> searches for both time series and spectra file. Since no spectra are
+available at the beginning, a warning will be issued during the attempt to import spectra. To avoid automated import of
+both time series and spectra data, set the corresponding switches of <code class="docutils literal notranslate"><span class="pre">mt.mtset</span></code> ( see <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a> for details), to false, e.g.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ImportTimeSeries'</span><span class="p">,</span><span class="nb">true</span><span class="p">);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">setset</span><span class="p">(</span><span class="s">'ImportSpectra'</span><span class="p">,</span><span class="nb">false</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><em>Note:</em> <code class="docutils literal notranslate"><span class="pre">Import</span></code> means that only the header information of each data file is extracted and stored. Actual time
+series or spectra files are usually too big to store in memory for an entire project.</p>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsettings"><span class="std std-ref">EMSettings</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#mtsettings"><span class="std std-ref">MTSettings</span></a>,</p>
+<p><strong>Sitemap</strong></p>
+<p>A good way to get started with processing of MT data is to generate a map. We use the Matlab <code class="docutils literal notranslate"><span class="pre">geoaxes</span></code> map
+utilities, a convenient way to plot geographical data. The default map layout uses <code class="code docutils literal notranslate"><span class="pre">basemap='topographic'</span></code>.</p>
+<p>To plot site locations on a map, use the <code class="docutils literal notranslate"><span class="pre">plotsitemap</span></code> method of either <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a> or <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a> and
+provide the latitude and longitude limits of the survey area.</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotsitemap</span><span class="p">(</span><span class="s">'LatitudeLimits'</span><span class="p">,[</span><span class="mf">50.2</span><span class="p">,</span><span class="w"> </span><span class="mf">52.7</span><span class="p">],</span><span class="s">'LongitudeLimits'</span><span class="p">,[</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">]);</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="p">.</span><span class="n">plotsitemap</span><span class="p">(</span><span class="s">'LatitudeLimits'</span><span class="p">,[</span><span class="mf">50.2</span><span class="p">,</span><span class="w"> </span><span class="mf">52.7</span><span class="p">],</span><span class="s">'LongitudeLimits'</span><span class="p">,[</span><span class="mi">7</span><span class="p">,</span><span class="mi">12</span><span class="p">]);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The former plots the sites for which time series have been successfully imported, the latter
+plots the sites for which spectra have been imported. Note that coordinates are extracted for
+the first available run for each available site.</p>
+<a class="reference internal image-reference" href="../../_images/DemoSiteMap.png"><img alt="alternate text" class="align-center" src="../../_images/DemoSiteMap.png" style="width: 900px;"/></a>
+<p><em>Sitemap displaying the sites contained in the demo project.</em> A zoom button can be activated on the top right of the
+Matlab figure, or zooming can be performed with gestures applicable to the computer in use.</p>
+<p>To store the map as a graphics file, we recommend using</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">gcf</span><span class="p">,</span><span class="s">'-dpng'</span><span class="p">,</span><span class="s">'-r300'</span><span class="p">,</span><span class="s">'mapname.png'</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p><em>See also:</em> <a class="reference internal" href="../API_docs/API_docs.html#emts"><span class="std std-ref">EMTS</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emtplot"><span class="std std-ref">EMTPlot</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emsp"><span class="std std-ref">EMSP</span></a>, <a class="reference internal" href="../API_docs/API_docs.html#emfplot"><span class="std std-ref">EMFPlot</span></a>,</p>
+<p><strong>Runtimes plot</strong></p>
+<p>Another important plot that helps preparing processing is a runtimes plot. Runtimes plots are also available for both
+time series and spectra data and can be invoked with:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">plotruntimes</span><span class="p">;</span><span class="w"></span>
+<span class="n">mt</span><span class="p">.</span><span class="n">sp</span><span class="p">.</span><span class="n">plotruntimes</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>where the former refers to imported time series data and the latter to imported spectra data. Runtimes for the demo project are
+summarized as follows:</p>
+<a class="reference internal image-reference" href="../../_images/DemoRuntimes.png"><img alt="alternate text" class="align-center" src="../../_images/DemoRuntimes.png" style="width: 900px;"/></a>
+<p><em>Runtimes plot</em>, displaying the available time series data in the demo project, separated into available sampling rates.</p>
+<p>Use this plot to identify time windows of interest, e.g. for plotting time series.</p>
+<p><em>Note:</em> Time series and spectra must not always cover the same time span, because spectra can also be
+computed on only a subset (e.g. certain time range, sampling rates) of data.</p>
+<p><em>Note:</em> The runtimes plot replaces the sitemap plot generated above. This is because the figure handle is stored and
+re-used (with the idea to plot the figures into handles contained GUI some time in the future). To release any plot related
+to time series, use:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="p">.</span><span class="n">ts</span><span class="p">.</span><span class="n">emplot</span><span class="p">.</span><span class="n">hparent</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This will allow to generate a new figure for the next plotting command. An equivalent syntax applies to spectra figures.</p>
+</section>
+<section id="selecting-and-plotting-time-series-subsets">
+<h3>Selecting and plotting time series (subsets)<a class="headerlink" href="#selecting-and-plotting-time-series-subsets" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="filter-decimation-and-resampling-options">
+<h3>Filter, decimation and resampling options<a class="headerlink" href="#filter-decimation-and-resampling-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="quick-look-spectra">
+<h3>Quick-look spectra<a class="headerlink" href="#quick-look-spectra" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="cascade-decimation">
+<h3>Cascade Decimation<a class="headerlink" href="#cascade-decimation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="import-spectra">
+<h3>Import Spectra<a class="headerlink" href="#import-spectra" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="selecting-and-plotting-spectra-subsets">
+<h3>Selecting and plotting spectra (subsets)<a class="headerlink" href="#selecting-and-plotting-spectra-subsets" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="band-setup">
+<h3>Band Setup<a class="headerlink" href="#band-setup" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="transfer-function-estimation">
+<h3>Transfer function estimation<a class="headerlink" href="#transfer-function-estimation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="plotting-transfer-functions">
+<h3>Plotting transfer functions<a class="headerlink" href="#plotting-transfer-functions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="update-transfer-function-estimation">
+<h3>Update Transfer function estimation<a class="headerlink" href="#update-transfer-function-estimation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="coherency-masking">
+<h3>Coherency masking<a class="headerlink" href="#coherency-masking" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="polarization-masking">
+<h3>Polarization masking<a class="headerlink" href="#polarization-masking" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="other-masking">
+<h3>Other masking<a class="headerlink" href="#other-masking" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Update Transfer function estimation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sequential-processing">
+<h3>Sequential processing<a class="headerlink" href="#sequential-processing" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../CSEM/CSEM_Tutorial.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Controlled source EM</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../GettingStarted/GettingStarted.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Getting Started</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, AGP Muenster |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../../_sources/en/Magnetotellurics/MT_Tutorial.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Magnetotellurics</a><ul>
+<li><a class="reference internal" href="#black-box-examples">Black-box examples</a><ul>
+<li><a class="reference internal" href="#adu-and-ede-processing"><code class="docutils literal notranslate"><span class="pre">ADU</span></code> and <code class="docutils literal notranslate"><span class="pre">EDE</span></code> processing</a></li>
+<li><a class="reference internal" href="#lemi-processing"><code class="docutils literal notranslate"><span class="pre">Lemi</span></code> processing</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#step-by-step-guide">Step-by-Step guide</a><ul>
+<li><a class="reference internal" href="#the-mt-class-design">The <code class="docutils literal notranslate"><span class="pre">MT</span></code> class design</a></li>
+<li><a class="reference internal" href="#initialize-import-time-series-data-overview">Initialize, import time series, data overview</a></li>
+<li><a class="reference internal" href="#selecting-and-plotting-time-series-subsets">Selecting and plotting time series (subsets)</a></li>
+<li><a class="reference internal" href="#filter-decimation-and-resampling-options">Filter, decimation and resampling options</a></li>
+<li><a class="reference internal" href="#quick-look-spectra">Quick-look spectra</a></li>
+<li><a class="reference internal" href="#cascade-decimation">Cascade Decimation</a></li>
+<li><a class="reference internal" href="#import-spectra">Import Spectra</a></li>
+<li><a class="reference internal" href="#selecting-and-plotting-spectra-subsets">Selecting and plotting spectra (subsets)</a></li>
+<li><a class="reference internal" href="#band-setup">Band Setup</a></li>
+<li><a class="reference internal" href="#transfer-function-estimation">Transfer function estimation</a></li>
+<li><a class="reference internal" href="#plotting-transfer-functions">Plotting transfer functions</a></li>
+<li><a class="reference internal" href="#update-transfer-function-estimation">Update Transfer function estimation</a></li>
+<li><a class="reference internal" href="#coherency-masking">Coherency masking</a></li>
+<li><a class="reference internal" href="#polarization-masking">Polarization masking</a></li>
+<li><a class="reference internal" href="#other-masking">Other masking</a></li>
+<li><a class="reference internal" href="#id2">Update Transfer function estimation</a></li>
+<li><a class="reference internal" href="#sequential-processing">Sequential processing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+.. EMTS documentation master file, created by
+   sphinx-quickstart on Fri Oct 15 10:13:58 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+EM time series processing help pages
+=================================================
+
+Tutorials
+--------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   en/Introduction/Introduction
+   en/GettingStarted/GettingStarted
+   en/Magnetotellurics/MT_Tutorial
+   en/CSEM/CSEM_Tutorial
+   en/sAEM/sAEM_Tutorial
+   en/Geomagnetics/Geomagnetics_Tutorial
+   en/AFMAG/AFMAG_Tutorial
+
+Supported recorders and channels
+----------------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   en/Recorder/Recorder
+   en/Calibration/Calibration
+
+
+Function references
+--------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   en/API_docs/API_docs.rst
+
+Indices and tables
+-------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

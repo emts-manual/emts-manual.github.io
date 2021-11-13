@@ -1,0 +1,482 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Magnetotellurics" href="../Magnetotellurics/MT_Tutorial.html" /><link rel="prev" title="About" href="../Introduction/Introduction.html" />
+
+    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+        <title>Getting Started - Home</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Home</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/logo2.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Home</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Introduction.html">About</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Magnetotellurics/MT_Tutorial.html">Magnetotellurics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CSEM/CSEM_Tutorial.html">Controlled source EM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sAEM/sAEM_Tutorial.html">Semi-airborne EM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Geomagnetics/Geomagnetics_Tutorial.html">Geomagnetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../AFMAG/AFMAG_Tutorial.html">AFMAG</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Recorder/Recorder.html">Recording systems and channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Calibration/Calibration.html">Calibration files</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../API_docs/API_docs.html">API documentation</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="getting-started">
+<span id="gettingstarted"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<style>
+.red {color:red}
+.blue {color:blue}
+.special{color:#00FF00; background-color:black;font-weight:bold}
+</style><section id="download-and-installation">
+<h2>Download and installation<a class="headerlink" href="#download-and-installation" title="Permalink to this headline">¶</a></h2>
+<p>to come</p>
+</section>
+<section id="preparation-of-data">
+<h2>Preparation of data<a class="headerlink" href="#preparation-of-data" title="Permalink to this headline">¶</a></h2>
+<section id="folder-structure">
+<h3>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this headline">¶</a></h3>
+<p>Data are to be organized in a particular folder structure of the type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/&lt;</span><span class="n">site</span><span class="o">&gt;/</span><span class="n">ts</span><span class="o">/&lt;</span><span class="n">tag</span><span class="o">&gt;/&lt;</span><span class="n">recorder</span><span class="o">&gt;/&lt;</span><span class="n">run</span><span class="o">&gt;/&lt;</span><span class="n">time</span> <span class="n">series</span> <span class="n">data</span> <span class="n">files</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For example, within the hypothetic project <code class="docutils literal notranslate"><span class="pre">MT.Project.2020</span></code>, measurements were carried out at several
+stations. A site <code class="docutils literal notranslate"><span class="pre">ESL</span></code>, we have recorded continuously, and at <code class="docutils literal notranslate"><span class="pre">ARN</span></code>, the recording was interrupted,
+resulting in two runs. For both sites, an <code class="docutils literal notranslate"><span class="pre">ADU</span></code> system was used (see <a class="reference internal" href="../Recorder/Recorder.html#recordingsystems"><span class="std std-ref">Recording systems and channels</span></a> for a summary on supported devices). The <code class="docutils literal notranslate"><span class="pre">ADU</span></code> stores the data for
+continuous measurements in one or multiple <code class="docutils literal notranslate"><span class="pre">*.ats</span></code> files within a folder named <code class="docutils literal notranslate"><span class="pre">meas_&lt;date&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;date&gt;</span></code> is close to
+the start time of the recording. A separate run is stored in a separate <code class="docutils literal notranslate"><span class="pre">meas_&lt;date&gt;</span></code> folder.
+To organize the data in our default folder structure, combine them into one project as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">MT</span><span class="o">.</span><span class="n">Project</span><span class="mf">.2020</span><span class="o">/</span><span class="n">ESL</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas_</span><span class="o">&lt;</span><span class="n">date</span><span class="o">&gt;/*.</span><span class="n">ats</span>
+<span class="o">./</span><span class="n">MT</span><span class="o">.</span><span class="n">Project</span><span class="mf">.2020</span><span class="o">/</span><span class="n">ARN</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas_</span><span class="o">&lt;</span><span class="n">date1</span><span class="o">&gt;/*.</span><span class="n">ats</span>
+<span class="o">./</span><span class="n">MT</span><span class="o">.</span><span class="n">Project</span><span class="mf">.2020</span><span class="o">/</span><span class="n">ARN</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">ADU</span><span class="o">/</span><span class="n">meas_</span><span class="o">&lt;</span><span class="n">date2</span><span class="o">&gt;/*.</span><span class="n">ats</span>
+</pre></div>
+</div>
+<p>In addition, assume that we operated an <code class="docutils literal notranslate"><span class="pre">EDE</span></code> data logger at a site near <code class="docutils literal notranslate"><span class="pre">ARN</span></code>. This site has the name <code class="docutils literal notranslate"><span class="pre">ARN-E01</span></code>.
+To add these data to the same project (<code class="docutils literal notranslate"><span class="pre">EDE</span></code> produce measurement folders with the same <code class="docutils literal notranslate"><span class="pre">meas_&lt;date&gt;</span></code> convention,
+but with file extension <code class="docutils literal notranslate"><span class="pre">*.ets</span></code>), copy them into:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">MT</span><span class="o">.</span><span class="n">Project</span><span class="mf">.2020</span><span class="o">/</span><span class="n">ARN</span><span class="o">-</span><span class="n">E01</span><span class="o">/</span><span class="n">ts</span><span class="o">/</span><span class="n">adc</span><span class="o">/</span><span class="n">EDE</span><span class="o">/</span><span class="n">meas_</span><span class="o">&lt;</span><span class="n">date</span><span class="o">&gt;/*.</span><span class="n">ets</span>
+</pre></div>
+</div>
+<p>Extra project folders and files might be required for processing. For MT measurements,
+we require calibration files for the magnetometers, for example. Put them (as the default) into:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/</span><span class="n">s</span><span class="o">/&lt;</span><span class="n">calibration</span> <span class="n">files</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Information on calibration files is provided in the section <em>Calibration files</em>.</p>
+<p>Further auxiliary default folder names are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/</span><span class="n">transmitter</span><span class="o">/&lt;</span><span class="n">transmitter</span> <span class="n">geometry</span> <span class="n">definition</span> <span class="n">files</span><span class="o">&gt;</span>
+<span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/</span><span class="n">dem</span><span class="o">/&lt;</span><span class="n">digital</span> <span class="n">elevation</span> <span class="n">data</span><span class="o">&gt;</span>
+<span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;/</span><span class="n">def</span><span class="o">/&lt;</span><span class="n">processing</span> <span class="n">definition</span> <span class="n">files</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>More details on the different data loggers and how to organize the data files are provided below and in the section <a class="reference internal" href="../Recorder/Recorder.html#recordingsystems"><span class="std std-ref">Recording systems and channels</span></a>.</p>
+</section>
+<section id="project-site-tag-run-and-more-what-is-what">
+<h3>Project, site, tag, run, and more: What is what?<a class="headerlink" href="#project-site-tag-run-and-more-what-is-what" title="Permalink to this headline">¶</a></h3>
+<p><strong>Project</strong></p>
+<p>A project contains all data related to a project. The project is simply a folder denoted as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./&lt;</span><span class="n">project</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In general, data are organized in sites and runs, where different processing steps are
+collected in separate tags. In addition, a project requires up-to-date calibration functions,
+and - depending on the type of survey - transmitter geometry information and digital elevation model.
+The detailed meaning of these items and the sub-structure to organize data within a project is outlined below.</p>
+<p><strong>Site</strong></p>
+<p>The term site is used as an identifier for a unique recording objective. We distinguish the following types of sites:</p>
+<div class="custom docutils container">
+<ul class="simple">
+<li><p>stationary sites include MT receivers, telluric receivers, current recordings for a controlled source survey: The common
+characteristic for a stationary site is that it is located at a unique location (MT, telluric) or has a unique geometry (transmitter)</p></li>
+<li><p>moving sites include airborne receiver and IMU recordings: The common characteristic for a moving site
+is that it is associated with a single transmitter geometry (semi-airborne EM) or related
+to a common survey domain (AFMAG, Geomagnetic surveying). For AFMAG and Geomagnetic surveying,
+separate flights can be treated either as separate sites or separate runs.</p></li>
+</ul>
+</div>
+<p>At a particular site, we typically use the same hardware throughout. However, under certain circumstances,
+multiple hardwares are possible, and even multiple recorders are permitted at the same site. However,
+it should be taken care of that multiple recording systems do not generate overlapping data,
+e.g. a particular electric channel can only be recorded once at a time at a single site and
+sampling rate. Hence, if recorders are doing the same (e.g. same channel, same sampling rate,
+same or overlapping time) data should be better stored in separate sites.</p>
+<p><strong>Tag</strong></p>
+<p>A time series tag provides a way to distinguish overlapping recordings at the same site. It
+is introduced to be used for different processing steps. For example, let us copy the original
+recordings in a subdirectory <code class="docutils literal notranslate"><span class="pre">adc</span></code>, and let us store some filtered data in a subdirectory <code class="docutils literal notranslate"><span class="pre">proc</span></code>.
+<code class="docutils literal notranslate"><span class="pre">adc</span></code> and <code class="docutils literal notranslate"><span class="pre">proc</span></code> denote tags and must be set to specify data access. Tags are also transferred to frequency domain,
+i.e., a folder tree storing spectral data will maintain the tag of the corresponding time series folder tree.</p>
+<p><strong>Recorder</strong></p>
+<p>A recorder name indicates the principal hardware used for recording data, and it should
+be used as name of the subfolder archiving separate runs recorded with this particular
+recording system. Recorders are <code class="docutils literal notranslate"><span class="pre">ADU</span></code> <code class="docutils literal notranslate"><span class="pre">EDE</span></code> <code class="docutils literal notranslate"><span class="pre">..</span></code> We encode the Recorder name, or some abbreviation,
+in some way in output filenames (see <a class="reference internal" href="../Recorder/Recorder.html#recordingsystems"><span class="std std-ref">Recording systems and channels</span></a> for details).</p>
+<p><strong>Run</strong></p>
+<p>A run is a continuous recording of a number of channels at a fixed sampling rate. Data of
+separate runs are stored in separate subdirectories of the respective recorder folder.
+Typical folder names holding a run are of type <code class="docutils literal notranslate"><span class="pre">meas*</span></code>.</p>
+<p><strong>Calibration files</strong></p>
+<p>to come</p>
+<p><strong>Transmitter geometry</strong></p>
+<p>to come</p>
+<p><strong>Digital elevation models</strong></p>
+<p>to come</p>
+</section>
+</section>
+<section id="initializing-a-project">
+<h2>Initializing a project<a class="headerlink" href="#initializing-a-project" title="Permalink to this headline">¶</a></h2>
+<p>Common to all data in one project is that they reside in the same project folder and that they refer to a common reference time.
+Although we use UTC-time as far as possible, a time for internal time referencing must also be specified. Normally, the
+reference time should be shortly before the beginning of the survey, but this is not a must. The
+main use of the reference time is to align time windows that are transformed into spectral domain.
+This is required to cover exactly the same time span for single FFT estimates from multiple recorders with distinct recording times.</p>
+<p>The reference time is specified in <code class="docutils literal notranslate"><span class="pre">datetime</span></code> format, e.g. as <code class="docutils literal notranslate"><span class="pre">datetime([yyyy,</span> <span class="pre">MM,</span> <span class="pre">dd])</span></code>. Both the project folder and the
+reference time are passed as arguments to initialize a survey. For instance, to initialize an MT survey, use:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">mt</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="n">MT</span><span class="p">(</span><span class="s">'/Volumes/INTENSO_4TB/MT.Project.2020'</span><span class="p">,</span><span class="w"> </span><span class="nb">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">24</span><span class="p">));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">mt</span></code> is an object derived from the class definition <code class="docutils literal notranslate"><span class="pre">MT</span></code>. The initialization routine throws a
+message into the matlab command window that should look like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>+ MT Project directory is /Volumes/INTENSO_4TB/MT.Sauerland.2021
+reference time is 2021-10-24 00-00-00
+</pre></div>
+</div>
+<p>The same type of initialization applies to other processing classes. See the respective tutorials.</p>
+</section>
+<section id="design-of-a-processing-script">
+<h2>Design of a processing script<a class="headerlink" href="#design-of-a-processing-script" title="Permalink to this headline">¶</a></h2>
+<p>Data access and processing is generally controlled through scripts. A script has typically the following sections:</p>
+<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">clc</span><span class="p">;</span><span class="w"></span>
+<span class="c">%% Initialize project</span><span class="w"></span>
+<span class="c">% ..</span><span class="w"></span>
+<span class="p">..</span><span class="w"></span>
+<span class="c">%% Import time series</span><span class="w"></span>
+<span class="c">% ..</span><span class="w"></span>
+<span class="p">..</span><span class="w"></span>
+<span class="c">%% Compute spectra</span><span class="w"></span>
+<span class="c">% ..</span><span class="w"></span>
+<span class="p">..</span><span class="w"></span>
+<span class="c">%% Compute transfer functions</span><span class="w"></span>
+<span class="c">% ..</span><span class="w"></span>
+<span class="p">..</span><span class="w"></span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">..</span></code> is a placeholder for a comment, and <code class="docutils literal notranslate"><span class="pre">..</span></code> a placeholder for code. We recommend
+to save this script in your project folder, or a subfolder for scripts, and possibly using a name
+that relates to the particular processing task. We choose <code class="docutils literal notranslate"><span class="pre">./MT.Sauerland.2021/scripts/proc_ESL.m</span></code>.</p>
+<p>The remainder of these tutorials is how to fill this script with content.</p>
+</section>
+<section id="some-nomenclature">
+<h2>Some nomenclature<a class="headerlink" href="#some-nomenclature" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Local site, tag, sampling rate:</p>
+<p>to come</p>
+</li>
+<li><p>Base site, tag, sampling rate:</p>
+<p>to come</p>
+</li>
+<li><p>Reference site, tag, sampling rate:</p>
+<p>to come</p>
+</li>
+<li><p>Channels:</p>
+<p>to come</p>
+</li>
+<li><p>Input Channels:</p>
+<p>to come</p>
+</li>
+<li><p>Output Channels</p>
+<p>to come</p>
+</li>
+<li><p>Time</p>
+<p>to come</p>
+</li>
+<li><p>Decimation</p>
+<p>to come</p>
+</li>
+<li><p>Band setup</p></li>
+</ul>
+</section>
+<section id="software-from-external-parties">
+<h2>Software from external parties<a class="headerlink" href="#software-from-external-parties" title="Permalink to this headline">¶</a></h2>
+<p>Depending on the particular application, we make use of tools from third parties, or expect
+that the data have been prepared with  proprietary software from instrument manufacturers. The
+list below provides an overview of third-party software.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">m_map</span></code>. Mapping toolbox, primarily used here for projecting geographic coordinates to UTM and vice versa.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">igrf.m</span></code>. International geomagnetic reference field, IGRF. Drew Compston (2021). International
+Geomagnetic Reference Field (IGRF): MATLAB Central File Exchange. Retrieved May 16, 2021:
+<a class="reference external" href="https://www.mathworks.com/matlabcentral/fileexchange/34388-international-geomagnetic-reference-field-igrf-model">https://www.mathworks.com/matlabcentral/fileexchange/34388-international-geomagnetic-reference-field-igrf-model</a> .
+The latest coefficients can be found on:
+<a class="reference external" href="https://ccmc.gsfc.nasa.gov/pub/modelweb/geomagnetic/igrf/data_files_for_Matlab/">https://ccmc.gsfc.nasa.gov/pub/modelweb/geomagnetic/igrf/data_files_for_Matlab/</a> .
+Required by various airborne processing methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ardupilog.m</span></code>. Handles navigation data from UAS flight controller
+and relies on the external class definition <code class="docutils literal notranslate"><span class="pre">ardupilog</span></code>, which can be found at:
+<a class="reference external" href="https://github.com/Georacer/ardupilog">https://github.com/Georacer/ardupilog</a>. Required by the <code class="docutils literal notranslate"><span class="pre">ArduPilot</span></code> class.</p></li>
+<li><p>Geometrics Survey manager</p></li>
+<li><p>iMAR software iXCOM-CMD.</p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../Magnetotellurics/MT_Tutorial.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Magnetotellurics</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../Introduction/Introduction.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">About</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2021, AGP Muenster |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
+            <a class="muted-link" href="../../_sources/en/GettingStarted/GettingStarted.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#download-and-installation">Download and installation</a></li>
+<li><a class="reference internal" href="#preparation-of-data">Preparation of data</a><ul>
+<li><a class="reference internal" href="#folder-structure">Folder structure</a></li>
+<li><a class="reference internal" href="#project-site-tag-run-and-more-what-is-what">Project, site, tag, run, and more: What is what?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#initializing-a-project">Initializing a project</a></li>
+<li><a class="reference internal" href="#design-of-a-processing-script">Design of a processing script</a></li>
+<li><a class="reference internal" href="#some-nomenclature">Some nomenclature</a></li>
+<li><a class="reference internal" href="#software-from-external-parties">Software from external parties</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/main.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    </body>
+</html>
